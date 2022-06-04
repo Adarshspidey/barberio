@@ -1,0 +1,20 @@
+:root {
+
+/* font-size */
+--xxlarge:36px;
+--xlarge:24px;
+--xxsmall:14px;
+
+
+/* colors */
+--white: #fff;
+--light-black:#333333;
+}
+html,
+#root ,
+body{
+  height: 100%;
+}
+.App{
+  height: 100%;
+}

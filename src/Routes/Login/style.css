@@ -1,0 +1,23 @@
+.login-container{
+    background-color: var(--light-black);
+    height: 100%;
+    
+}
+.login-container-content{
+    background-color: var(--white);
+   
+}
+.login-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #F9FAFA;
+    width: 335px;
+    height: 50px;
+}

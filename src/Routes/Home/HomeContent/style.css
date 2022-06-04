@@ -1,0 +1,38 @@
+.home-container{
+    background-color: var(--light-black);
+}
+.home-content{
+    background-color: var(--white);
+}
+.home-content-title{
+    font-size: var(--xxlarge);
+}
+.home-content-discription{
+    font-size: var(--samll);
+}
+.content-discription{
+    font-size: var(--xxsmall);
+}
+.button-component{
+    display: flex;
+    gap: 10px;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+}
+.login-button{
+    width: 270px;
+    height: 50px;
+    background: rgba(89, 124, 117, 0.22);
+    border-radius: 38px;
+    border: 0.4px solid rgba(255, 255, 255, 0.3);
+}
+.register-button{
+    width: 270px;
+    height: 50px;
+    background: #597C75;
+    border: 0.4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 38px;
+    
+
+}

@@ -1,0 +1,22 @@
+.home-page{
+    height: 800px;
+    background-image:url(../../../assets/Images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+
+} 
+
+.home-page-title{
+    font-size: var(--xxlarge);
+    padding-bottom: 20px;
+}
+.home-page-content{
+    font-size: var(--xxsmall);
+}
