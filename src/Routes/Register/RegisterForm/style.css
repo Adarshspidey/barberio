@@ -1,0 +1,10 @@
+.form-container{
+    background-color: var(--light-black);
+    height: 100%;
+}
+.register-form{
+    background-color: var(--white);
+}
+.form-input{
+    
+}
