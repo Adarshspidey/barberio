@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Bookings
- = () => {
+const Bookings = () => {
   return (
-    <div>Booking</div>
+    <div>
+      <div>Hair Straightening</div>
+      <div>Bridal Makeup</div>
+      <div>Spa</div>
+      <div>Facial</div>
+    
+    </div>
   )
 }
 

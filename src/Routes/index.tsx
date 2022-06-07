@@ -31,6 +31,9 @@ import ProfileCompleted from "./ProfileCompleted";
 
 import loginImage from "../assets/Icons/login.svg";
 import { useState } from "react";
+import ShopLayout from "../Components/Layout/ShopLayout";
+import ViewProfile from "./ViewProfile";
+import Offers from "./Offers";
 
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
@@ -72,7 +75,15 @@ const Router = () => {
         <Route path="profile-completed" element={<ProfileCompleted />} />
       </Route>
 
-      <Route path="bookings" element={<Bookings />} />
+    <Route path="shop" element={<ShopLayout/>}>
+      <Route index element = {<Bookings />}/>
+      <Route path="view-profile" element={<ViewProfile/>}/>
+      <Route path="offers" element={<Offers/>}/>
+      <Route path="edit" element={<EditProfile />} />
+      <Route path="schedule-time" element={<ScheduleTime />} />
+    </Route>
+    <Route path="offers" element={<Offers/>}/>
+      {/* <Route path="bookings" element={<Bookings />} /> */}
       <Route path="services" element={<Services />}>
         <Route index element={<AddServices />} />
         <Route path="update" element={<UpdateServices />} />
@@ -80,7 +91,7 @@ const Router = () => {
       </Route>
       <Route path="profile" element={<Profile />}>
         <Route index element={<CreateProfile />} />
-        <Route path="edit" element={<EditProfile />} />
+        
       </Route>
     </Routes>
   );

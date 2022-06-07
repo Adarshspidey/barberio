@@ -1,0 +1,20 @@
+.shop-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--xlarge) ;
+}
+.header-images{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-component{
+    background: #EBEBEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.scan-Icon{
+    background: linear-gradient(180deg, #6A938B 0%, #435D58 100%);
+    border-radius: 50%;
+}
