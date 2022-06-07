@@ -34,6 +34,21 @@ import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";
 import ViewProfile from "./ViewProfile";
 import Offers from "./Offers";
+import AddOffers from "./AddOffers";
+import ShopNearMe from "./ShopNearMe";
+import ScheduleWork from "./ScheduleWork";
+import ScheduleWorkByDay from "./ScheduleWorkByDay";
+import ScheduleWorkInterval from "./ScheduleWorkInterval";
+import ScheduleIntervalList from "./ScheduleIntervalList";
+import ScheduleIntervalForm from "./ScheduleIntervalForm";
+import ProfileRatings from "./ProfileRatings";
+import ServiceList from "./ServiceList";
+import AddServiceForm from "./AddServiceForm";
+import DisableService from "./DisableService";
+import ServiceHistory from "./ServiceHistory";
+import QrScanner from "./QrScanner";
+import NotificationList from "./NotificationList";
+import NotificationContent from "./NotificationContent";
 
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
@@ -75,14 +90,36 @@ const Router = () => {
         <Route path="profile-completed" element={<ProfileCompleted />} />
       </Route>
 
-    <Route path="shop" element={<ShopLayout/>}>
-      <Route index element = {<Bookings />}/>
-      <Route path="view-profile" element={<ViewProfile/>}/>
-      <Route path="offers" element={<Offers/>}/>
-      <Route path="edit" element={<EditProfile />} />
-      <Route path="schedule-time" element={<ScheduleTime />} />
-    </Route>
-    <Route path="offers" element={<Offers/>}/>
+      <Route path="shop" element={<ShopLayout />}>
+        <Route index element={<Bookings />} />
+        <Route path="view-profile" element={<ViewProfile />} />
+
+        <Route path="offers" element={<Offers />} />
+        <Route path="add-offers" element={<AddOffers />} />
+        <Route path="shop-near-me" element={<ShopNearMe />} />
+        <Route path="edit" element={<EditProfile />} />
+        <Route path="schedule-work" element={<ScheduleWork />} />
+        <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
+        <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
+        <Route
+          path="schedule-interval-list"
+          element={<ScheduleIntervalList />}
+        />
+        <Route
+          path="schedule-interval-form"
+          element={<ScheduleIntervalForm />}
+        />
+        <Route path="ratings" element={<ProfileRatings />} />
+        <Route path="service" element={<ServiceList />} />
+        <Route path="add-service-form" element={<AddServiceForm />} />
+        <Route path="disable-service" element={<DisableService />} />
+        <Route path="service-history" element={<ServiceHistory />} />
+        <Route path="qr-scan" element={<QrScanner />} />
+        <Route path="notification-list" element={<NotificationList />} />
+        <Route path="notification-body" element={<NotificationContent />} />
+      </Route>
+
+      <Route path="offers" element={<Offers />} />
       {/* <Route path="bookings" element={<Bookings />} /> */}
       <Route path="services" element={<Services />}>
         <Route index element={<AddServices />} />
@@ -91,7 +128,6 @@ const Router = () => {
       </Route>
       <Route path="profile" element={<Profile />}>
         <Route index element={<CreateProfile />} />
-        
       </Route>
     </Routes>
   );

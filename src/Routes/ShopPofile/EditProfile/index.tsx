@@ -1,23 +1,51 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
 const EditProfile = () => {
   const navigate = useNavigate();
   return (
-    <div>EditProfile
-      <button>back</button>
-      <div>Images</div>
-      <div>John Doe Salon & Spa</div>
-      <div>428456</div>
-      <div>Thiruvananthapuram</div>
-      <div>Address</div>
-      <div>9548695158</div>
-      <div>Add Your Email Here</div>
+    <div>
+      Edit Profile
       <button
-      onClick={() => {
-        navigate("/shop/view-profile");
-      }}>Save</button>
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        back
+      </button>
+      <div>Images</div>
+      <div>
+        {" "}
+        <input type="text" /> John Doe Salon & Spa
+      </div>
+      <div>
+        {" "}
+        <input type="text" /> 428456
+      </div>
+      <div>
+        {" "}
+        <input type="text" /> Thiruvananthapuram{" "}
+      </div>
+      <div>
+        {" "}
+        <input type="text" /> Address
+      </div>
+      <div>
+        {" "}
+        <input type="text" /> 9548695158
+      </div>
+      <div>
+        {" "}
+        <input type="text" /> Add Your Email Here
+      </div>
+      <button
+        onClick={() => {
+          navigate("/shop/view-profile");
+        }}
+      >
+        Save
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default EditProfile
+export default EditProfile;

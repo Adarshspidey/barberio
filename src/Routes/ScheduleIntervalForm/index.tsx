@@ -1,7 +1,7 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 
-const Offers = () => {
+const ScheduleIntervalForm = () => {
   const navigate = useNavigate();
   return (
     <div>
@@ -12,17 +12,21 @@ const Offers = () => {
       >
         Back
       </button>
+      Name of Interval
+      <input type="text" />
+      Start Time
+      <input type="text" />
+      End Time
+      <input type="text" />
       <button
         onClick={() => {
-          navigate("/shop/add-offers");
+          navigate("/shop/schedule-interval-list");
         }}
       >
-        Add+
+        Save
       </button>
-      <div>Hair Cutting</div>
-      <Outlet />
     </div>
   );
 };
 
-export default Offers;
+export default ScheduleIntervalForm;

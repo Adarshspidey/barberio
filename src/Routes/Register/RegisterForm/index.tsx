@@ -16,7 +16,13 @@ const RegisterForm = ({ setHeaderImage }: PropsTypes) => {
 
   return (
     <div>
-      <button>Back</button>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button>
       <div className="form-title">
         join the movement!
         <span>You deserve to look good.</span>

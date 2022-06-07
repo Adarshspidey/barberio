@@ -15,7 +15,13 @@ const Otp = ({ setHeaderImage }: PropsTypes) => {
 
   return (
     <div>
-      <button>Back</button>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button>
 
       <div>Hi, it's you and me in this together.</div>
       <div>Enter your OTP</div>

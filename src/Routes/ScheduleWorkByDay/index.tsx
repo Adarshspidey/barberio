@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ScheduleByDay = () => {
+const ScheduleWorkByDay = () => {
   const navigate = useNavigate();
   return (
     <div>
@@ -13,13 +13,13 @@ const ScheduleByDay = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/setup/interval");
+          navigate("/shop/schedule-work");
         }}
       >
-        Next
+        Save
       </button>
     </div>
   );
 };
 
-export default ScheduleByDay;
+export default ScheduleWorkByDay;

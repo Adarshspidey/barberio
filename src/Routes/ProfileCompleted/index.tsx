@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import finish from "../../assets/Icons/finish.svg";
 
 const ProfileCompleted = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div>Profile Completed Successfully</div>
@@ -10,7 +12,13 @@ const ProfileCompleted = () => {
         by navigating to profile window later.
       </div>
       <img src={finish} alt="finish" />
-      <button>Finish</button>
+      <button
+        onClick={() => {
+          navigate("/shop");
+        }}
+      >
+        Finish
+      </button>
     </div>
   );
 };
