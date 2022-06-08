@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import verificatioImage from "../../../assets/Icons/VerificationImage.svg";
+import verificatioImage from "../../../../assets/Icons/VerificationImage.svg";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;

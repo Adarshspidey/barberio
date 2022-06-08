@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import registerImage from "../../../assets/Icons/sign.svg";
+import registerImage from "../../../../assets/Icons/sign.svg";
 import "./style.css";
 
 interface PropsTypes {

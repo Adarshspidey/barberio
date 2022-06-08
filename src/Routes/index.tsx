@@ -1,54 +1,56 @@
 import { Routes, Route } from "react-router-dom";
 import HomeLayout from "../Components/Layout/HomeLayout";
 import ShopSetUpLayout from "../Components/Layout/ShopSetUpLayout";
-import Bookings from "./Bookings";
+import Bookings from "./Shop/Bookings";
 import HomeContent from "./Home/HomeContent";
 import HomeInfo from "./Home/HomeInfo";
-import Login from "./Login";
-import RegisterForm from "./Register/RegisterForm";
-import Services from "./Services";
-import AddServices from "./Services/AddServices";
-import DeleteServices from "./Services/DeleteServices";
-import UpdateServices from "./Services/UpdateServices";
-import Profile from "./ShopPofile";
-import CreateProfile from "./ShopPofile/CreateProfile";
-import EditProfile from "./ShopPofile/EditProfile";
-import Otp from "./Otp";
-import Verification from "./Register/Verification";
-import ShopLocation from "./ShopLocation";
-import UploadLogo from "./UploadLogo";
-import UploadCoverPicture from "./UploadCoverPicture";
-import UploadMorePic from "./UploadMorePic";
-import AddService from "./AddService";
-import ScheduleTime from "./ScheduleTime";
-import ScheduleByDay from "./ScheduleByDay";
-import AddInterval from "./AddInterval";
-import IntervalList from "./IntervalList";
-import IntervalForm from "./IntervalForm";
-import ShopType from "./ShopType";
-import NumberOfSeat from "./NumberOfSeat";
-import ProfileCompleted from "./ProfileCompleted";
+import Login from "./Home/Login";
+import RegisterForm from "./Home/Register/RegisterForm";
+import Services from "./Shop/Services";
+import AddServices from "./Shop/Services/AddServices";
+import DeleteServices from "./Shop/Services/DeleteServices";
+import UpdateServices from "./Shop/Services/UpdateServices";
+import Profile from "./Shop/ShopPofile";
+import CreateProfile from "./Shop/ShopPofile/CreateProfile";
+import EditProfile from "./Shop/ShopPofile/EditProfile";
+import Otp from "./Home/Otp";
+import Verification from "./Home/Register/Verification";
+import ShopLocation from "./Shop/ShopLocation";
+import UploadLogo from "./Shop/UploadLogo";
+import UploadCoverPicture from "./Shop/UploadCoverPicture";
+import UploadMorePic from "./Shop/UploadMorePic";
+import AddService from "./Shop/AddService";
+import ScheduleTime from "./Shop/ScheduleTime";
+import ScheduleByDay from "./Shop/ScheduleByDay";
+import AddInterval from "./Shop/AddInterval";
+import IntervalList from "./Shop/IntervalList";
+import IntervalForm from "./Shop/IntervalForm";
+import ShopType from "./Shop/ShopType";
+import NumberOfSeat from "./Shop/NumberOfSeat";
+import ProfileCompleted from "./Shop/ProfileCompleted";
 
 import loginImage from "../assets/Icons/login.svg";
 import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";
-import ViewProfile from "./ViewProfile";
-import Offers from "./Offers";
-import AddOffers from "./AddOffers";
-import ShopNearMe from "./ShopNearMe";
-import ScheduleWork from "./ScheduleWork";
-import ScheduleWorkByDay from "./ScheduleWorkByDay";
-import ScheduleWorkInterval from "./ScheduleWorkInterval";
-import ScheduleIntervalList from "./ScheduleIntervalList";
-import ScheduleIntervalForm from "./ScheduleIntervalForm";
-import ProfileRatings from "./ProfileRatings";
-import ServiceList from "./ServiceList";
-import AddServiceForm from "./AddServiceForm";
-import DisableService from "./DisableService";
-import ServiceHistory from "./ServiceHistory";
-import QrScanner from "./QrScanner";
-import NotificationList from "./NotificationList";
-import NotificationContent from "./NotificationContent";
+import ViewProfile from "./Shop/ViewProfile";
+import Offers from "./Shop/Offers";
+import AddOffers from "./Shop/AddOffers";
+import ShopNearMe from "./Shop/ShopNearMe";
+import ScheduleWork from "./Shop/ScheduleWork";
+import ScheduleWorkByDay from "./Shop/ScheduleWorkByDay";
+import ScheduleWorkInterval from "./Shop/ScheduleWorkInterval";
+import ScheduleIntervalList from "./Shop/ScheduleIntervalList";
+import ScheduleIntervalForm from "./Shop/ScheduleIntervalForm";
+import ProfileRatings from "./Shop/ProfileRatings";
+import ServiceList from "./Shop/ServiceList";
+import AddServiceForm from "./Shop/AddServiceForm";
+import DisableService from "./Shop/DisableService";
+import ServiceHistory from "./Shop/ServiceHistory";
+import QrScanner from "./Shop/QrScanner";
+import NotificationList from "./Shop/NotificationList";
+import NotificationContent from "./Shop/NotificationContent";
+import FilterForm from "./Shop/FilterForm";
+import DetailedBookingView from "./Shop/DetailedBokkingView";
 
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
@@ -88,12 +90,12 @@ const Router = () => {
         <Route path="shop-type" element={<ShopType />} />
         <Route path="no-of-seat" element={<NumberOfSeat />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
+        <Route path="add-service-form" element={<AddServiceForm />} />
       </Route>
 
       <Route path="shop" element={<ShopLayout />}>
         <Route index element={<Bookings />} />
         <Route path="view-profile" element={<ViewProfile />} />
-
         <Route path="offers" element={<Offers />} />
         <Route path="add-offers" element={<AddOffers />} />
         <Route path="shop-near-me" element={<ShopNearMe />} />
@@ -101,14 +103,8 @@ const Router = () => {
         <Route path="schedule-work" element={<ScheduleWork />} />
         <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
         <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
-        <Route
-          path="schedule-interval-list"
-          element={<ScheduleIntervalList />}
-        />
-        <Route
-          path="schedule-interval-form"
-          element={<ScheduleIntervalForm />}
-        />
+        <Route path="schedule-interval-list" element={<ScheduleIntervalList />}/>
+        <Route path="schedule-interval-form" element={<ScheduleIntervalForm />}/>
         <Route path="ratings" element={<ProfileRatings />} />
         <Route path="service" element={<ServiceList />} />
         <Route path="add-service-form" element={<AddServiceForm />} />
@@ -117,12 +113,14 @@ const Router = () => {
         <Route path="qr-scan" element={<QrScanner />} />
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
+        <Route path="filter-list" element = {<FilterForm/>}/>
+        <Route path="detailed-booking" element = {<DetailedBookingView/>}/>
       </Route>
 
       <Route path="offers" element={<Offers />} />
-      {/* <Route path="bookings" element={<Bookings />} /> */}
       <Route path="services" element={<Services />}>
         <Route index element={<AddServices />} />
+        
         <Route path="update" element={<UpdateServices />} />
         <Route path="delete" element={<DeleteServices />} />
       </Route>

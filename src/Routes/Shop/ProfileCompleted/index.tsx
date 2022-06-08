@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import finish from "../../assets/Icons/finish.svg";
+import finish from "../../../assets/Icons/finish.svg";
 
 const ProfileCompleted = () => {
   const navigate = useNavigate();

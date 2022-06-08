@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import otpimage from "../../assets/Icons/otp.svg";
+import otpimage from "../../../assets/Icons/otp.svg";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
@@ -32,7 +32,7 @@ const Otp = ({ setHeaderImage }: PropsTypes) => {
           navigate("/verification");
         }}
       >
-        Login
+        Verify
       </button>
     </div>
   );

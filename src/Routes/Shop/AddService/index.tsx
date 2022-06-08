@@ -5,7 +5,10 @@ const AddService = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button>Add</button>
+      <button 
+      onClick={() => {
+        navigate("/setup/add-service-form");
+      }} >Add</button>
       <div className="service-list">
         <div>Spa</div>
         <div>Hair Cutting</div>
