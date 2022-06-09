@@ -4,7 +4,8 @@ import registerImage from "../../../../assets/Icons/sign.svg";
 import InputField from "../../../../Components/Input";
 import { ShopRegister, ShopRegisterError } from "../../../../Types/Shop";
 import postCall from "../../../../Services/postCall";
-import {ValidationError} from "../../../../Types/Error"
+import {ValidationError} from "../../../../Types/Error";
+import useIdleCall  from "../../../../Hooks/useIdleCall";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
@@ -25,10 +26,16 @@ const RegisterForm = ({ setHeaderImage }: PropsTypes) => {
 
   const [registerFormErrorData, setRegisterFormErrorData] = useState<ShopRegisterError>({...emptyForm});
 
+  const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
+
   const [submitted, setSubmitted] = useState<boolean>(false);
 
+  useIdleCall(() => {
+    currentUpdatingField && validate(currentUpdatingField);
+  },[registerFormData],1000)
+
   const onChange = (key:string,value:string) => {
-    validate(key);
+    setCurrentUpdatingField(key);
     setRegisterFormData(prev=>({...prev,[key]:value}));
   }
 
