@@ -1,0 +1,178 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Sofia Pro Regular';
+}
+
+#__next {
+    height: 100%;
+}
+
+form{
+    display: block;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --footer-background: #F5F5F5;
+    --secondary-background: #F5F5F5;
+    --light-black: rgba(0, 0, 0, 0.65);
+    --primary-color: #f2f2f2;
+    --secondary-color: #f89b3d;
+    --secondary-dark-font-color: #825600;
+    --secondary-light-font-color: rgba(146, 0, 66, 0.14);
+    --border-color: #20716a;
+    --button-color: #20716a;
+    --button-secondary-color: #fff;
+    --input-background-color: rgb(235, 241, 241);
+    --red: #FF0004;
+    --gray: #595959;
+    --light-gray: #E8E8E8;
+    --green: #059805;
+
+
+    --small: 12px;
+    --medium: 14px;
+    --large: 16px;
+    --xlarge: 18px;
+    --slarge: 20px;
+    --xxlarge: 24px;
+    --xxxlarge: 32px;
+    --xxxxlarge: 46px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+input[type=file]{
+    display: none;
+}
+
+.input-field-container {
+    width: 100%;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    transition: 0.2s ease-in-out;
+    color: #555;
+    pointer-events: none;
+}
+
+.input-field .text-area-label {
+    top: 25px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 20px 20px 20px 40px;
+    border: none;
+    background-color: var(--input-background-color);
+    border-radius: 5px;
+}
+
+.input-field-container-error .input-field input,
+.input-field-container-error .input-field textarea {
+    border: solid 1px red;
+}
+
+.input-field-container-error label {
+    color: #d32f2f;
+}
+
+
+.input-field textarea {
+    resize: none;
+    height: 160px;
+}
+
+.input-field input:focus~label,
+.input-field textarea:focus~label,
+.input-field .filled-label {
+    top: 0;
+    left: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.input-field-icon,
+.input-field-info-icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.textarea-field .input-field-icon,
+.textarea-field .input-field-info-icon {
+    top: 25px;
+}
+
+.input-field-info-icon {
+    left: unset;
+    right: 10px;
+    cursor: pointer;
+}
+
+.error-text {
+    text-align: right;
+    color: #d32f2f;
+    font-size: 0.75rem;
+}
+
+.upload-field{
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: var(--input-background-color);
+    border-radius: 5px;
+    /* align-items: end; */
+    display: grid;
+}
+
+.upload-button{
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 540px) {
+
+    :root {
+        --small: 10px;
+        --medium: 12px;
+        --large: 14px;
+        --xlarge: 16px;
+        --slarge: 18px;
+        --xxlarge: 22px;
+        --xxxlarge: 28px;
+        --xxxxlarge: 34px;
+    }
+
+}

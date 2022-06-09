@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import registerImage from "../../../../assets/Icons/sign.svg";
-import "./style.css";
+import InputField from "../../../../Components/Input";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
@@ -30,34 +30,36 @@ const RegisterForm = ({ setHeaderImage }: PropsTypes) => {
       <div className="form-content-container">
         <div className="form-element">
           <form>
-            <div className="form-input">
-              <label>
-                <input type="text" placeholder="Shop Name" />
-              </label>
+            <div className="form-container">
+              <InputField
+                label="Shop Name"
+                value=""
+                onChange={() => {}}
+              />
+              <InputField
+                label="Phone Number"
+                value=""
+                onChange={() => {}}
+              />
+              <InputField
+                label="Register Number"
+                value=""
+                onChange={() => {}}
+              />
+              <InputField
+                label="Owner Name"
+                value=""
+                onChange={() => {}}
+              />
+              <button
+                className="register-button"
+                onClick={() => {
+                  navigate("/otp");
+                }}
+                >
+                Register
+              </button>
             </div>
-            <div className="form-input">
-              <label>
-                <input type="text" placeholder="Phone Number" />
-              </label>
-            </div>
-            <div className="form-input">
-              <label>
-                <input type="text" placeholder="Register Number" />
-              </label>
-            </div>
-            <div className="form-input">
-              <label>
-                <input type="text" placeholder="Owner Name" />
-              </label>
-            </div>
-            <button
-              className="register-button"
-              onClick={() => {
-                navigate("/otp");
-              }}
-            >
-              Register
-            </button>
           </form>
         </div>
       </div>

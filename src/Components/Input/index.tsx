@@ -1,15 +1,76 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import IconAndInfo from "../Input/Components/IconAndInfo";
+import Label from "../Input/Components/Label";
+import Layout from "../Input/Components/Layout";
 
-interface PropsTypes {
-  type: string;
-}
-
-const Input = ({ type }: PropsTypes) => {
-  return (
-    <div>
-      <input type={type} />
-    </div>
-  );
+type PropsTypes = {
+    type?: "text" | "number" | "password" | "submit" | "button" | "textarea";
+    label?: string;
+    icon?: string;
+    error?: string;
+    info?: string;
+    value: string;
+    disabled?: boolean;
+    onChange: (value: string, e: any) => void;
+    blurred?: boolean;
 };
 
-export default Input;
+const InputField = ({
+    type = "text",
+    label,
+    icon,
+    error,
+    info,
+    value,
+    onChange,
+    disabled = false,
+    blurred = false
+}: PropsTypes) => {
+    const [isBlurred, setIsBlurred] = useState<boolean>(false);
+
+    useEffect(() => {
+        setIsBlurred(blurred);
+    }, [blurred]);
+
+    const onBlur = () => {
+      setIsBlurred(true);
+    };
+
+    return (
+        <Layout
+            error={error}
+            isBlurred={isBlurred}
+            type={type}
+        >
+            {type === "textarea" ? (
+                <textarea
+                    title={label}
+                    value={value}
+                    onChange={e => onChange(e.target.value, e)}
+                    disabled={disabled}
+                    onBlur={onBlur}
+                />
+            ) : (
+                <input
+                    type={type}
+                    title={label}
+                    value={value}
+                    onChange={e => onChange(e.target.value, e)}
+                    disabled={disabled}
+                    onBlur={onBlur}
+                />
+            )}
+            <Label
+                label={label}
+                type={type}
+                value={value}
+                />
+            <IconAndInfo
+                icon={icon}
+                info={info}
+                />
+        </Layout>
+    );
+};
+
+export default InputField;
