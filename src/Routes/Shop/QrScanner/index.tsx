@@ -1,8 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
-const QrScanner = () => {
+interface PropsType {
+  setIconPath: Dispatch<SetStateAction<string>>;
+}
+
+const QrScanner = ({ setIconPath }: PropsType) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIconPath("none");
+  });
+
   return (
     <div>
       <button

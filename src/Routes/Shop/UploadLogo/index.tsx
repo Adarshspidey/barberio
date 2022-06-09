@@ -5,6 +5,7 @@ const UploadLogo = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <h1>Upload Logo</h1>
       <button
         onClick={() => {
           navigate("/setup/upload-cover-pic");

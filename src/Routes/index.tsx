@@ -30,6 +30,7 @@ import NumberOfSeat from "./Shop/NumberOfSeat";
 import ProfileCompleted from "./Shop/ProfileCompleted";
 
 import loginImage from "../assets/Icons/login.svg";
+import bookingAcive from "../assets/Icons/Booking-active.svg";
 import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";
 import ViewProfile from "./Shop/ViewProfile";
@@ -54,6 +55,8 @@ import DetailedBookingView from "./Shop/DetailedBokkingView";
 
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
+  const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
+  const [iconPath, setIconPath] = useState<string>("");
   return (
     <Routes>
       <Route path="" element={<HomeLayout headerImage={headerImage} />}>
@@ -90,37 +93,170 @@ const Router = () => {
         <Route path="shop-type" element={<ShopType />} />
         <Route path="no-of-seat" element={<NumberOfSeat />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
-        <Route path="add-service-form" element={<AddServiceForm />} />
+        <Route
+          path="add-service-form"
+          element={
+            <AddServiceForm
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
       </Route>
 
-      <Route path="shop" element={<ShopLayout />}>
-        <Route index element={<Bookings />} />
-        <Route path="view-profile" element={<ViewProfile />} />
-        <Route path="offers" element={<Offers />} />
-        <Route path="add-offers" element={<AddOffers />} />
-        <Route path="shop-near-me" element={<ShopNearMe />} />
-        <Route path="edit" element={<EditProfile />} />
-        <Route path="schedule-work" element={<ScheduleWork />} />
-        <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
-        <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
-        <Route path="schedule-interval-list" element={<ScheduleIntervalList />}/>
-        <Route path="schedule-interval-form" element={<ScheduleIntervalForm />}/>
+      <Route
+        path="shop"
+        element={<ShopLayout activeIcon={activeIcon} iconPath={iconPath} />}
+      >
+        <Route
+          index
+          element={
+            <Bookings setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
+          }
+        />
+        <Route
+          path="view-profile"
+          element={
+            <ViewProfile
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="offers"
+          element={
+            <Offers setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
+          }
+        />
+        <Route
+          path="add-offers"
+          element={
+            <AddOffers
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="shop-near-me"
+          element={
+            <ShopNearMe
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="edit"
+          element={
+            <EditProfile
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="schedule-work"
+          element={
+            <ScheduleWork
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="schedule-work-by-day"
+          element={
+            <ScheduleWorkByDay
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="schedule-interval"
+          element={
+            <ScheduleWorkInterval
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="schedule-interval-list"
+          element={
+            <ScheduleIntervalList
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="schedule-interval-form"
+          element={
+            <ScheduleIntervalForm
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
         <Route path="ratings" element={<ProfileRatings />} />
-        <Route path="service" element={<ServiceList />} />
-        <Route path="add-service-form" element={<AddServiceForm />} />
-        <Route path="disable-service" element={<DisableService />} />
-        <Route path="service-history" element={<ServiceHistory />} />
-        <Route path="qr-scan" element={<QrScanner />} />
-        <Route path="notification-list" element={<NotificationList />} />
-        <Route path="notification-body" element={<NotificationContent />} />
-        <Route path="filter-list" element = {<FilterForm/>}/>
-        <Route path="detailed-booking" element = {<DetailedBookingView/>}/>
+        <Route
+          path="service"
+          element={
+            <ServiceList
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="add-service-form"
+          element={
+            <AddServiceForm
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="disable-service"
+          element={
+            <DisableService
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="service-history"
+          element={
+            <ServiceHistory
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+        <Route
+          path="qr-scan"
+          element={<QrScanner setIconPath={setIconPath} />}
+        />
+        <Route
+          path="notification-list"
+          element={<NotificationList setIconPath={setIconPath} />}
+        />
+        <Route
+          path="notification-body"
+          element={<NotificationContent setIconPath={setIconPath} />}
+        />
+        <Route path="filter-list" element={<FilterForm />} />
+        <Route path="detailed-booking" element={<DetailedBookingView />} />
       </Route>
 
-      <Route path="offers" element={<Offers />} />
       <Route path="services" element={<Services />}>
         <Route index element={<AddServices />} />
-        
+
         <Route path="update" element={<UpdateServices />} />
         <Route path="delete" element={<DeleteServices />} />
       </Route>

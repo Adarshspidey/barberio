@@ -5,6 +5,7 @@ const UploadMorePic = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <h1>Upload More Image</h1>
       <button
         onClick={() => {
           navigate("/setup/add-service");

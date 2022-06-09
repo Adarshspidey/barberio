@@ -7,7 +7,13 @@ import historyIcon from "../../../assets/Icons/history.svg";
 import servicesIcon from "../../../assets/Icons/Services.svg";
 import searchIcon from "../../../assets/Icons/search.svg";
 import notificationIcon from "../../../assets/Icons/notifications.svg";
-const ShopLayout = () => {
+
+interface PropsType {
+  activeIcon: string;
+  iconPath: string;
+}
+
+const ShopLayout = ({ activeIcon, iconPath }: PropsType) => {
   const navigate = useNavigate();
   return (
     <div className="shoplayout-component">
@@ -33,14 +39,14 @@ const ShopLayout = () => {
             onClick={() => {
               navigate("/shop/view-profile");
             }}
-            src={profileIcon}
+            src={`${iconPath === "profile" ? activeIcon : profileIcon}`}
             alt="profile"
           />
           <img
             onClick={() => {
               navigate("/shop/service");
             }}
-            src={servicesIcon}
+            src={`${iconPath === "service" ? activeIcon : servicesIcon}`}
             alt="services"
           />
 
@@ -49,12 +55,12 @@ const ShopLayout = () => {
               onClick={() => {
                 navigate("/shop/qr-scan");
               }}
-              src={scanIcon}
+              src={`${iconPath === "qr" ? activeIcon : scanIcon}`}
               alt="scan"
             />
           </div>
           <img
-            src={bookingIcon}
+            src={`${iconPath === "booking" ? activeIcon : bookingIcon}`}
             alt="booking"
             onClick={() => {
               navigate("/shop");
@@ -64,7 +70,7 @@ const ShopLayout = () => {
             onClick={() => {
               navigate("/shop/service-history");
             }}
-            src={historyIcon}
+            src={`${iconPath === "history" ? activeIcon : historyIcon}`}
             alt="history"
           />
           <div></div>

@@ -1,23 +1,74 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2723_1754)">
-<g filter="url(#filter0_d_2723_1754)">
-<path d="M8.79999 10H15.8175V6.5H5.29999V17H8.79999V10ZM8.79999 31H5.29999V41.5H15.8175V38H8.79999V31ZM36.8 38H29.8V41.5H40.3V31H36.8V38ZM29.8 10H36.8V17H40.3V6.5H29.8V10Z" fill="white"/>
-<path d="M10.55 22.25H21.05V11.75H10.55V22.25ZM14.05 15.25H17.55V18.75H14.05V15.25ZM10.55 36.25H21.05V25.75H10.55V36.25ZM14.05 29.25H17.55V32.75H14.05V29.25ZM35.05 11.75H24.55V22.25H35.05V11.75ZM31.55 18.75H28.05V15.25H31.55V18.75ZM24.5675 25.75H28.0675V29.25H24.5675V25.75ZM28.0675 29.25H31.5675V32.75H28.0675V29.25ZM31.5675 32.75H35.0675V36.25H31.5675V32.75ZM31.5675 25.75H35.0675V29.25H31.5675V25.75Z" fill="white"/>
+<svg width="108" height="107" viewBox="0 0 108 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ii_3001_1055)">
+<ellipse cx="54.2" cy="47" rx="43.2" ry="40" fill="url(#paint0_linear_3001_1055)"/>
+</g>
+<g filter="url(#filter1_dii_3001_1055)">
+<circle cx="54" cy="47" r="40" fill="url(#paint1_linear_3001_1055)"/>
+</g>
+<g clip-path="url(#clip0_3001_1055)">
+<g filter="url(#filter2_d_3001_1055)">
+<path d="M38.8 33H45.8175V29.5H35.3V40H38.8V33ZM38.8 54H35.3V64.5H45.8175V61H38.8V54ZM66.8 61H59.8V64.5H70.3V54H66.8V61ZM59.8 33H66.8V40H70.3V29.5H59.8V33Z" fill="white"/>
+<path d="M40.55 45.25H51.05V34.75H40.55V45.25ZM44.05 38.25H47.55V41.75H44.05V38.25ZM40.55 59.25H51.05V48.75H40.55V59.25ZM44.05 52.25H47.55V55.75H44.05V52.25ZM65.0501 34.75H54.55V45.25H65.0501V34.75ZM61.5501 41.75H58.0501V38.25H61.5501V41.75ZM54.5676 48.75H58.0676V52.25H54.5676V48.75ZM58.0676 52.25H61.5676V55.75H58.0676V52.25ZM61.5676 55.75H65.0676V59.25H61.5676V55.75ZM61.5676 48.75H65.0676V52.25H61.5676V48.75Z" fill="white"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_d_2723_1754" x="-9.20001" y="-6" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_ii_3001_1055" x="11" y="4.39259" width="86.4" height="85.2148" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.60741"/>
+<feGaussianBlur stdDeviation="1.3037"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.826165 0 0 0 0 0.038651 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_3001_1055"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2.60741"/>
+<feGaussianBlur stdDeviation="1.3037"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.659882 0 0 0 0 0.476118 0 0 0 0 0.0222745 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow_3001_1055" result="effect2_innerShadow_3001_1055"/>
+</filter>
+<filter id="filter1_dii_3001_1055" x="0.666667" y="0.333333" width="106.667" height="106.667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="6.66667"/>
+<feGaussianBlur stdDeviation="6.66667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0698039 0 0 0 0 0.0972549 0 0 0 0 0.0917647 0 0 0 0.3975 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3001_1055"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3001_1055" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.74074"/>
+<feGaussianBlur stdDeviation="1.37037"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.436275 0 0 0 0 0.607843 0 0 0 0 0.573529 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_3001_1055"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2.74074"/>
+<feGaussianBlur stdDeviation="1.37037"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.239951 0 0 0 0 0.334314 0 0 0 0 0.315441 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_3001_1055" result="effect3_innerShadow_3001_1055"/>
+</filter>
+<filter id="filter2_d_3001_1055" x="20.8" y="17" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="2"/>
 <feGaussianBlur stdDeviation="2"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2723_1754"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2723_1754" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3001_1055"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3001_1055" result="shape"/>
 </filter>
-<clipPath id="clip0_2723_1754">
-<rect width="48" height="48" fill="white"/>
+<linearGradient id="paint0_linear_3001_1055" x1="54.2" y1="7" x2="54.2" y2="87" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC909"/>
+<stop offset="1" stop-color="#B68306"/>
+</linearGradient>
+<linearGradient id="paint1_linear_3001_1055" x1="54" y1="7" x2="54" y2="87" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6A938B"/>
+<stop offset="1" stop-color="#435D58"/>
+</linearGradient>
+<clipPath id="clip0_3001_1055">
+<rect width="48" height="48" fill="white" transform="translate(30 23)"/>
 </clipPath>
 </defs>
 </svg>
