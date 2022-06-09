@@ -12,7 +12,7 @@ type PropsTypes = {
     value: string;
     disabled?: boolean;
     onChange: (value: string, e: any) => void;
-    blurred?: boolean;
+    submitted?: boolean;
 };
 
 const InputField = ({
@@ -24,13 +24,13 @@ const InputField = ({
     value,
     onChange,
     disabled = false,
-    blurred = false
+    submitted = false
 }: PropsTypes) => {
     const [isBlurred, setIsBlurred] = useState<boolean>(false);
 
     useEffect(() => {
-        setIsBlurred(blurred);
-    }, [blurred]);
+        setIsBlurred(submitted);
+    }, [submitted]);
 
     const onBlur = () => {
       setIsBlurred(true);

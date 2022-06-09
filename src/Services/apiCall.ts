@@ -4,7 +4,6 @@ import apiUrl from "../Config/apiUrl";
 export default async (url: string, method: string, data?:{}, isFile = false)=>{
     let response = await fetch(`${apiUrl}${url}`,{
         method,
-        credentials: "include",
         headers: isFile
         ? undefined
         : {

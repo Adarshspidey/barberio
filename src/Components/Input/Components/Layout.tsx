@@ -9,7 +9,7 @@ const Layout = ({error,type,children,isBlurred}:PropsTypes) => {
   return (
     <div
             className={`input-field-container ${
-                error ? "input-field-container-error" : ""
+                error && isBlurred ? "input-field-container-error" : ""
             }`}
         >
             <div
@@ -19,7 +19,7 @@ const Layout = ({error,type,children,isBlurred}:PropsTypes) => {
             >
                 {children}
             </div>
-            {error && isBlurred && <div className="error-text">{error}</div>}
+            <div className="error-text">{error && isBlurred && error}</div>
         </div>
   )
 }
