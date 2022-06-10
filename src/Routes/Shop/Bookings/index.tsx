@@ -7,6 +7,7 @@ import bookingActive from "../../../assets/Icons/Booking-active.svg";
 const data: Array<BookingData> = [
   {
     title: "Hair cutting",
+    time: "11:30",
     duration: 20,
     rate: 10,
     name: "Ashik",
@@ -14,6 +15,7 @@ const data: Array<BookingData> = [
   },
   {
     title: "Hair cutting",
+    time: "11:30",
     duration: 20,
     rate: 10,
     name: "Ashik",

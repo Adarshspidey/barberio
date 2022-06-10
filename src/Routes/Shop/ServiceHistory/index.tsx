@@ -14,6 +14,7 @@ interface PropsType {
 const data: Array<BookingData> = [
   {
     title: "Hair cutting",
+    time: "11:30",
     duration: 20,
     rate: 10,
     name: "Ashik",
@@ -21,6 +22,7 @@ const data: Array<BookingData> = [
   },
   {
     title: "Hair cutting",
+    time: "11:30",
     duration: 20,
     rate: 10,
     name: "Ashik",
