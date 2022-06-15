@@ -13,7 +13,7 @@ const IntervalForm = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/setup/shop-type");
+          navigate("/setup/interval-list");
         }}
       >
         Save

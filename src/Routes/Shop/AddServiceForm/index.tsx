@@ -18,13 +18,6 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
   return (
     <div>
       Add Service
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
       <div>
         Name of Service <input type="text" />
       </div>

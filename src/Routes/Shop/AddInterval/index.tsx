@@ -5,18 +5,39 @@ const AddInterval = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <h1>Intervals</h1>
       <div>
-        <div>Spa</div>
-        <div>Facial</div>
-        <div>Hair Cutting</div>
+        <div
+          onClick={() => {
+            navigate("/setup/interval-list");
+          }}
+        >
+          Spa
+        </div>
+        <div
+          onClick={() => {
+            navigate("/setup/interval-list");
+          }}
+        >
+          Facial
+        </div>
+        <div
+          onClick={() => {
+            navigate("/setup/interval-list");
+          }}
+        >
+          Hair Cutting
+        </div>
       </div>
-      Common Interval Start Time
+      <br />
+      Common Interval <br /> <br />
+      Start Time
       <input type="text" />
       End Time
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/setup/interval-list");
+          navigate("/setup/shop-type");
         }}
       >
         Next

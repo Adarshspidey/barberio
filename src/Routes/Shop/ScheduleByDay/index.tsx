@@ -13,10 +13,10 @@ const ScheduleByDay = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/setup/interval");
+          navigate("/setup/schedule-time");
         }}
       >
-        Next
+        Save
       </button>
     </div>
   );
