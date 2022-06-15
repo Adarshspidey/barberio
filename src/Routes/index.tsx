@@ -52,6 +52,7 @@ import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
 import DetailedBookingView from "./Shop/DetailedBokkingView";
+import BookingSeatView from "./Shop/BookingSeatView";
 
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
@@ -114,6 +115,17 @@ const Router = () => {
             <Bookings setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
           }
         />
+
+        <Route
+          path="seat"
+          element={
+            <BookingSeatView
+              setActiveIcon={setActiveIcon}
+              setIconPath={setIconPath}
+            />
+          }
+        />
+
         <Route
           path="view-profile"
           element={
