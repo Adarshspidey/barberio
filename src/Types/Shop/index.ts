@@ -15,14 +15,14 @@ export type ShopRegisterError = {
 export type ShopServiceForm = {
   name: string;
   description: string;
-  time: string;
+  sessionTime: string;
   rate: string;
 };
 
 export type ShopServiceFormError = {
   name: string;
   description: string;
-  time: string;
+  sessionTime: string;
   rate: string;
 };
 export type ShopLogin = {

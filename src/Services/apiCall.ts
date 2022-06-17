@@ -8,7 +8,7 @@ export default async (url: string, method: string, data?:{}, isFile = false)=>{
         ? undefined
         : {
            "Content-Type" : "application/json",
-
+              "Authorization" : `Bearer ${localStorage.getItem("token")}`
          },
         body: (isFile && data) || data ? JSON.stringify(data) : undefined,
 
