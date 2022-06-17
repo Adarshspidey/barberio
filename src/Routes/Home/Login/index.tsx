@@ -72,6 +72,7 @@ const Login = ({ setHeaderImage }: PropsTypes) => {
     setSubmitted(true);
     const result = await postCall("/auth/login", loginData);
     if (!result?.status) {
+      console.log(result.data);
       return result.data.forEach(({ path, message }: ValidationError) => {
         onErrorChange(path, message);
       });
