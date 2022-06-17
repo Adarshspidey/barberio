@@ -23,31 +23,13 @@ const emptyForm: OtpForm = {
 };
 
 const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
-  console.log(phone);
-  const [otpData, setOtpData] = useState<OtpForm>({ ...emptyForm });
+  const [otp, setOtp] = useState<string>("");
 
   const [otpErrorData, setOtpErrorData] = useState<OtpFormError>({
     ...emptyForm,
   });
 
-  const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
-
   const [submitted, setSubmitted] = useState<boolean>(false);
-
-  const { otp } = otpData;
-
-  useIdleCall(
-    () => {
-      currentUpdatingField && validate(currentUpdatingField);
-    },
-    [otpData],
-    1000
-  );
-
-  const onChange = (key: string, value: string) => {
-    setCurrentUpdatingField(key);
-    setOtpData((prev) => ({ ...prev, [key]: value }));
-  };
 
   const onErrorChange = (key: string, value: string) => {
     setOtpErrorData((prev) => ({ ...prev, [key]: value }));
@@ -55,7 +37,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
 
   const validate = async (key: string) => {
     setOtpErrorData((prev) => ({ ...prev, [key]: "" }));
-    const result = await postCall("/auth/otp/validate", otpData);
+    const result = await postCall("/auth/otp/validate", otp);
     if (!result?.status) {
       return result.data.forEach(({ path, message }: ValidationError) => {
         if (key === path) onErrorChange(path, message);
@@ -72,7 +54,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
     setSubmitted(true);
     const result = await postCall("/auth/otp-verification", {
       phone,
-      otp: otpData,
+      otp,
     });
 
     if (!result?.status) {
@@ -108,7 +90,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
           value={otp}
           submitted={submitted}
           error={otpErrorData.otp}
-          onChange={(value) => onChange("otp", value)}
+          onChange={(value) => setOtp(value)}
         />
         <button
           className="register-button"

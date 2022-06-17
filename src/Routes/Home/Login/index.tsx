@@ -56,7 +56,7 @@ const Login = ({ setHeaderImage, setPhone }: PropsTypes) => {
   const validate = async (key: string) => {
     setLoginErrorData((prev) => ({ ...prev, [key]: "" }));
     const result = await postCall("/auth/login/validate", loginData);
-    setPhone = result.data.phone;
+
     if (!result?.status) {
       return result.data.forEach(({ path, message }: ValidationError) => {
         if (key === path) onErrorChange(path, message);
@@ -79,6 +79,7 @@ const Login = ({ setHeaderImage, setPhone }: PropsTypes) => {
       });
       return;
     }
+    setPhone(loginData.phone);
     return navigate("/otp");
   };
 
