@@ -67,6 +67,7 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
         onErrorChange(path,message);
       })
     }
+    return navigate("/shop/service");
   }
 
   return (
