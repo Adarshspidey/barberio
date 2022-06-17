@@ -62,7 +62,6 @@ const Login = ({ setHeaderImage }: PropsTypes) => {
     }
   };
 
-  const navigate = useNavigate();
   useEffect(() => {
     setHeaderImage(loginImage);
   });
@@ -76,9 +75,13 @@ const Login = ({ setHeaderImage }: PropsTypes) => {
       return result.data.forEach(({ path, message }: ValidationError) => {
         onErrorChange(path, message);
       });
+      return;
     }
+    console.log(result);
     return navigate("/otp");
   };
+
+  const navigate = useNavigate();
 
   return (
     <div>
