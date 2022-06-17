@@ -56,6 +56,7 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
     setIconPath("service");
   });
   
+  
   const onSubmit = async(e:SyntheticEvent)=>{
     e.preventDefault();
     setSubmit(true);
@@ -108,7 +109,7 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
                 error={serviceFormError.name}
                 onChange={(value) => onChange("rate",value)}
          />      
-         <button
+        <button
         onClick={() => {
           navigate("/shop/service");
         }}

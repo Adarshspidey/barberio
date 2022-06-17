@@ -5,14 +5,20 @@ const IntervalList = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button>Add</button>
+      <button
+        onClick={() => {
+          navigate("/setup/interval-form");
+        }}
+      >
+        Add
+      </button>
       <div className="interval-list">
         <div>Interval 1</div>
         <div>Interval 2</div>
       </div>
       <button
         onClick={() => {
-          navigate("/setup/interval-form");
+          navigate("/setup/interval");
         }}
       >
         Save

@@ -6,7 +6,13 @@ const DetailedBookingView = () => {
   return (
     <div>
       DetailedBookingView
-      <button>Seat</button>
+      <button
+        onClick={() => {
+          navigate("/shop/seat");
+        }}
+      >
+        Seat
+      </button>
       <button
         onClick={() => {
           navigate(-1);

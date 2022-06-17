@@ -5,7 +5,7 @@ const ShopType = () => {
   const navigate = useNavigate();
   return (
     <div>
-      Shop Type
+      <h1>Shop Type</h1>
       <input type="text" />
       <button
         onClick={() => {

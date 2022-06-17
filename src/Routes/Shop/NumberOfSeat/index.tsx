@@ -5,7 +5,7 @@ const NumberOfSeat = () => {
   const navigate = useNavigate();
   return (
     <div>
-      Number Of Seats
+      <h1>Number Of Seats</h1>
       <input type="text" />
       <button
         onClick={() => {

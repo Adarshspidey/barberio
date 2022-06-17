@@ -1,16 +1,17 @@
 export type ShopRegister = {
-    name: string;
-    phone: string;
-    registerNumber: string;
-    ownerName: string;
-}
+  name: string;
+  phone: string;
+  registerNumber: string;
+  ownerName: string;
+};
 
 export type ShopRegisterError = {
-    name: string;
-    phone: string;
-    registerNumber: string;
-    ownerName: string;
-}
+  name: string;
+  phone: string;
+  registerNumber: string;
+  ownerName: string;
+};
+
 
 export type ShopServiceForm ={
     name: string;
@@ -25,3 +26,11 @@ export type ShopServiceFormError ={
     time: string;
     rate:string;
 }
+export type ShopLogin = {
+  phone: string;
+};
+
+export type ShopLoginError = {
+  phone: string;
+};
+

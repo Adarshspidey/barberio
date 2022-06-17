@@ -5,7 +5,13 @@ const ScheduleTime = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button>Schedule By Day</button>
+      <button
+        onClick={() => {
+          navigate("/setup/schedule-by-day");
+        }}
+      >
+        Schedule By Day
+      </button>
       <div>Calendar Days</div>
       Start Time
       <input type="text" />
@@ -13,7 +19,7 @@ const ScheduleTime = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/setup/schedule-by-day");
+          navigate("/setup/interval");
         }}
       >
         Next
