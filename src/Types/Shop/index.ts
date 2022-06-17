@@ -12,3 +12,16 @@ export type ShopRegisterError = {
     ownerName: string;
 }
 
+export type ShopServiceForm ={
+    name: string;
+    description: string;
+    time: string;
+    rate:string;
+}
+
+export type ShopServiceFormError ={
+    name: string;
+    description: string;
+    time: string;
+    rate:string;
+}
