@@ -11,7 +11,6 @@ import otpimage from "../../../assets/Icons/otp.svg";
 import { OtpForm, OtpFormError } from "../../../Types/Shop";
 import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
-import useIdleCall from "../../../Hooks/useIdleCall";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
