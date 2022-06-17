@@ -15,14 +15,14 @@ interface PropsType {
 const emptyForm: ShopServiceForm ={
   name:"",
   description:"",
-  time: "", 
+  sessionTime: "", 
   rate:""
 }
 
 const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
   const navigate = useNavigate();
   const [serviceFormData,setServiceFormData] = useState <ShopServiceForm>({...emptyForm});
-  const { name,description,time, rate} =serviceFormData
+  const { name,description,sessionTime, rate} =serviceFormData
   const [serviceFormError,setSrviceFormError] = useState<ShopServiceFormError>({...emptyForm});
   const [serviceUpdatingField, setServiceUpdatingField] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
@@ -48,25 +48,25 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
         if(key === path) onErrorChange(path,message);
       })
     }
-  }
+  } 
 
 
   useEffect(() => {
     setActiveIcon(serviceActive);
     setIconPath("service");
   });
-  
+
   
   const onSubmit = async(e:SyntheticEvent)=>{
     e.preventDefault();
     setSubmit(true);
     const result = await postCall('/services/add-service',serviceFormData);
+    console.log(result)
     if(!result?.status){
       return result.data.forEach(({path,message}:ValidationError)=>{
         onErrorChange(path,message);
       })
     }
-
   }
 
   return (
@@ -92,27 +92,27 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
                 label="Description"
                 value={description}
                 submitted={submit}
-                error={serviceFormError.name}
+                error={serviceFormError.description}
                 onChange={(value) => onChange("description",value)}
          />
          <InputField
                 label=" Time for a session"
-                value={time}
+                value={sessionTime}
                 submitted={submit}
-                error={serviceFormError.name}
-                onChange={(value) => onChange("time",value)}
+                error={serviceFormError.sessionTime}
+                onChange={(value) => onChange("sessionTime",value)}
          />
          <InputField
                 label=" Rate"
                 value={rate}
                 submitted={submit}
-                error={serviceFormError.name}
+                error={serviceFormError.rate}
                 onChange={(value) => onChange("rate",value)}
          />      
         <button
-        onClick={() => {
-          navigate("/shop/service");
-        }}
+        // onClick={() => {
+        //   navigate("/shop/service");
+        // }}
       >
         Save
       </button>
