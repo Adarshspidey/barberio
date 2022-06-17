@@ -5,6 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import OtpField from "../../../Components/OtpField";
 import InputField from "../../../Components/Input";
 import { useNavigate } from "react-router-dom";
 import otpimage from "../../../assets/Icons/otp.svg";
@@ -65,7 +66,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
     }
     console.log(result.data);
     result.data && localStorage.setItem("token", result.data.token);
-    return navigate("/verification");
+    return navigate("/shop");
   };
 
   const navigate = useNavigate();
@@ -84,22 +85,13 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
       <div>Enter your OTP</div>
 
       <form onSubmit={submit}>
-        <InputField
-          label="OTP"
-          value={otp}
-          submitted={submitted}
-          error={otpErrorData.otp}
-          onChange={(value) => setOtp(value)}
+        <OtpField
+          otp={otp}
+          handleOtpChange={(value) => setOtp(value)}
+          otpError={otpErrorData.otp}
         />
-        <button
-          className="register-button"
-          type="submit"
-          // onClick={() => {
-          //   navigate("/verification");
-          // }}
-        >
-          Verify
-        </button>
+
+        <button className="register-button">Verify</button>
       </form>
     </div>
   );
