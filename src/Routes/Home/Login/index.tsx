@@ -16,13 +16,14 @@ import useIdleCall from "../../../Hooks/useIdleCall";
 
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
+  setPhone: Dispatch<SetStateAction<string>>;
 }
 
 const emptyForm: ShopLogin = {
   phone: "",
 };
 
-const Login = ({ setHeaderImage }: PropsTypes) => {
+const Login = ({ setHeaderImage, setPhone }: PropsTypes) => {
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
   const { phone } = loginData;
@@ -55,6 +56,7 @@ const Login = ({ setHeaderImage }: PropsTypes) => {
   const validate = async (key: string) => {
     setLoginErrorData((prev) => ({ ...prev, [key]: "" }));
     const result = await postCall("/auth/login/validate", loginData);
+    setPhone = result.data.phone;
     if (!result?.status) {
       return result.data.forEach(({ path, message }: ValidationError) => {
         if (key === path) onErrorChange(path, message);
@@ -77,7 +79,6 @@ const Login = ({ setHeaderImage }: PropsTypes) => {
       });
       return;
     }
-    console.log(result);
     return navigate("/otp");
   };
 

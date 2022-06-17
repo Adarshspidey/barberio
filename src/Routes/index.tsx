@@ -57,6 +57,7 @@ import BookingSeatView from "./Shop/BookingSeatView";
 const Router = () => {
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
   const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
+  const [phone, setPhone] = useState<string>("");
   const [iconPath, setIconPath] = useState<string>("");
   return (
     <Routes>
@@ -67,13 +68,18 @@ const Router = () => {
         />
         <Route
           path="/login"
-          element={<Login setHeaderImage={setHeaderImage} />}
+          element={
+            <Login setHeaderImage={setHeaderImage} setPhone={setPhone} />
+          }
         />
         <Route
           path="/register"
           element={<RegisterForm setHeaderImage={setHeaderImage} />}
         />
-        <Route path="/otp" element={<Otp setHeaderImage={setHeaderImage} />} />
+        <Route
+          path="/otp"
+          element={<Otp setHeaderImage={setHeaderImage} phone={phone} />}
+        />
         <Route
           path="/verification"
           element={<Verification setHeaderImage={setHeaderImage} />}
