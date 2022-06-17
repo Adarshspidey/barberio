@@ -64,7 +64,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
       return;
     }
     console.log(result.data);
-    result.data && localStorage.setItem("token", result.data);
+    result.data && localStorage.setItem("token", result.data.token);
     return navigate("/verification");
   };
 
