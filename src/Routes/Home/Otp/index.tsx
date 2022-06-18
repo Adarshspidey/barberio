@@ -6,7 +6,6 @@ import {
   useState,
 } from "react";
 import OtpField from "../../../Components/OtpField";
-import InputField from "../../../Components/Input";
 import { useNavigate } from "react-router-dom";
 import otpimage from "../../../assets/Icons/otp.svg";
 import { OtpForm, OtpFormError } from "../../../Types/Shop";
