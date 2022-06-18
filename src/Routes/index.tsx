@@ -47,10 +47,6 @@ import FilterForm from "./Shop/FilterForm";
 import DetailedBookingView from "./Shop/DetailedBokkingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
-import BookingLayout from "../Components/Layout/BookingLayout";
-import ProfileLayout from "../Components/Layout/ProfileLayout";
-import ServiceLayout from "../Components/Layout/ServiceLayout";
-import HistoryLayout from "../Components/Layout/HistoryLayout";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 
 const Router = () => {
