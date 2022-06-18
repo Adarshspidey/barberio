@@ -47,6 +47,7 @@ import FilterForm from "./Shop/FilterForm";
 import DetailedBookingView from "./Shop/DetailedBokkingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
+import BookingLayout from "../Components/Layout/BookingLayout";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -130,12 +131,16 @@ const Router = () => {
       </Route>
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route
-          index
-          element={
-            <Bookings setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
-          }
-        />
+        <Route path="booking" element={<BookingLayout />}>
+          <Route
+            index
+            element={
+              <Bookings setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
+            }
+          />
+        </Route>
+        
+
         <Route
           path="seat"
           element={
