@@ -51,6 +51,7 @@ import BookingLayout from "../Components/Layout/BookingLayout";
 import ProfileLayout from "../Components/Layout/ProfileLayout";
 import ServiceLayout from "../Components/Layout/ServiceLayout";
 import HistoryLayout from "../Components/Layout/HistoryLayout";
+import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -124,12 +125,28 @@ const Router = () => {
       </Route>
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route path="booking" element={<BookingLayout />}>
+        <Route
+          path="booking"
+          element={
+            <ShopSubLayout
+              setShopLayOutProps={setShopLayOutProps}
+              type="Booking"
+            />
+          }
+        >
           <Route index element={<Bookings />} />
           <Route path="seat" element={<BookingSeatView />} />
         </Route>
 
-        <Route path="profile" element={<ProfileLayout />}>
+        <Route
+          path="profile"
+          element={
+            <ShopSubLayout
+              setShopLayOutProps={setShopLayOutProps}
+              type="Profile"
+            />
+          }
+        >
           <Route path="view-profile" element={<ViewProfile />} />
 
           <Route path="offers" element={<Offers />} />
@@ -159,7 +176,15 @@ const Router = () => {
           <Route path="ratings" element={<ProfileRatings />} />
         </Route>
 
-        <Route path="service" element={<ServiceLayout />}>
+        <Route
+          path="service"
+          element={
+            <ShopSubLayout
+              setShopLayOutProps={setShopLayOutProps}
+              type="Service"
+            />
+          }
+        >
           <Route index element={<ServiceList />} />
 
           <Route path="add-service-form" element={<AddServiceForm />} />
@@ -167,7 +192,15 @@ const Router = () => {
           <Route path="disable-service" element={<DisableService />} />
         </Route>
 
-        <Route path="service-history" element={<HistoryLayout />}>
+        <Route
+          path="service-history"
+          element={
+            <ShopSubLayout
+              setShopLayOutProps={setShopLayOutProps}
+              type="History"
+            />
+          }
+        >
           <Route index element={<ServiceHistory />} />
         </Route>
 
