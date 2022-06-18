@@ -18,7 +18,7 @@ const AddServiceForm = () => {
   const navigate = useNavigate();
   const [serviceFormData,setServiceFormData] = useState <ShopServiceForm>({...emptyForm});
   const { name,description,sessionTime, rate} =serviceFormData
-  const [serviceFormError,setSrviceFormError] = useState<ShopServiceFormError>({...emptyForm});
+  const [serviceFormError,setServiceFormError] = useState<ShopServiceFormError>({...emptyForm});
   const [serviceUpdatingField, setServiceUpdatingField] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
 
@@ -31,12 +31,12 @@ const AddServiceForm = () => {
     setServiceFormData(prev=>({...prev,[key]:value}));
   }
   const onErrorChange = (key:string,value:string) => {
-    setSrviceFormError(prev=>({...prev,[key]:value}));
+    setServiceFormError(prev=>({...prev,[key]:value}));
   }
 
   
   const validate = async(key:string) => {
-    setSrviceFormError(prev=>({...prev,[key]:""}));
+    setServiceFormError(prev=>({...prev,[key]:""}));
     const result = await postCall("/services/add-service/validate",serviceFormData);
     if(!result?.status){
       return result.data.forEach(({path,message}:ValidationError)=>{

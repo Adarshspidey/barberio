@@ -1,6 +1,4 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Dispatch, SetStateAction, useEffect } from "react";
 import NotificationCard from "../../../Components/NotificationCard";
 
 
