@@ -1,19 +1,33 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import barberimage from "../../../assets/Icons/barber.svg";
-import "./style.css";
+import { LayOutProps } from "../../../Types/Props";
+
 
 interface PropsTypes {
-  setHeaderImage: Dispatch<SetStateAction<string>>;
+  setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
 }
 
-const HomeContent = ({ setHeaderImage }: PropsTypes) => {
+const HomeContent = ({ setLayoutProps }: PropsTypes) => {
+
+  //Set Props For The LayOut
   useEffect(() => {
-    setHeaderImage(barberimage);
-  });
+    setLayoutProps({
+      headerImage: barberimage,
+      hideBackButton: true
+    })
+
+    //ReSet Props For The LayOut
+    return ()=>{
+      setLayoutProps(prev=>({
+        ...prev,
+        hideBackButton: false
+      }))
+    }
+  },[]);
+  
   const navigate = useNavigate();
   return (
-    <div className="home-container">
       <div className="home-content">
         <div className="home-content-title">Barberio</div>
         <div className="home-content-discription">
@@ -42,7 +56,6 @@ const HomeContent = ({ setHeaderImage }: PropsTypes) => {
           </button>
         </div>
       </div>
-    </div>
   );
 };
 

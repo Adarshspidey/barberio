@@ -1,3 +1,30 @@
+.home-container{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background-color: var(--light-black);
+}
+
+.home-header-image{
+    display: grid;
+    align-items: end;
+    justify-content: center;
+}
+
+.home-body-container{
+    background-color: var(--white);
+    border-radius: 25px 25px 0 0;
+    padding: 30px;
+    position: relative;
+}
+
+.back-button-left{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
 .form-container{
     display: grid;
     margin: 0 auto;
@@ -8,3 +35,5 @@
     width: 100%;
     padding: 20px;
 }
+
+

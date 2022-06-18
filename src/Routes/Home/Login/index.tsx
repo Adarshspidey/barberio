@@ -13,9 +13,10 @@ import { ShopLogin, ShopLoginError } from "../../../Types/Shop";
 import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
+import { LayOutProps } from "../../../Types/Props";
 
 interface PropsTypes {
-  setHeaderImage: Dispatch<SetStateAction<string>>;
+  setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   setPhone: Dispatch<SetStateAction<string>>;
   setOtpGoto: Dispatch<SetStateAction<string>>;
 }
@@ -24,7 +25,15 @@ const emptyForm: ShopLogin = {
   phone: "",
 };
 
-const Login = ({ setHeaderImage, setPhone, setOtpGoto }: PropsTypes) => {
+const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
+  
+  useEffect(() => {
+    setLayoutProps(prev=>({
+      ...prev,
+      headerImage: loginImage,
+    }))
+  },[]);
+  
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
   const { phone } = loginData;
@@ -65,9 +74,7 @@ const Login = ({ setHeaderImage, setPhone, setOtpGoto }: PropsTypes) => {
     }
   };
 
-  useEffect(() => {
-    setHeaderImage(loginImage);
-  });
+  
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();

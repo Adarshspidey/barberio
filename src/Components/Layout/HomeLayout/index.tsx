@@ -1,18 +1,23 @@
 import { Outlet } from "react-router-dom";
-import "./style.css";
+import BackButton from "../../Buttons/BackButton";
 
 interface PropsType {
   headerImage: string;
+  hideBackButton?: boolean;
 }
 
-const HomeLayout = ({ headerImage }: PropsType) => {
+const HomeLayout = ({ headerImage,hideBackButton=false }: PropsType) => {
   return (
-    <div className="login-container">
-      <div className="login-image">
+    <div className="home-container">
+      <div className="home-header-image">
         <img src={headerImage} alt="login" />
       </div>
-
-      <div className="login-container-content">
+      <div className="home-body-container">
+        {!hideBackButton
+        &&
+        <div className="back-button-left">
+          <BackButton/>
+        </div>}
         <Outlet />
       </div>
     </div>

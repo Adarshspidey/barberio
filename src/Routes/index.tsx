@@ -53,25 +53,34 @@ import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
 import DetailedBookingView from "./Shop/DetailedBokkingView";
 import BookingSeatView from "./Shop/BookingSeatView";
+import { LayOutProps } from "../Types/Props";
+
+
 
 const Router = () => {
+
+  const [layOutProps,setLayoutProps] = useState<LayOutProps>({
+    hideBackButton: false,
+    headerImage: loginImage
+  });
   const [headerImage, setHeaderImage] = useState<string>(loginImage);
+
   const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
   const [phone, setPhone] = useState<string>("");
   const [iconPath, setIconPath] = useState<string>("");
   const [otpGoto, setOtpGoto] = useState<string>("");
   return (
     <Routes>
-      <Route path="" element={<HomeLayout headerImage={headerImage} />}>
+      <Route path="" element={<HomeLayout  {...layOutProps}/>}>
         <Route
           index
-          element={<HomeContent setHeaderImage={setHeaderImage} />}
+          element={<HomeContent setLayoutProps={setLayoutProps}  />}
         />
         <Route
           path="/login"
           element={
             <Login
-              setHeaderImage={setHeaderImage}
+              setLayoutProps={setLayoutProps}
               setPhone={setPhone}
               setOtpGoto={setOtpGoto}
             />
