@@ -1,14 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { Dispatch, SetStateAction, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import OfferCard from "../../../Components/OfferCard";
-import profileActive from "../../../assets/Icons/Profile-active.svg";
-
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
 
 type OfferData = {
   title: string;
@@ -21,16 +14,10 @@ const data: Array<OfferData> = [
     offer: 10,
   },
 ];
-const Offers = ({ setActiveIcon, setIconPath }: PropsType) => {
+const Offers = () => {
   const [offers, setOffers] = useState<Array<OfferData>>(data);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setActiveIcon(profileActive);
-    setIconPath("profile");
-  });
-
   return (
     <div>
       <button

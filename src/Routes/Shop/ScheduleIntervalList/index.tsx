@@ -1,20 +1,7 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import profileActive from "../../../assets/Icons/Profile-active.svg";
 
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
-
-const ScheduleIntervalList = ({ setActiveIcon, setIconPath }: PropsType) => {
+const ScheduleIntervalList = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setActiveIcon(profileActive);
-    setIconPath("profile");
-  });
-
   return (
     <div>
       <button

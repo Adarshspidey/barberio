@@ -23,20 +23,11 @@ const data: Array<BookingData> = [
   },
 ];
 
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
 
-const Bookings = ({ setActiveIcon, setIconPath }: PropsType) => {
+const Bookings = () => {
   const [bookings, setBookings] = useState<Array<BookingData>>(data);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setActiveIcon(bookingActive);
-    setIconPath("booking");
-  });
 
   return (
     <div>

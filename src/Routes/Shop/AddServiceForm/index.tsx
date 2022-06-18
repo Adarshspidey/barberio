@@ -7,11 +7,6 @@ import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import { ShopServiceForm, ShopServiceFormError } from "../../../Types/Shop";
 
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
-
 const emptyForm: ShopServiceForm ={
   name:"",
   description:"",
@@ -19,7 +14,7 @@ const emptyForm: ShopServiceForm ={
   rate:""
 }
 
-const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
+const AddServiceForm = () => {
   const navigate = useNavigate();
   const [serviceFormData,setServiceFormData] = useState <ShopServiceForm>({...emptyForm});
   const { name,description,sessionTime, rate} =serviceFormData
@@ -49,13 +44,6 @@ const AddServiceForm = ({ setActiveIcon, setIconPath }: PropsType) => {
       })
     }
   } 
-
-
-  useEffect(() => {
-    setActiveIcon(serviceActive);
-    setIconPath("service");
-  });
-
   
   const onSubmit = async(e:SyntheticEvent)=>{
     e.preventDefault();

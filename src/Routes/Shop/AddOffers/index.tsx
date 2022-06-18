@@ -1,20 +1,9 @@
-import React from "react";
-import { Dispatch, SetStateAction, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
-import profileActive from "../../../assets/Icons/Profile-active.svg";
 
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
 
-const EditProfile = ({ setActiveIcon, setIconPath }: PropsType) => {
+const EditProfile = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setActiveIcon(profileActive);
-    setIconPath("profile");
-  });
 
   return (
     <div>

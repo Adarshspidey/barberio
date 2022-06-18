@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingCard from "../../../Components/BookingCard";
-import HistoryActive from "../../../assets/Icons/History-active.svg";
-
 import { BookingData } from "../../../Types/Booking";
 
-interface PropsType {
-  setActiveIcon: Dispatch<SetStateAction<string>>;
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
+
 
 const data: Array<BookingData> = [
   {
@@ -30,16 +24,11 @@ const data: Array<BookingData> = [
   },
 ];
 
-const ServiceHistory = ({ setActiveIcon, setIconPath }: PropsType) => {
+const ServiceHistory = () => {
   const [bookingsHistory, setBookingsHistory] =
     useState<Array<BookingData>>(data);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setActiveIcon(HistoryActive);
-    setIconPath("history");
-  });
 
   return (
     <div>
