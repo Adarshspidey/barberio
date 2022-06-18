@@ -23,7 +23,6 @@ import NumberOfSeat from "./Shop/NumberOfSeat";
 import ProfileCompleted from "./Shop/ProfileCompleted";
 
 import loginImage from "../assets/Icons/login.svg";
-import bookingAcive from "../assets/Icons/Booking-active.svg";
 import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";
 import ViewProfile from "./Shop/ViewProfile";
