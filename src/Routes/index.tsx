@@ -279,6 +279,9 @@ const Router = () => {
             />
           }
         />
+
+        {/* Non active */}
+
         <Route
           path="qr-scan"
           element={<QrScanner setIconPath={setIconPath} />}
