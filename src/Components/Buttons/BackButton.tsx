@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import backButtonIcon from "../../assets/Icons/arrow-left.svg";
 
 interface PropsType{
@@ -6,9 +7,14 @@ interface PropsType{
     onClick?:()=>void;
 }
 
-const BackButton = ({icon=backButtonIcon,label="Back"}:PropsType) => {
+const BackButton = ({icon=backButtonIcon,label="Back",onClick}:PropsType) => {
+    const navigate = useNavigate();
+
   return (
-    <button className="back-button">
+    <button
+        className="back-button"
+        onClick={onClick || (()=>navigate(-1))}
+    >
         <img
             src={icon}
             alt={label} />

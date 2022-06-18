@@ -3,15 +3,8 @@ import HomeLayout from "../Components/Layout/HomeLayout";
 import ShopSetUpLayout from "../Components/Layout/ShopSetUpLayout";
 import Bookings from "./Shop/Bookings";
 import HomeContent from "./Home/HomeContent";
-import HomeInfo from "./Home/HomeInfo";
 import Login from "./Home/Login";
 import RegisterForm from "./Home/Register/RegisterForm";
-import Services from "./Shop/Services";
-import AddServices from "./Shop/Services/AddServices";
-import DeleteServices from "./Shop/Services/DeleteServices";
-import UpdateServices from "./Shop/Services/UpdateServices";
-import Profile from "./Shop/ShopPofile";
-import CreateProfile from "./Shop/ShopPofile/CreateProfile";
 import EditProfile from "./Shop/ShopPofile/EditProfile";
 import Otp from "./Home/Otp";
 import Verification from "./Home/Register/Verification";
@@ -53,7 +46,7 @@ import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
 import DetailedBookingView from "./Shop/DetailedBokkingView";
 import BookingSeatView from "./Shop/BookingSeatView";
-import { LayOutProps } from "../Types/Props";
+import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 
 
 
@@ -63,7 +56,10 @@ const Router = () => {
     hideBackButton: false,
     headerImage: loginImage
   });
-  const [headerImage, setHeaderImage] = useState<string>(loginImage);
+
+  const [shopLayOutProps,setShopLayOutProps] = useState<ShopLayOutProps>({
+    activePath: "Booking"
+  })
 
   const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
   const [phone, setPhone] = useState<string>("");
@@ -138,7 +134,7 @@ const Router = () => {
 
       <Route
         path="shop"
-        element={<ShopLayout activeIcon={activeIcon} iconPath={iconPath} />}
+        element={<ShopLayout {...shopLayOutProps}  />}
       >
         <Route
           index
@@ -297,15 +293,6 @@ const Router = () => {
         <Route path="detailed-booking" element={<DetailedBookingView />} />
       </Route>
 
-      <Route path="services" element={<Services />}>
-        <Route index element={<AddServices />} />
-
-        <Route path="update" element={<UpdateServices />} />
-        <Route path="delete" element={<DeleteServices />} />
-      </Route>
-      <Route path="profile" element={<Profile />}>
-        <Route index element={<CreateProfile />} />
-      </Route>
     </Routes>
   );
 };

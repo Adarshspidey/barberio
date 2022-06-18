@@ -5,35 +5,21 @@ import scanIcon from "../../../assets/Icons/scan.svg";
 import bookingIcon from "../../../assets/Icons/booking.svg";
 import historyIcon from "../../../assets/Icons/history.svg";
 import servicesIcon from "../../../assets/Icons/Services.svg";
-import searchIcon from "../../../assets/Icons/search.svg";
-import notificationIcon from "../../../assets/Icons/notifications.svg";
+import Header from "../../Header";
+import Footer from "../../Footer";
+import { ShopLayOutProps } from "../../../Types/Props";
 
-interface PropsType {
-  activeIcon: string;
-  iconPath: string;
-}
 
-const ShopLayout = ({ activeIcon, iconPath }: PropsType) => {
+
+
+const ShopLayout = ({ activePath }: ShopLayOutProps) => {
   const navigate = useNavigate();
   return (
-    <div className="shoplayout-component">
-      <header>
-        <div className="shop-header">
-          <div className="header-titile">Barberio</div>
-          <div className="header-images">
-            <img src={searchIcon} alt="search" />
-            <img
-              onClick={() => {
-                navigate("/shop/notification-list");
-              }}
-              src={notificationIcon}
-              alt="notification"
-            />
-          </div>
-        </div>
-      </header>
+    <div className="shop-main-layout-container">
+      <Header/>
       <Outlet />
-      <footer>
+      <Footer activePath={activePath}/>
+      {/* <footer>
         <div className="footer-component">
           <img
             onClick={() => {
@@ -75,7 +61,7 @@ const ShopLayout = ({ activeIcon, iconPath }: PropsType) => {
           />
           <div></div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

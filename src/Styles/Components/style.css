@@ -18,3 +18,30 @@
 .back-button img{
     height: 16px;
 }
+
+.footer-center-menu-icon-box{
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, #6A938B 0%, #435D58 100%);
+    box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(18, 25, 23, 0.3975), inset -1.67822e-16px -2.74074px 2.74074px #3D5550, inset 1.67822e-16px 2.74074px 2.74074px #6F9B92;
+    padding: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-center-menu-icon{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.footer-menu-icon{
+    height: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.footer-menu-icon img{
+    width: 45%;
+}

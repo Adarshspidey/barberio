@@ -1,22 +1,22 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import BackButton from "../../Buttons/BackButton";
 import "./style.css";
 
-const HomeLayout = () => {
-  const navigate = useNavigate();
+const ShopSetupLayout = () => {
   return (
-    <div className="login-container">
-      <div className="login-container-content">
-        <button
-          onClick={() => {
-            navigate(-1);
-          }}
-        >
-          Back
-        </button>
+    <div className="home-container">
+      <div className="home-header-image">
+      </div>
+      <div className="home-body-container home-setup-body-container">
+      </div>
+      <div className="setup-section-container">
+        <div className="back-button-left">
+          <BackButton/>
+        </div>
         <Outlet />
       </div>
     </div>
   );
 };
 
-export default HomeLayout;
+export default ShopSetupLayout;

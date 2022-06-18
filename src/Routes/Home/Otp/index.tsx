@@ -69,7 +69,6 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
       });
       return;
     }
-    console.log(result.data);
     result.data && localStorage.setItem("token", result.data.token);
     return navigate(otpGoto);
   };
@@ -78,13 +77,6 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
 
       <div>Hi, it's you and me in this together.</div>
       <div>Enter your OTP</div>

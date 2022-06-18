@@ -97,13 +97,6 @@ const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
   return (
     <div>
       <div>
-        <button
-          onClick={() => {
-            navigate(-1);
-          }}
-        >
-          Back
-        </button>
         Login With Secret Pin
       </div>
 
