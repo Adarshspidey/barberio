@@ -12,10 +12,11 @@ import { ShopRegister, ShopRegisterError } from "../../../../Types/Shop";
 import postCall from "../../../../Services/postCall";
 import { ValidationError } from "../../../../Types/Error";
 import useIdleCall from "../../../../Hooks/useIdleCall";
+import { LayOutProps } from "../../../../Types/Props";
 
 interface PropsTypes {
-  setHeaderImage: Dispatch<SetStateAction<string>>;
   setOtpGoto: Dispatch<SetStateAction<string>>;
+  setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
 }
 
 const emptyForm: ShopRegister = {
@@ -25,7 +26,16 @@ const emptyForm: ShopRegister = {
   ownerName: "",
 };
 
-const RegisterForm = ({ setHeaderImage, setOtpGoto }: PropsTypes) => {
+const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
+
+  useEffect(() => {
+    setLayoutProps(prev=>({
+      ...prev,
+      headerImage: registerImage,
+    }))
+  },[]);
+  
+
   const [registerFormData, setRegisterFormData] = useState<ShopRegister>({
     ...emptyForm,
   });
@@ -66,9 +76,7 @@ const RegisterForm = ({ setHeaderImage, setOtpGoto }: PropsTypes) => {
     }
   };
 
-  useEffect(() => {
-    setHeaderImage(registerImage);
-  });
+ 
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();

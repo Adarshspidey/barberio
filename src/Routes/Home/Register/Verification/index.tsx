@@ -1,15 +1,20 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import verificatioImage from "../../../../assets/Icons/VerificationImage.svg";
+import { LayOutProps } from "../../../../Types/Props";
 
 interface PropsTypes {
-  setHeaderImage: Dispatch<SetStateAction<string>>;
+  setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
 }
 
-const Verification = ({ setHeaderImage }: PropsTypes) => {
+const Verification = ({ setLayoutProps }: PropsTypes) => {
+  
   useEffect(() => {
-    setHeaderImage(verificatioImage);
-  });
+    setLayoutProps(prev=>({
+      ...prev,
+      headerImage: verificatioImage,
+    }))
+  },[]);
   const navigate = useNavigate();
   return (
     <div>
