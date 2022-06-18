@@ -12,7 +12,12 @@ const ShopSubLayout = ({ setShopLayOutProps, type }: PropsTypes) => {
       ...prev,
       activePath: type,
     }));
-  }, []);
+    return (()=>{
+      setShopLayOutProps(prev=>({
+        ...prev,
+        activePath: "",
+      }))})
+  }, [type]);
 
   return <Outlet />;
 };

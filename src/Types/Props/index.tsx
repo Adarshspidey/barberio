@@ -4,7 +4,7 @@ export type LayOutProps = {
 }
 
 export type ShopFooterPropsTypes = {
-    activePath: "Profile" | "Booking" | "History" | "Service";
+    activePath: "Profile" | "Booking" | "History" | "Service" | "";
 }
 
 export interface ShopLayOutProps extends  ShopFooterPropsTypes{

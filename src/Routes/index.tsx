@@ -44,7 +44,7 @@ import QrScanner from "./Shop/QrScanner";
 import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
-import DetailedBookingView from "./Shop/DetailedBokkingView";
+import DetailedBookingView from "./Shop/DetailedBookingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
@@ -56,7 +56,7 @@ const Router = () => {
   });
 
   const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({
-    activePath: "Booking",
+    activePath: "",
   });
 
   const [phone, setPhone] = useState<string>("");
@@ -143,7 +143,7 @@ const Router = () => {
             />
           }
         >
-          <Route path="view-profile" element={<ViewProfile />} />
+          <Route index element={<ViewProfile />} />
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
