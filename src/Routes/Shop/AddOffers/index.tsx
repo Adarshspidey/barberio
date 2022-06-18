@@ -1,6 +1,4 @@
-
 import { useNavigate } from "react-router-dom";
-
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -28,7 +26,7 @@ const EditProfile = () => {
       </div>
       <button
         onClick={() => {
-          navigate("/shop/offers");
+          navigate("/shop/profile/offers");
         }}
       >
         Add

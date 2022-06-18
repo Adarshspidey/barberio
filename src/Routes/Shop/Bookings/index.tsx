@@ -23,7 +23,6 @@ const data: Array<BookingData> = [
   },
 ];
 
-
 const Bookings = () => {
   const [bookings, setBookings] = useState<Array<BookingData>>(data);
 
@@ -33,7 +32,7 @@ const Bookings = () => {
     <div>
       <button
         onClick={() => {
-          navigate("/shop/detailed-booking");
+          navigate("/shop/booking/detailed-booking");
         }}
       >
         All

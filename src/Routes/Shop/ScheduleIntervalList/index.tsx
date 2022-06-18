@@ -14,7 +14,7 @@ const ScheduleIntervalList = () => {
       <br />
       <button
         onClick={() => {
-          navigate("/shop/schedule-interval-form");
+          navigate("/shop/profile/schedule-interval-form");
         }}
       >
         Add
@@ -25,7 +25,7 @@ const ScheduleIntervalList = () => {
       </div>
       <button
         onClick={() => {
-          navigate("/shop/schedule-interval");
+          navigate("/shop/profile/schedule-interval");
         }}
       >
         Save

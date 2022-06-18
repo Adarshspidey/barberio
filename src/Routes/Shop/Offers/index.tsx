@@ -29,7 +29,7 @@ const Offers = () => {
       </button>
       <button
         onClick={() => {
-          navigate("/shop/add-offers");
+          navigate("/shop/profile/add-offers");
         }}
       >
         Add+

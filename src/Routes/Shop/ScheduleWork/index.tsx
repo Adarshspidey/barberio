@@ -1,10 +1,7 @@
-
 import { useNavigate } from "react-router-dom";
-
 
 const ScheduleWork = () => {
   const navigate = useNavigate();
-
 
   return (
     <div>
@@ -18,7 +15,7 @@ const ScheduleWork = () => {
       Schedule Work Time <br />
       <button
         onClick={() => {
-          navigate("/shop/schedule-work-by-day");
+          navigate("/shop/profile/schedule-work-by-day");
         }}
       >
         Schedule by Day
@@ -30,7 +27,7 @@ const ScheduleWork = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/shop/view-profile");
+          navigate("/shop/profile");
         }}
       >
         Save

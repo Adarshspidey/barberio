@@ -3,47 +3,46 @@ import { useNavigate } from "react-router-dom";
 const ViewProfile = () => {
   const navigate = useNavigate();
 
-
   return (
     <div>
       <div
         onClick={() => {
-          navigate("/shop/edit");
+          navigate("/shop/profile/edit");
         }}
       >
         Edit Profile{" "}
       </div>
       <div
         onClick={() => {
-          navigate("/shop/offers");
+          navigate("/shop/profile/offers");
         }}
       >
         Offers
       </div>
       <div
         onClick={() => {
-          navigate("/shop/shop-near-me");
+          navigate("/shop/profile/shop-near-me");
         }}
       >
         Shops Near Me
       </div>
       <div
         onClick={() => {
-          navigate("/shop/schedule-work");
+          navigate("/shop/profile/schedule-work");
         }}
       >
         Schedule Worktime
       </div>
       <div
         onClick={() => {
-          navigate("/shop/schedule-interval");
+          navigate("/shop/profile/schedule-interval");
         }}
       >
         Service Time Interval
       </div>
       <div
         onClick={() => {
-          navigate("/shop/ratings");
+          navigate("/shop/profile/ratings");
         }}
       >
         Ratings & Reviews

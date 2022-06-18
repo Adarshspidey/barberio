@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
 const FilterForm = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
-       <button
-       onClick={() => {
-        navigate("/shop/service-history");
-      }}
-       >Back</button>
+      <button
+        onClick={() => {
+          navigate("/shop/service-history");
+        }}
+      >
+        Back
+      </button>
       <input type="text" />
       Name of service
       <input type="text" />
@@ -21,12 +23,14 @@ const FilterForm = () => {
       Date
       <input type="text" />
       <button
-      onClick={() => {
-        navigate("/shop/view-profile ");
-      }}
-      >Apply</button>
+        onClick={() => {
+          navigate("/shop/profile ");
+        }}
+      >
+        Apply
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default FilterForm
+export default FilterForm;

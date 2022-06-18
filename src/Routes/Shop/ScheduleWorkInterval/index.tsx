@@ -18,14 +18,14 @@ const ScheduleWorkInterval = () => {
       <div className="service-wrapper">
         <div
           onClick={() => {
-            navigate("/shop/schedule-interval-list");
+            navigate("/shop/profile/schedule-interval-list");
           }}
         >
           Spa
         </div>
         <div
           onClick={() => {
-            navigate("/shop/schedule-interval-list");
+            navigate("/shop/profile/schedule-interval-list");
           }}
         >
           Facial
@@ -40,7 +40,7 @@ const ScheduleWorkInterval = () => {
       </div>
       <button
         onClick={() => {
-          navigate("/shop/view-profile");
+          navigate("/shop/profile");
         }}
       >
         Save

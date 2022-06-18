@@ -14,7 +14,7 @@ const BookingSeatView = () => {
       </button>{" "}
       <button
         onClick={() => {
-          navigate("/shop/detailed-booking");
+          navigate("/shop/booking/detailed-booking");
         }}
       >
         Service

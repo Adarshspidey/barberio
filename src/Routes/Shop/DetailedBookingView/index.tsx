@@ -8,7 +8,7 @@ const DetailedBookingView = () => {
       DetailedBookingView
       <button
         onClick={() => {
-          navigate("/shop/seat");
+          navigate("/shop/booking/seat");
         }}
       >
         Seat

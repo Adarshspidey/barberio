@@ -25,15 +25,14 @@ const emptyForm: ShopLogin = {
   phone: "",
 };
 
-const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
-  
+const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   useEffect(() => {
-    setLayoutProps(prev=>({
+    setLayoutProps((prev) => ({
       ...prev,
       headerImage: loginImage,
-    }))
-  },[]);
-  
+    }));
+  }, []);
+
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
   const { phone } = loginData;
@@ -74,8 +73,6 @@ const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
     }
   };
 
-  
-
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -88,7 +85,7 @@ const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
       return;
     }
     setPhone(loginData.phone);
-    setOtpGoto("/shop");
+    setOtpGoto("/shop/booking");
     return navigate("/otp");
   };
 
@@ -96,9 +93,7 @@ const Login = ({  setPhone, setOtpGoto,setLayoutProps }: PropsTypes) => {
 
   return (
     <div>
-      <div>
-        Login With Secret Pin
-      </div>
+      <div>Login With Secret Pin</div>
 
       <div>Welcome Back</div>
       <div>Remember me? I'm your barberio.</div>

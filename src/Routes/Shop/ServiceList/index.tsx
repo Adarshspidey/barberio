@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ServiceCard from "../../../Components/ServiceCard";
 
-
-
 type ServiceData = {
   title: string;
 };
@@ -19,13 +17,12 @@ const ServiceList = () => {
   const [services, setServicess] = useState<Array<ServiceData>>(data);
   const navigate = useNavigate();
 
-
   return (
     <div>
       Services <br />
       <button
         onClick={() => {
-          navigate("/shop/add-service-form");
+          navigate("/shop/service/add-service-form");
         }}
       >
         Add

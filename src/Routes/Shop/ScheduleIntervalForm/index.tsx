@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 const ScheduleIntervalForm = () => {
@@ -20,7 +19,7 @@ const ScheduleIntervalForm = () => {
       <input type="text" />
       <button
         onClick={() => {
-          navigate("/shop/schedule-interval-list");
+          navigate("/shop/profile/schedule-interval-list");
         }}
       >
         Save

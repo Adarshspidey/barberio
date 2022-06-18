@@ -28,6 +28,13 @@ const DisableService = () => {
           Time <input type="text" />
         </div>
       </div>
+      <button
+        onClick={() => {
+          navigate("/shop/service/add-service-form");
+        }}
+      >
+        Save
+      </button>
     </div>
   );
 };

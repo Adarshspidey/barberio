@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 const EditProfile = () => {
@@ -40,7 +39,7 @@ const EditProfile = () => {
       </div>
       <button
         onClick={() => {
-          navigate("/shop/view-profile");
+          navigate("/shop/profile");
         }}
       >
         Save
