@@ -136,7 +136,6 @@ const Router = () => {
             <Bookings setActiveIcon={setActiveIcon} setIconPath={setIconPath} />
           }
         />
-
         <Route
           path="seat"
           element={
@@ -147,18 +146,16 @@ const Router = () => {
           }
         />
       </Route>
-
       {/* Profile */}
-      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route
-          path="view-profile"
-          element={
-            <ViewProfile
-              setActiveIcon={setActiveIcon}
-              setIconPath={setIconPath}
-            />
-          }
-        />
+      <Route
+        path="view-profile"
+        element={
+          <ViewProfile
+            setActiveIcon={setActiveIcon}
+            setIconPath={setIconPath}
+          />
+        }
+      >
         <Route
           path="offers"
           element={
@@ -241,16 +238,15 @@ const Router = () => {
       </Route>
       {/* Service */}
 
-      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route
-          path="service"
-          element={
-            <ServiceList
-              setActiveIcon={setActiveIcon}
-              setIconPath={setIconPath}
-            />
-          }
-        />
+      <Route
+        path="service"
+        element={
+          <ServiceList
+            setActiveIcon={setActiveIcon}
+            setIconPath={setIconPath}
+          />
+        }
+      >
         <Route
           path="add-service-form"
           element={
@@ -272,25 +268,19 @@ const Router = () => {
       </Route>
       {/* History */}
 
-      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route
-          path="service-history"
-          element={
-            <ServiceHistory
-              setActiveIcon={setActiveIcon}
-              setIconPath={setIconPath}
-            />
-          }
-        />
-      </Route>
+      <Route
+        path="service-history"
+        element={
+          <ServiceHistory
+            setActiveIcon={setActiveIcon}
+            setIconPath={setIconPath}
+          />
+        }
+      ></Route>
 
       {/* Non active */}
 
-      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
-        <Route
-          path="qr-scan"
-          element={<QrScanner setIconPath={setIconPath} />}
-        />
+      <Route path="qr-scan" element={<QrScanner setIconPath={setIconPath} />}>
         <Route
           path="notification-list"
           element={<NotificationList setIconPath={setIconPath} />}
