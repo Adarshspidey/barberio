@@ -148,34 +148,23 @@ const Router = () => {
           }
         >
           <Route path="view-profile" element={<ViewProfile />} />
-
           <Route path="offers" element={<Offers />} />
-
           <Route path="add-offers" element={<AddOffers />} />
-
           <Route path="shop-near-me" element={<ShopNearMe />} />
-
           <Route path="edit" element={<EditProfile />} />
-
           <Route path="schedule-work" element={<ScheduleWork />} />
-
           <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
-
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
-
           <Route
             path="schedule-interval-list"
             element={<ScheduleIntervalList />}
           />
-
           <Route
             path="schedule-interval-form"
             element={<ScheduleIntervalForm />}
           />
-
           <Route path="ratings" element={<ProfileRatings />} />
         </Route>
-
         <Route
           path="service"
           element={
@@ -186,9 +175,7 @@ const Router = () => {
           }
         >
           <Route index element={<ServiceList />} />
-
           <Route path="add-service-form" element={<AddServiceForm />} />
-
           <Route path="disable-service" element={<DisableService />} />
         </Route>
 
@@ -205,13 +192,9 @@ const Router = () => {
         </Route>
 
         <Route path="qr-scan" element={<QrScanner />} />
-
         <Route path="notification-list" element={<NotificationList />} />
-
         <Route path="notification-body" element={<NotificationContent />} />
-
         <Route path="filter-list" element={<FilterForm />} />
-
         <Route path="detailed-booking" element={<DetailedBookingView />} />
       </Route>
     </Routes>
