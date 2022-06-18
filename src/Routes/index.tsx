@@ -54,9 +54,9 @@ const Router = () => {
     headerImage: loginImage,
   });
 
-  const [shopLayOutProps,setShopLayOutProps] = useState<ShopLayOutProps>({
-    activePath: "Booking"
-  })
+  const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({
+    activePath: "Booking",
+  });
 
   const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
   const [phone, setPhone] = useState<string>("");
@@ -129,10 +129,7 @@ const Router = () => {
         />
       </Route>
 
-      <Route
-        path="shop"
-        element={<ShopLayout {...shopLayOutProps}  />}
-      >
+      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
         <Route
           index
           element={
@@ -149,9 +146,10 @@ const Router = () => {
             />
           }
         />
+      </Route>
 
-        {/* Profile */}
-
+      {/* Profile */}
+      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
         <Route
           path="view-profile"
           element={
@@ -240,9 +238,10 @@ const Router = () => {
           }
         />
         <Route path="ratings" element={<ProfileRatings />} />
+      </Route>
+      {/* Service */}
 
-        {/* Service */}
-
+      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
         <Route
           path="service"
           element={
@@ -270,9 +269,10 @@ const Router = () => {
             />
           }
         />
+      </Route>
+      {/* History */}
 
-        {/* History */}
-
+      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
         <Route
           path="service-history"
           element={
@@ -282,9 +282,11 @@ const Router = () => {
             />
           }
         />
+      </Route>
 
-        {/* Non active */}
+      {/* Non active */}
 
+      <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
         <Route
           path="qr-scan"
           element={<QrScanner setIconPath={setIconPath} />}
