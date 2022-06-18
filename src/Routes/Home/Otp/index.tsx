@@ -16,13 +16,14 @@ import { ValidationError } from "../../../Types/Error";
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
   phone: string;
+  otpGoto: string;
 }
 
 const emptyForm: OtpForm = {
   otp: "",
 };
 
-const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
+const Otp = ({ setHeaderImage, phone, otpGoto }: PropsTypes) => {
   const [otp, setOtp] = useState<string>("");
 
   const [otpErrorData, setOtpErrorData] = useState<OtpFormError>({
@@ -66,7 +67,7 @@ const Otp = ({ setHeaderImage, phone }: PropsTypes) => {
     }
     console.log(result.data);
     result.data && localStorage.setItem("token", result.data.token);
-    return navigate("/shop");
+    return navigate(otpGoto);
   };
 
   const navigate = useNavigate();

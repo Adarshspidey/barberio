@@ -59,6 +59,7 @@ const Router = () => {
   const [activeIcon, setActiveIcon] = useState<string>(bookingAcive);
   const [phone, setPhone] = useState<string>("");
   const [iconPath, setIconPath] = useState<string>("");
+  const [otpGoto, setOtpGoto] = useState<string>("");
   return (
     <Routes>
       <Route path="" element={<HomeLayout headerImage={headerImage} />}>
@@ -69,19 +70,34 @@ const Router = () => {
         <Route
           path="/login"
           element={
-            <Login setHeaderImage={setHeaderImage} setPhone={setPhone} />
+            <Login
+              setHeaderImage={setHeaderImage}
+              setPhone={setPhone}
+              setOtpGoto={setOtpGoto}
+            />
           }
         />
         <Route
           path="/register"
-          element={<RegisterForm setHeaderImage={setHeaderImage} />}
+          element={
+            <RegisterForm
+              setHeaderImage={setHeaderImage}
+              setOtpGoto={setOtpGoto}
+            />
+          }
         />
         <Route
           path="/otp"
-          element={<Otp setHeaderImage={setHeaderImage} phone={phone} />}
+          element={
+            <Otp
+              setHeaderImage={setHeaderImage}
+              phone={phone}
+              otpGoto={otpGoto}
+            />
+          }
         />
         <Route
-          path="/verification"
+          path="/confirmation"
           element={<Verification setHeaderImage={setHeaderImage} />}
         />
       </Route>

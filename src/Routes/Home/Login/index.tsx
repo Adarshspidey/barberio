@@ -17,13 +17,14 @@ import useIdleCall from "../../../Hooks/useIdleCall";
 interface PropsTypes {
   setHeaderImage: Dispatch<SetStateAction<string>>;
   setPhone: Dispatch<SetStateAction<string>>;
+  setOtpGoto: Dispatch<SetStateAction<string>>;
 }
 
 const emptyForm: ShopLogin = {
   phone: "",
 };
 
-const Login = ({ setHeaderImage, setPhone }: PropsTypes) => {
+const Login = ({ setHeaderImage, setPhone, setOtpGoto }: PropsTypes) => {
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
   const { phone } = loginData;
@@ -80,6 +81,7 @@ const Login = ({ setHeaderImage, setPhone }: PropsTypes) => {
       return;
     }
     setPhone(loginData.phone);
+    setOtpGoto("/shop");
     return navigate("/otp");
   };
 
