@@ -48,13 +48,10 @@ import DetailedBookingView from "./Shop/DetailedBokkingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 
-
-
 const Router = () => {
-
-  const [layOutProps,setLayoutProps] = useState<LayOutProps>({
+  const [layOutProps, setLayoutProps] = useState<LayOutProps>({
     hideBackButton: false,
-    headerImage: loginImage
+    headerImage: loginImage,
   });
 
   const [shopLayOutProps,setShopLayOutProps] = useState<ShopLayOutProps>({
@@ -67,10 +64,10 @@ const Router = () => {
   const [otpGoto, setOtpGoto] = useState<string>("");
   return (
     <Routes>
-      <Route path="" element={<HomeLayout  {...layOutProps}/>}>
+      <Route path="" element={<HomeLayout {...layOutProps} />}>
         <Route
           index
-          element={<HomeContent setLayoutProps={setLayoutProps}  />}
+          element={<HomeContent setLayoutProps={setLayoutProps} />}
         />
         <Route
           path="/login"
@@ -152,6 +149,8 @@ const Router = () => {
             />
           }
         />
+
+        {/* Profile */}
 
         <Route
           path="view-profile"
@@ -241,6 +240,9 @@ const Router = () => {
           }
         />
         <Route path="ratings" element={<ProfileRatings />} />
+
+        {/* Service */}
+
         <Route
           path="service"
           element={
@@ -268,6 +270,9 @@ const Router = () => {
             />
           }
         />
+
+        {/* History */}
+
         <Route
           path="service-history"
           element={
@@ -277,6 +282,9 @@ const Router = () => {
             />
           }
         />
+
+        {/* Non active */}
+
         <Route
           path="qr-scan"
           element={<QrScanner setIconPath={setIconPath} />}
@@ -292,7 +300,6 @@ const Router = () => {
         <Route path="filter-list" element={<FilterForm />} />
         <Route path="detailed-booking" element={<DetailedBookingView />} />
       </Route>
-
     </Routes>
   );
 };
