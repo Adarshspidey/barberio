@@ -3,16 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import NotificationCard from "../../../Components/NotificationCard";
 
-interface PropsType {
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
 
-const NotificationList = ({ setIconPath }: PropsType) => {
+
+const NotificationList = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setIconPath("none");
-  });
 
   return (
     <div>

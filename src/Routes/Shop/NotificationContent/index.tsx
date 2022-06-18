@@ -1,17 +1,8 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
-import { Dispatch, SetStateAction, useEffect } from "react";
 
-interface PropsType {
-  setIconPath: Dispatch<SetStateAction<string>>;
-}
-
-const NotificationContent = ({ setIconPath }: PropsType) => {
+const NotificationContent = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    setIconPath("none");
-  });
 
   return (
     <div>
