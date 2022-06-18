@@ -60,6 +60,7 @@ const Router = () => {
 
   const [phone, setPhone] = useState<string>("");
   const [otpGoto, setOtpGoto] = useState<string>("");
+  
   return (
     <Routes>
       <Route path="" element={<HomeLayout {...layOutProps} />}>
