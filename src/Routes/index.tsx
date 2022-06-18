@@ -131,6 +131,7 @@ const Router = () => {
         >
           <Route index element={<Bookings />} />
           <Route path="seat" element={<BookingSeatView />} />
+          <Route path="detailed-booking" element={<DetailedBookingView />} />
         </Route>
 
         <Route
@@ -190,7 +191,6 @@ const Router = () => {
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
         <Route path="filter-list" element={<FilterForm />} />
-        <Route path="detailed-booking" element={<DetailedBookingView />} />
       </Route>
     </Routes>
   );
