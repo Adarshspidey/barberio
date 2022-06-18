@@ -90,7 +90,7 @@ const Router = () => {
           path="/register"
           element={
             <RegisterForm
-              setHeaderImage={setHeaderImage}
+              setLayoutProps={setLayoutProps}
               setOtpGoto={setOtpGoto}
             />
           }
@@ -99,7 +99,7 @@ const Router = () => {
           path="/otp"
           element={
             <Otp
-              setHeaderImage={setHeaderImage}
+              setLayoutProps={setLayoutProps}
               phone={phone}
               otpGoto={otpGoto}
             />
@@ -107,7 +107,7 @@ const Router = () => {
         />
         <Route
           path="/confirmation"
-          element={<Verification setHeaderImage={setHeaderImage} />}
+          element={<Verification setLayoutProps={setLayoutProps} />}
         />
       </Route>
 

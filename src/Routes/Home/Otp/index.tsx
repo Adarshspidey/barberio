@@ -11,9 +11,10 @@ import otpimage from "../../../assets/Icons/otp.svg";
 import { OtpForm, OtpFormError } from "../../../Types/Shop";
 import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
+import { LayOutProps } from "../../../Types/Props";
 
 interface PropsTypes {
-  setHeaderImage: Dispatch<SetStateAction<string>>;
+  setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   phone: string;
   otpGoto: string;
 }
@@ -22,7 +23,15 @@ const emptyForm: OtpForm = {
   otp: "",
 };
 
-const Otp = ({ setHeaderImage, phone, otpGoto }: PropsTypes) => {
+const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
+
+  useEffect(() => {
+    setLayoutProps(prev=>({
+      ...prev,
+      headerImage: otpimage,
+    }))
+  },[]);
+  
   const [otp, setOtp] = useState<string>("");
 
   const [otpErrorData, setOtpErrorData] = useState<OtpFormError>({
@@ -44,10 +53,6 @@ const Otp = ({ setHeaderImage, phone, otpGoto }: PropsTypes) => {
       });
     }
   };
-
-  useEffect(() => {
-    setHeaderImage(otpimage);
-  });
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
