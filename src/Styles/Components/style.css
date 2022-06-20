@@ -146,6 +146,7 @@
 .booking-card-details{
     display: grid;
     gap: 5px;
+    font-size: var(--medium);
     color: var(--light-green);
     grid-auto-flow: column;
     justify-content: start;
@@ -160,6 +161,20 @@
   justify-content: space-between;
 }
 
+.booking-card-user{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.booking-card-user-details{
+    border: 0.6px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    padding: 10px ;
+}
+
 .booking-card-duration {
   color: var(--dark-gray);
   font-size: var(--medium);
@@ -167,4 +182,27 @@
   gap: 5px;
   grid-auto-flow: column;
   justify-content: space-between;
+}
+
+.booking-profile{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 5px;
+}
+
+.booking-seat-number{
+    background: linear-gradient(180deg, #D6D6D6 0%, #FFFFFF 100%);
+    box-shadow: inset 1.27e-16px 2.07407px 2.07407px rgba(204, 204, 204, 0.5), inset -1.27e-16px -2.07407px 2.07407px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 5px 10px;
+    align-items: center;
+}
+.booking-seat-number-count{
+    border: 1px solid rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+    margin-left: 5px
 }

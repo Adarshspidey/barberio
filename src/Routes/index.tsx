@@ -191,8 +191,7 @@ const Router = () => {
         <Route path="qr-scan" element={<QrScanner />} />
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
-        <Route path="filter-list" element={<FilterForm />} />
-      </Route>
+        <Route path="filter-list" element={<FilterForm />} />      </Route>
     </Routes>
   );
 };

@@ -1,0 +1,34 @@
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dii_57_1452)">
+<rect x="4" y="2" width="17" height="17" rx="8.5" fill="#E99B05"/>
+</g>
+<g clip-path="url(#clip0_57_1452)">
+<path d="M11.1719 10.9427C14.1234 10.9427 14.1234 6.51562 11.1719 6.51562M9.84375 6.51562H15.1563H9.84375ZM9.84375 8.72917H15.1563H9.84375ZM9.84375 10.9427L13.6068 14.4844L9.84375 10.9427ZM9.84375 10.9427H11.1719H9.84375Z" stroke="#FFE3D3" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_dii_57_1452" x="0" y="0" width="25" height="25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0193424 0 0 0 0 0.125417 0 0 0 0 0.0426787 0 0 0 0.296 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_57_1452"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_57_1452" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.693333"/>
+<feGaussianBlur stdDeviation="0.346667"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.913725 0 0 0 0 0.607843 0 0 0 0 0.0196078 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_57_1452"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-0.693333"/>
+<feGaussianBlur stdDeviation="0.346667"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.565333 0 0 0 0 0.320833 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_57_1452" result="effect3_innerShadow_57_1452"/>
+</filter>
+<clipPath id="clip0_57_1452">
+<rect width="10.625" height="10.625" fill="white" transform="translate(7.1875 5.1875)"/>
+</clipPath>
+</defs>
+</svg>
