@@ -230,3 +230,34 @@
 .service-list-text{
   font-size: var(--large);
 }
+
+.interval-list-component{
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.06), 6.93967e-16px 2px 4px rgba(0, 0, 0, 0.06);
+  padding: 15px;
+}
+
+.interval-title{
+  font-size: var(--xlarge);
+}
+
+.shop-card-component{
+  box-shadow: 1.15525e-15px 18.8667px 37.7333px rgba(18, 25, 23, 0.24), inset -3.59411e-16px -5.86963px 5.86963px #52736C, inset 3.59411e-16px 5.86963px 5.86963px #5E837C;
+  border-radius: 2px;
+  width: 159px;
+}
+.shop-image{
+  background: var(--dark-green);
+}
+.shop-details-card{
+  box-shadow: 1.15525e-15px 18.8667px 37.7333px rgba(48, 48, 48, 0.1035), inset -2.59289e-16px -4.23452px 4.23452px #E7E7E7, inset 2.59289e-16px 4.23452px 4.23452px #F8F8F8;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.shop-details-card{
+  font-size: var(--medium);
+}
+
+.shop-address{
+  font-size: var(--small);
+}

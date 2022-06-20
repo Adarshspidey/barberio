@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import IntervalListCard from "../../../Components/IntervalListCard";
 import ServiceCard from "../../../Components/ServiceCard";
 import ServiceListCard from "../../../Components/ServiceListCard";
 

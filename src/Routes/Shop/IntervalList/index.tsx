@@ -1,5 +1,6 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+import IntervalListCard from "../../../Components/IntervalListCard";
+import ShopNearCard from "../../../Components/ShopnearCard";
 
 const IntervalList = () => {
   const navigate = useNavigate();
@@ -13,8 +14,8 @@ const IntervalList = () => {
         Add
       </button>
       <div className="interval-list">
-        <div>Interval 1</div>
-        <div>Interval 2</div>
+        <IntervalListCard/>
+        
       </div>
       <button
         onClick={() => {
@@ -23,6 +24,7 @@ const IntervalList = () => {
       >
         Save
       </button>
+      <ShopNearCard/>
     </div>
   );
 };
