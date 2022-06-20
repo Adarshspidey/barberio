@@ -143,6 +143,9 @@
   color: var(--orange);
   font-size: var(--large);
 }
+.time{
+  font-size: var(--small);
+}
 .booking-card-details{
     display: grid;
     gap: 5px;
@@ -205,4 +208,25 @@
     height: 19px;
     text-align: center;
     margin-left: 5px
+}
+
+.service-list-view-card{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    border: 0.1px dashed #9BB0AC;
+    border-radius: 15px;
+    margin: 25px;
+    margin-bottom:0 ;
+    padding: 15px;
+}
+
+.service-list-duration{
+  color: var(--orange);
+  font-size: var(--medium);
+  margin-bottom: 4px;
+}
+
+.service-list-text{
+  font-size: var(--large);
 }

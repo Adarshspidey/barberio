@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ServiceCard from "../../../Components/ServiceCard";
+import ServiceListCard from "../../../Components/ServiceListCard";
 
 type ServiceData = {
   title: string;
@@ -31,6 +32,7 @@ const ServiceList = () => {
         <ServiceCard {...services} />
       ))}
     </div>
+    
   );
 };
 
