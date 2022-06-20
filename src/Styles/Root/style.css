@@ -17,6 +17,7 @@ form{
 :root {
     --white: #fff;
     --black: #000;
+    --light-white:#F9FAFA;
     --footer-background: #F5F5F5;
     --secondary-background: #F5F5F5;
     --light-black: rgba(0, 0, 0, 0.65);
@@ -29,7 +30,9 @@ form{
     --button-secondary-color: #fff;
     --input-background-color: rgb(235, 241, 241);
     --red: #FF0004;
+    --orange:#FF9052;
     --gray: #595959;
+    --dark-gray:rgba(0, 0, 0, 0.4);
     --light-gray: #E8E8E8;
     --green: #059805;
     --footer-gray:#EBEBEB;
