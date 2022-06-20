@@ -45,3 +45,45 @@
 .footer-menu-icon img{
     width: 45%;
 }
+
+.booking-card-component{
+    background: var(--light-white);
+    padding: 20px 20px 10px 20px;
+    margin: 0 20px;
+    box-shadow: 1.64511e-15px 26.8667px 53.7333px rgba(50, 50, 50, 0.05), inset -3.69236e-16px -6.03007px 6.03007px #EFF0F0, inset 3.69236e-16px 6.03007px 6.03007px #FFFFFF;
+}
+
+.booking-card-component-group{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    
+
+}
+
+.booking-card-title{
+    color:var(--black);
+    font-size: var(--xlarge);
+}
+
+.booking-carditime{
+    color:var(--orange);
+    font-size: var(--large);
+}
+
+.bkoing-card-duration-component{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+
+}
+
+.booking-card-duration{
+    color: var(--dark-gray);
+    font-size: var(--medium);
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
