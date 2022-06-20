@@ -24,7 +24,6 @@ const IntervalList = () => {
       >
         Save
       </button>
-      <ShopNearCard/>
     </div>
   );
 };
