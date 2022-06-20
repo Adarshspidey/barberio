@@ -143,8 +143,18 @@
   color: var(--orange);
   font-size: var(--large);
 }
+.booking-card-details{
+    display: grid;
+    gap: 5px;
+    color: var(--light-green);
+    grid-auto-flow: column;
+    justify-content: start;
+}
+.booking-card-details.paid{
+    color: var(--orange);
+}
 
-.bkoing-card-duration-component {
+.booking-card-duration-component {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
