@@ -60,7 +60,8 @@ const Router = () => {
 
   const [phone, setPhone] = useState<string>("");
   const [otpGoto, setOtpGoto] = useState<string>("");
-  
+  const [popupState, setPopupState] = useState<boolean>(false);
+
   return (
     <Routes>
       <Route path="" element={<HomeLayout {...layOutProps} />}>
@@ -134,7 +135,6 @@ const Router = () => {
           <Route path="seat" element={<BookingSeatView />} />
           <Route path="detailed-booking" element={<DetailedBookingView />} />
         </Route>
-
         <Route
           path="profile"
           element={
@@ -175,7 +175,6 @@ const Router = () => {
           <Route path="add-service-form" element={<AddServiceForm />} />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
-
         <Route
           path="service-history"
           element={
@@ -187,11 +186,11 @@ const Router = () => {
         >
           <Route index element={<ServiceHistory />} />
         </Route>
-
         <Route path="qr-scan" element={<QrScanner />} />
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
-        <Route path="filter-list" element={<FilterForm />} />      </Route>
+        <Route path="filter-list" element={<FilterForm />} />{" "}
+      </Route>
     </Routes>
   );
 };
