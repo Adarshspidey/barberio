@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import IconAndInfo from "../Input/Components/IconAndInfo";
 import Label from "../Input/Components/Label";
 import Layout from "../Input/Components/Layout";
+import ArrowIcon from "./Components/ArrowIcon";
 
 type PropsTypes = {
   type?: "text" | "number" | "password" | "submit" | "button" | "textarea";
+  arrow?: string;
   label?: string;
   icon?: string;
   error?: string;
@@ -18,6 +20,7 @@ type PropsTypes = {
 const InputField = ({
   type = "text",
   label,
+  arrow,
   icon,
   error,
   info,
@@ -58,6 +61,7 @@ const InputField = ({
       )}
       <Label label={label} type={type} value={value} />
       <IconAndInfo icon={icon} info={info} />
+      <ArrowIcon arrow={arrow} />
     </Layout>
   );
 };

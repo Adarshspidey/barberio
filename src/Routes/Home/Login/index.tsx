@@ -4,6 +4,7 @@ import {
   SyntheticEvent,
   useEffect,
   useState,
+
 } from "react";
 import "./style.css";
 import InputField from "../../../Components/Input";
@@ -14,6 +15,8 @@ import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
+import phoneIcon from '../../../assets/Icons/phone.svg'
+import arrowDown from "../../../assets/Icons/arrow-down.svg";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
@@ -102,6 +105,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
         <div className="form-container">
           <InputField
             label="Phone Number"
+            icon={phoneIcon}
             value={phone}
             submitted={submitted}
             error={loginErrorData.phone}

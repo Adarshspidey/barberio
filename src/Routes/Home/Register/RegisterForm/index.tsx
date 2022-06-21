@@ -13,6 +13,10 @@ import postCall from "../../../../Services/postCall";
 import { ValidationError } from "../../../../Types/Error";
 import useIdleCall from "../../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../../Types/Props";
+import shopIcon from '../../../../assets/Icons/shop.svg'
+import phoneIcon from '../../../../assets/Icons/phone.svg'
+import registerIcon from '../../../../assets/Icons/register.svg'
+import profileIcon from  '../../../../assets/Icons/profileicon.svg'
 
 interface PropsTypes {
   setOtpGoto: Dispatch<SetStateAction<string>>;
@@ -112,6 +116,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
             <div className="form-container">
               <InputField
                 label="Shop Name"
+                icon={shopIcon}
                 value={name}
                 submitted={submitted}
                 error={registerFormErrorData.name}
@@ -119,6 +124,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
               />
               <InputField
                 label="Phone Number"
+                icon={phoneIcon}
                 value={phone}
                 submitted={submitted}
                 error={registerFormErrorData.phone}
@@ -126,6 +132,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
               />
               <InputField
                 label="Register Number"
+                icon={registerIcon}
                 value={registerNumber}
                 submitted={submitted}
                 error={registerFormErrorData.registerNumber}
@@ -133,6 +140,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
               />
               <InputField
                 label="Owner Name"
+                icon={profileIcon}
                 value={ownerName}
                 submitted={submitted}
                 error={registerFormErrorData.ownerName}

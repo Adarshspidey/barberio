@@ -150,6 +150,27 @@ input[type="file"] {
   transform: translateY(-50%);
   left: 10px;
 }
+.input-field-arrow{
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.arrow-right-line{
+  position: absolute;
+  width: 40px;
+  height: 0px;
+  top: 30px;
+  right: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
 
 .textarea-field .input-field-icon,
 .textarea-field .input-field-info-icon {
