@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import finish from "../../../assets/Icons/finish.svg";
+import BigButton from "../../../Components/Buttons/BigButton";
 
 const ProfileCompleted = () => {
   const navigate = useNavigate();
@@ -12,13 +13,14 @@ const ProfileCompleted = () => {
         by navigating to profile window later.
       </div>
       <img src={finish} alt="finish" />
-      <button
+      <BigButton
+        type="primary"
+        label="Finish"
         onClick={() => {
           navigate("/shop");
         }}
-      >
-        Finish
-      </button>
+      />
+       
     </div>
   );
 };

@@ -1,6 +1,9 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import InputField from "../../../Components/Input";
+import time from "../../../assets/Icons/time.svg";
+import arrow from "../../../assets/Icons/arrow-down.svg";
+import BigButton from "../../../Components/Buttons/BigButton";
+import IntervalListCard from "../../../Components/IntervalListCard";
 const AddInterval = () => {
   const navigate = useNavigate();
   return (
@@ -14,12 +17,13 @@ const AddInterval = () => {
         >
           Spa
         </div>
+        <IntervalListCard/>
         <div
           onClick={() => {
             navigate("/setup/interval-list");
           }}
         >
-          Facial
+          <IntervalListCard/>
         </div>
         <div
           onClick={() => {
@@ -31,17 +35,27 @@ const AddInterval = () => {
       </div>
       <br />
       Common Interval <br /> <br />
-      Start Time
-      <input type="text" />
-      End Time
-      <input type="text" />
-      <button
+      <InputField label="Start Time"
+        onChange={() => {}}
+        value=""
+        icon= {time}
+        arrow={arrow}/>
+      
+      <InputField
+        label="End Time"
+        onChange={() => {}}
+        value=""
+        icon= {time}
+        arrow={arrow}/>
+
+      <BigButton
+        type="primary"
+        label="Next"
         onClick={() => {
           navigate("/setup/shop-type");
         }}
-      >
-        Next
-      </button>
+      />
+    
     </div>
   );
 };
