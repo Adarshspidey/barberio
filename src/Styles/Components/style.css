@@ -316,3 +316,10 @@
   display: grid;
   gap: 15px;
 }
+
+.offer-rate{
+  text-align: center;
+  color: #597C75;
+  font-size: var(----slarge);
+
+}
