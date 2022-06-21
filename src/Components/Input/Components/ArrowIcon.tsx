@@ -6,14 +6,16 @@ type PropsTypes = {
 const ArrowIcon = ({arrow}:PropsTypes) => {
   return (
     <div>
-        <div className="arrow-right-line"></div>
-        {arrow && (
+        
+        {arrow && (<div>
+            <div className="arrow-right-line"></div>
             <div
                 className="input-field-arrow"
                 style={{
                     backgroundImage: `url(${arrow})`,
                 }}
             ></div>
+            </div>
         )}
     </div>
   )

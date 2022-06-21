@@ -7,9 +7,12 @@ interface OffercardProps {
 const OfferCard = ({title,offer}:OffercardProps) => {
     const navigate = useNavigate();
   return (
-    <div>
-       <div>{title}</div> 
-        <div>{offer}</div>
+    <div className="booking-card-component">
+      <div className="booking-card-duration-component">
+       <div className="booking-card-title">{title}</div>
+        <div className='offer-rate'>{offer} % off
+        </div>
+        </div>
         
     </div>
   )

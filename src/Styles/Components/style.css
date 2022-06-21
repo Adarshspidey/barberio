@@ -320,3 +320,9 @@
 .add-upload-icon {
   background-image: url(../../assets/Icons/upload-icon.svg);
 }
+
+.offer-rate {
+  text-align: center;
+  color: #597c75;
+  font-size: var(----slarge);
+}
