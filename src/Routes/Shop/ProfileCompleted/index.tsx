@@ -14,12 +14,13 @@ const ProfileCompleted = () => {
       </div>
       <img src={finish} alt="finish" />
       <BigButton
-        type="orange"
+        type="primary"
         label="Finish"
         onClick={() => {
-          navigate("/shop/booking");
+          navigate("/shop");
         }}
       />
+       
     </div>
   );
 };
