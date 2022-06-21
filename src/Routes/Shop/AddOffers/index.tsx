@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
+import SmallButton from "../../../Components/Buttons/SmallButton";
+import InputField from "../../../Components/Input";
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -10,25 +12,19 @@ const EditProfile = () => {
         <span>Add Offer</span>
         <BackButton />
       </div>
-      <input type="text" />
-      Description <input type="text" />
-      Start
+      <InputField label="Offer" onChange={() => {}} />
+      <InputField type="textarea" label="Description" onChange={() => {}} />
+      <span>Start</span>
       <div className="start">
-        Date <input type="text" />
-        Time <input type="text" />
+        <InputField label="Date" onChange={() => {}} />
+        <InputField label="Time" onChange={() => {}} />
       </div>
-      End
-      <div className="end">
-        Date <input type="text" />
-        Time <input type="text" />
+      <span>End</span>
+      <div className="start">
+        <InputField label="Date" onChange={() => {}} />
+        <InputField label="Time" onChange={() => {}} />
       </div>
-      <button
-        onClick={() => {
-          navigate("/shop/profile/offers");
-        }}
-      >
-        Add
-      </button>
+      <SmallButton label="Add" type="saveBlack" />
     </div>
   );
 };
