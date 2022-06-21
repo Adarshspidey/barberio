@@ -3,6 +3,7 @@ import BookingCard from "../../../Components/BookingCard";
 import { useNavigate } from "react-router-dom";
 import { BookingData } from "../../../Types/Booking";
 import bookingActive from "../../../assets/Icons/Booking-active.svg";
+import SmallButton from "../../../Components/Buttons/SmallButton";
 
 const data: Array<BookingData> = [
   {
@@ -30,13 +31,20 @@ const Bookings = () => {
 
   return (
     <div>
-      <button
+      {/* <button
         onClick={() => {
           navigate("/shop/booking/detailed-booking");
         }}
       >
         All
-      </button>
+      </button> */}
+      <SmallButton
+        type="white"
+        label="All"
+        onClick={() => {
+          navigate("/shop/booking/detailed-booking");
+        }}
+      />
       {bookings.length < 1 && <div>No bookings available</div>}
       {bookings.map((booking: BookingData, i) => (
         <BookingCard {...booking} />

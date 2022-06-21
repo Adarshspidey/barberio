@@ -94,3 +94,9 @@
   display: grid;
   gap: 10px;
 }
+
+.wrapper-flex-justify-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
