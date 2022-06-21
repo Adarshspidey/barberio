@@ -1,8 +1,9 @@
 import { Dispatch, SetStateAction, SyntheticEvent, useEffect,useState} from "react";
 import { useNavigate } from "react-router-dom";
-import serviceActive from "../../../assets/Icons/Service-active.svg";
-import BigButton from "../../../Components/Buttons/BigButton";
-import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
+import descriptionicon from "../../../assets/Icons/description.svg"
+import rupeeicon from "../../../assets/Icons/indian-rupee.svg"
+import sessionicon from "../../../assets/Icons/session.svg"
+import serviceicon from "../../../assets/Icons/nameofservice.svg"
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import InputField from "../../../Components/Input";
 import useIdleCall from "../../../Hooks/useIdleCall";
@@ -69,6 +70,7 @@ const AddServiceForm = () => {
       <div className="form-container">
         <InputField
                 label="Name of Service "
+                icon={serviceicon}
                 value={name}
                 submitted={submit}
                 error={serviceFormError.name}
@@ -76,6 +78,7 @@ const AddServiceForm = () => {
          />
          <InputField
                 label="Description"
+                icon={descriptionicon}
                 value={description}
                 submitted={submit}
                 error={serviceFormError.description}
@@ -83,6 +86,7 @@ const AddServiceForm = () => {
          />
          <InputField
                 label=" Time for a session"
+                icon={sessionicon}
                 value={sessionTime}
                 submitted={submit}
                 error={serviceFormError.sessionTime}
@@ -90,6 +94,7 @@ const AddServiceForm = () => {
          />
          <InputField
                 label=" Rate"
+                icon={rupeeicon}
                 value={rate}
                 submitted={submit}
                 error={serviceFormError.rate}
