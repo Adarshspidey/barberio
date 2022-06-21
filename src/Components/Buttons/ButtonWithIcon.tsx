@@ -2,6 +2,7 @@ import React from "react";
 
 interface PropsType {
   leftIcon?: string;
+  type?: "black" | "green" | "white";
   rightIcon?: string;
   label: string;
   onClick?: () => void;
