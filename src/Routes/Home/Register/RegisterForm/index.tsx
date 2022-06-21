@@ -13,10 +13,11 @@ import postCall from "../../../../Services/postCall";
 import { ValidationError } from "../../../../Types/Error";
 import useIdleCall from "../../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../../Types/Props";
-import shopIcon from '../../../../assets/Icons/shop.svg'
-import phoneIcon from '../../../../assets/Icons/phone.svg'
-import registerIcon from '../../../../assets/Icons/register.svg'
-import profileIcon from  '../../../../assets/Icons/profileicon.svg'
+import shopIcon from "../../../../assets/Icons/shop.svg";
+import phoneIcon from "../../../../assets/Icons/phone.svg";
+import registerIcon from "../../../../assets/Icons/register.svg";
+import profileIcon from "../../../../assets/Icons/profileicon.svg";
+import BigButton from "../../../../Components/Buttons/BigButton";
 
 interface PropsTypes {
   setOtpGoto: Dispatch<SetStateAction<string>>;
@@ -31,14 +32,12 @@ const emptyForm: ShopRegister = {
 };
 
 const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
-
   useEffect(() => {
-    setLayoutProps(prev=>({
+    setLayoutProps((prev) => ({
       ...prev,
       headerImage: registerImage,
-    }))
-  },[]);
-  
+    }));
+  }, []);
 
   const [registerFormData, setRegisterFormData] = useState<ShopRegister>({
     ...emptyForm,
@@ -80,8 +79,6 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
     }
   };
 
- 
-
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -99,13 +96,6 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
       <div className="form-title">
         join the movement!
         <span>You deserve to look good.</span>
@@ -146,9 +136,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
                 error={registerFormErrorData.ownerName}
                 onChange={(value) => onChange("ownerName", value)}
               />
-              <button className="register-button" type="submit">
-                Register
-              </button>
+              <BigButton type="primary" label="Register" />
             </div>
           </form>
         </div>
