@@ -1,6 +1,8 @@
 import { Dispatch, SetStateAction, SyntheticEvent, useEffect,useState} from "react";
 import { useNavigate } from "react-router-dom";
 import serviceActive from "../../../assets/Icons/Service-active.svg";
+import BigButton from "../../../Components/Buttons/BigButton";
+import SmallButton from "../../../Components/Buttons/SmallButton";
 import InputField from "../../../Components/Input";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import postCall from "../../../Services/postCall";
@@ -61,13 +63,14 @@ const AddServiceForm = () => {
   return (
     <div>
       Add Service
-      <button
+      <SmallButton
+        type="white"
+        label="Back"
+
         onClick={() => {
           navigate(-1);
         }}
-      >
-        Back
-      </button>
+      />
       <form onSubmit={onSubmit}>
       <div className="form-container">
         <InputField
@@ -98,13 +101,14 @@ const AddServiceForm = () => {
                 error={serviceFormError.rate}
                 onChange={(value) => onChange("rate",value)}
          />      
-        <button
+        <SmallButton
+          type="saveBlack"
+          label="Save"
         // onClick={() => {
         //   navigate("/shop/service");
         // }}
-      >
-        Save
-      </button>
+      />
+      
       </div>
       </form>
     </div>
