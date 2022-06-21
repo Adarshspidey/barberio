@@ -14,7 +14,6 @@ import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
-import Popup from "../../../Components/Popup";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
@@ -35,8 +34,6 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   }, []);
 
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
-
-  const [popupState, setPopupState] = useState<boolean>(false);
 
   const { phone } = loginData;
 
@@ -116,13 +113,6 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
               Login
             </button>
           </div>
-          <button
-            onClick={() => {
-              setPopupState(true);
-            }}
-          >
-            Pop Up
-          </button>
         </form>
 
         {/* <input type="text" />
@@ -134,7 +124,6 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
         Login
       </button> */}
       </div>
-      {popupState && <Popup setPopupState={setPopupState} />}
     </>
   );
 };
