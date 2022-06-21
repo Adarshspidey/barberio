@@ -1,18 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import BackButton from "../../../Components/Buttons/BackButton";
 
 const EditProfile = () => {
   const navigate = useNavigate();
 
   return (
     <div>
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        back
-      </button>
-      Add Offer Offer <input type="text" />
+      <div className="wrapper-flex-justify-content">
+        <span>Add Offer</span>
+        <BackButton />
+      </div>
+      <input type="text" />
       Description <input type="text" />
       Start
       <div className="start">

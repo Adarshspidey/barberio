@@ -84,6 +84,7 @@ const Router = () => {
           element={
             <RegisterForm
               setLayoutProps={setLayoutProps}
+              setPhone={setPhone}
               setOtpGoto={setOtpGoto}
             />
           }

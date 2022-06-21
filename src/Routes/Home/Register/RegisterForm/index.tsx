@@ -22,6 +22,7 @@ import BigButton from "../../../../Components/Buttons/BigButton";
 interface PropsTypes {
   setOtpGoto: Dispatch<SetStateAction<string>>;
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
+  setPhone: Dispatch<SetStateAction<string>>;
 }
 
 const emptyForm: ShopRegister = {
@@ -31,7 +32,7 @@ const emptyForm: ShopRegister = {
   ownerName: "",
 };
 
-const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
+const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -88,6 +89,7 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto }: PropsTypes) => {
         onErrorChange(path, message);
       });
     }
+    setPhone(registerFormData.phone);
     setOtpGoto("/confirmation");
     return navigate("/otp");
   };
