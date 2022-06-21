@@ -227,8 +227,7 @@
   justify-content: space-between;
   border: 0.1px dashed #9bb0ac;
   border-radius: 15px;
-  margin: 25px;
-  margin-bottom: 0;
+  margin: 0 25px;
   padding: 15px;
 }
 

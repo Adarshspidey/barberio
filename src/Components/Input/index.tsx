@@ -11,7 +11,7 @@ type PropsTypes = {
   icon?: string;
   error?: string;
   info?: string;
-  value: string;
+  value?: string;
   disabled?: boolean;
   onChange: (value: string, e: any) => void;
   submitted?: boolean;

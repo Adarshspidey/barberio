@@ -1,26 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import BigButton from "../../../Components/Buttons/BigButton";
+import SmallButton from "../../../Components/Buttons/SmallButton";
+import ServiceListCard from "../../../Components/ServiceListCard";
 
 const AddService = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button 
+      <SmallButton
+        type="white"
+         label="Add +"
       onClick={() => {
         navigate("/setup/add-service-form");
-      }} >Add</button>
+      }} />
       <div className="service-list">
-        <div>Spa</div>
-        <div>Hair Cutting</div>
-        <div>Facial</div>
+      <ServiceListCard/>
+      <ServiceListCard/>
       </div>
-      <button
+      <BigButton
+        type="primary"
+        label="Next"
         onClick={() => {
           navigate("/setup/schedule-time");
         }}
-      >
-        Next
-      </button>
+      />
+       
     </div>
   );
 };

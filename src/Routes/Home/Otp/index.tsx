@@ -12,6 +12,7 @@ import { OtpForm, OtpFormError } from "../../../Types/Shop";
 import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import { LayOutProps } from "../../../Types/Props";
+import BigButton from "../../../Components/Buttons/BigButton";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
@@ -88,7 +89,10 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
           otpError={otpErrorData.otp}
         />
 
-        <button className="register-button">Verify</button>
+        <BigButton
+          type="secondary"
+          label="Verify"
+        />
       </form>
     </div>
   );

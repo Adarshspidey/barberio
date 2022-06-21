@@ -17,6 +17,7 @@ import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
 import phoneIcon from '../../../assets/Icons/phone.svg'
 import arrowDown from "../../../assets/Icons/arrow-down.svg";
+import BigButton from "../../../Components/Buttons/BigButton";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
@@ -112,9 +113,10 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
             />
 
 
-            <button className="register-button" type="submit">
-              Login
-            </button>
+            <BigButton
+              type="secondary"
+              label="Login"
+            />
           </div>
       </form>
 
