@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SmallButton from "../../../Components/Buttons/SmallButton";
 import IntervalListCard from "../../../Components/IntervalListCard";
 import ServiceCard from "../../../Components/ServiceCard";
 import ServiceListCard from "../../../Components/ServiceListCard";
@@ -22,13 +23,13 @@ const ServiceList = () => {
   return (
     <div>
       Services <br />
-      <button
+      <SmallButton
+        type="white"
+        label="Add"
         onClick={() => {
           navigate("/shop/service/add-service-form");
         }}
-      >
-        Add
-      </button>
+      />
       {services.map((services: ServiceData, i) => (
         <ServiceCard {...services} />
       ))}
