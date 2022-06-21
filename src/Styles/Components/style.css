@@ -316,3 +316,7 @@
   display: grid;
   gap: 15px;
 }
+
+.add-upload-icon {
+  background-image: url(../../assets/Icons/upload-icon.svg);
+}
