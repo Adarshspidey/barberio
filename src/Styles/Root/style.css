@@ -29,13 +29,14 @@ form {
   --button-primary-color: #597c75;
   --button-secondary-color: #fff;
   --input-background-color: rgb(235, 241, 241);
+  --popup-background-color: #5d5d5d;
   --red: #ff0004;
   --orange: #ff9052;
   --gray: #595959;
   --dark-gray: rgba(0, 0, 0, 0.4);
   --light-gray: #e8e8e8;
   --green: #059805;
-  --dark-green:#597C75;
+  --dark-green: #597c75;
   --footer-gray: #ebebeb;
   --white: #fff;
   --black: #000;

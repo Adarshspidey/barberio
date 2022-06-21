@@ -3,7 +3,7 @@ import React from "react";
 interface PropsTypes {
   type?: "primary" | "secondary";
   label: string;
-  onClick?: () => {};
+  onClick?: () => void;
 }
 
 const BigButton = ({ type, onClick, label }: PropsTypes) => {

@@ -14,6 +14,7 @@ import postCall from "../../../Services/postCall";
 import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
+import Popup from "../../../Components/Popup";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
@@ -34,6 +35,8 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   }, []);
 
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
+
+  const [popupState, setPopupState] = useState<boolean>(false);
 
   const { phone } = loginData;
 
@@ -92,29 +95,37 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div>Login With Secret Pin</div>
+    <>
+      <div>
+        <div>Login With Secret Pin</div>
 
-      <div>Welcome Back</div>
-      <div>Remember me? I'm your barberio.</div>
+        <div>Welcome Back</div>
+        <div>Remember me? I'm your barberio.</div>
 
-      <form onSubmit={submit}>
-        <div className="form-container">
-          <InputField
-            label="Phone Number"
-            value={phone}
-            submitted={submitted}
-            error={loginErrorData.phone}
-            onChange={(value) => onChange("phone", value)}
-          />
+        <form onSubmit={submit}>
+          <div className="form-container">
+            <InputField
+              label="Phone Number"
+              value={phone}
+              submitted={submitted}
+              error={loginErrorData.phone}
+              onChange={(value) => onChange("phone", value)}
+            />
 
-          <button className="register-button" type="submit">
-            Login
+            <button className="register-button" type="submit">
+              Login
+            </button>
+          </div>
+          <button
+            onClick={() => {
+              setPopupState(true);
+            }}
+          >
+            Pop Up
           </button>
-        </div>
-      </form>
+        </form>
 
-      {/* <input type="text" />
+        {/* <input type="text" />
       <button
         onClick={() => {
           navigate("/otp");
@@ -122,7 +133,9 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
       >
         Login
       </button> */}
-    </div>
+      </div>
+      {popupState && <Popup setPopupState={setPopupState} />}
+    </>
   );
 };
 
