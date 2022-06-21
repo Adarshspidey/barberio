@@ -96,29 +96,29 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
 
   return (
     <div>
-      <div>Login With Secret Pin</div>
+      <div>
+        <div>Login With Secret Pin</div>
 
-      <div>Welcome Back</div>
-      <div>Remember me? I'm your barberio.</div>
+        <div>Welcome Back</div>
+        <div>Remember me? I'm your barberio.</div>
+        <form onSubmit={submit}>
+          <div className="form-container">
+            <InputField
+              label="Phone Number"
+              value={phone}
+              submitted={submitted}
+              error={loginErrorData.phone}
+              onChange={(value) => onChange("phone", value)}
+            />
 
-      <form onSubmit={submit}>
-        <div className="form-container">
-          <InputField
-            label="Phone Number"
-            icon={phoneIcon}
-            value={phone}
-            submitted={submitted}
-            error={loginErrorData.phone}
-            onChange={(value) => onChange("phone", value)}
-          />
 
-          <button className="register-button" type="submit">
-            Login
-          </button>
-        </div>
+            <button className="register-button" type="submit">
+              Login
+            </button>
+          </div>
       </form>
 
-      {/* <input type="text" />
+        {/* <input type="text" />
       <button
         onClick={() => {
           navigate("/otp");
@@ -126,6 +126,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
       >
         Login
       </button> */}
+      </div>
     </div>
   );
 };
