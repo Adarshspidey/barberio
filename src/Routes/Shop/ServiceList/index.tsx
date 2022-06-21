@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SmallButton from "../../../Components/Buttons/SmallButton";
-import IntervalListCard from "../../../Components/IntervalListCard";
+import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import ServiceCard from "../../../Components/ServiceCard";
-import ServiceListCard from "../../../Components/ServiceListCard";
+import addIcon from '../../../assets/Icons/Add.svg'
 
 type ServiceData = {
   title: string;
@@ -23,8 +22,8 @@ const ServiceList = () => {
   return (
     <div>
       Services <br />
-      <SmallButton
-        type="white"
+      <ButtonWithIcon
+        rightIcon={addIcon}
         label="Add"
         onClick={() => {
           navigate("/shop/service/add-service-form");
