@@ -79,20 +79,23 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
   return (
     <div>
 
-      <div>Hi, it's you and me in this together.</div>
-      <div>Enter your OTP</div>
-
-      <form onSubmit={submit}>
-        <OtpField
-          otp={otp}
-          handleOtpChange={(value) => setOtp(value)}
-          otpError={otpErrorData.otp}
-        />
-
+      <div className="content-discription">Hi, it's you and me in this together.</div>
+      <div className="content-title">Enter your OTP</div>
+      <form onSubmit={submit} >
+        <div className="otp-input-feild">
+          <OtpField
+            otp={otp}
+            handleOtpChange={(value) => setOtp(value)}
+            otpError={otpErrorData.otp}
+           />
+        
+        <div className="otp-button">
         <BigButton
           type="secondary"
           label="Verify"
         />
+        </div>
+        </div>
       </form>
     </div>
   );

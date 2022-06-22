@@ -97,11 +97,11 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="form-title">
-        join the movement!
-        <span>You deserve to look good.</span>
-      </div>
+    <div className="login-container">
+      <div className="content-title">
+        join the movement!</div>
+        <div className="form-discription">You deserve to look good.</div>
+      
       <div className="form-content-container">
         <div className="form-element">
           <form onSubmit={submit}>

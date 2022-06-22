@@ -19,12 +19,14 @@ const Verification = ({ setLayoutProps }: PropsTypes) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>All Done !</div>
-      <div>Verification Completed.</div>
-      <div>
+      <div className="login-container">
+      <div className="content-title">All Done !</div>
+      <div className="content-discription">Verification Completed.</div>
+      <div className="content-title">
         You've got this! Just a few more steps. I'll never get in your way.
       </div>
-      <div>I Agree to terms and services</div>
+      <div className="terms-service-title" >I Agree to terms and services</div>
+      <div className="otp-input-feild">
       <BigButton
         label="Continue"
         type="primary"
@@ -32,7 +34,8 @@ const Verification = ({ setLayoutProps }: PropsTypes) => {
           navigate("/setup");
         }}
       />
-        
+      </div>
+      </div>
     </div>
   );
 };

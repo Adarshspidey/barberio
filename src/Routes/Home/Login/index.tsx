@@ -97,15 +97,16 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
 
   return (
     <div>
-      <div>
-        <div>Login With Secret Pin</div>
+      <div className="login-container">
+        <div className="login-screen-pin">Login With Secret Pin</div>
 
-        <div>Welcome Back</div>
-        <div>Remember me? I'm your barberio.</div>
+        <div className="content-title">Welcome Back</div>
+        <div className="content-discription">Remember me? I'm your barberio.</div>
         <form onSubmit={submit}>
           <div className="form-container">
             <InputField
               label="Phone Number"
+              icon={phoneIcon}
               value={phone}
               submitted={submitted}
               error={loginErrorData.phone}
