@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import profileActive from "../../../assets/Icons/Profile-active.svg";
+import BackButton from "../../../Components/Buttons/BackButton";
 
 const ScheduleWorkInterval = () => {
   const navigate = useNavigate();
@@ -8,13 +9,7 @@ const ScheduleWorkInterval = () => {
   return (
     <div>
       Select Service
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
+      <BackButton/>
       <div className="service-wrapper">
         <div
           onClick={() => {

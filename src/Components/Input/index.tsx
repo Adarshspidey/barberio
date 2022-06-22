@@ -7,6 +7,7 @@ import ArrowIcon from "./Components/ArrowIcon";
 type PropsTypes = {
   type?: "text" | "number" | "password" | "submit" | "button" | "textarea";
   arrow?: string;
+  leftIcon?:string;
   label?: string;
   icon?: string;
   error?: string;
@@ -21,6 +22,7 @@ const InputField = ({
   type = "text",
   label,
   arrow,
+  leftIcon,
   icon,
   error,
   info,
@@ -49,6 +51,7 @@ const InputField = ({
           disabled={disabled}
           onBlur={onBlur}
         />
+
       ) : (
         <input
           type={type}
@@ -61,7 +64,7 @@ const InputField = ({
       )}
       <Label label={label} type={type} value={value} />
       <IconAndInfo icon={icon} info={info} />
-      <ArrowIcon arrow={arrow} isLine={true} />
+      <ArrowIcon arrow={arrow} isLine={true} leftIcon={leftIcon}/>
     </Layout>
   );
 };

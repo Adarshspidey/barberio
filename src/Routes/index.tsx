@@ -19,7 +19,6 @@ import AddInterval from "./Shop/AddInterval";
 import IntervalList from "./Shop/IntervalList";
 import IntervalForm from "./Shop/IntervalForm";
 import ShopType from "./Shop/ShopType";
-import NumberOfSeat from "./Shop/NumberOfSeat";
 import ProfileCompleted from "./Shop/ProfileCompleted";
 import loginImage from "../assets/Icons/login.svg";
 import { useState } from "react";
@@ -116,7 +115,6 @@ const Router = () => {
         <Route path="interval-list" element={<IntervalList />} />
         <Route path="interval-form" element={<IntervalForm />} />
         <Route path="shop-type" element={<ShopType />} />
-        <Route path="no-of-seat" element={<NumberOfSeat />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
         <Route path="add-service-form" element={<AddServiceForm />} />
       </Route>

@@ -4,6 +4,9 @@ import time from "../../../assets/Icons/time.svg";
 import arrow from "../../../assets/Icons/arrow-down.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
 import IntervalListCard from "../../../Components/IntervalListCard";
+import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
+import addplus from '../../../assets/Icons/add-plus.svg'
+
 const AddInterval = () => {
   const navigate = useNavigate();
   return (
@@ -30,7 +33,15 @@ const AddInterval = () => {
       </div>
 
       <div className="sub-content-header">Common Interval</div>
-
+      <div className="button-end">
+      <ButtonWithIcon
+          rightIcon={addplus}
+          type="white"
+          label="Add"
+          onClick={() => {
+            navigate("/setup/interval-form");
+          }}/>
+      </div>
       <InputField
         label="Start Time"
         onChange={() => {}}
