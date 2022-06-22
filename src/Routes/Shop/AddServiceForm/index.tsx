@@ -96,6 +96,7 @@ const AddServiceForm = () => {
             />
             <InputField
               label="Description"
+              type="textarea"
               icon={descriptionicon}
               value={description}
               submitted={submit}

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import InputField from "../../../Components/Input";
 import arrow from "../../../assets/Icons/arrow-down.svg";
 import time from "../../../assets/Icons/time.svg";
+import interval from '../../../assets/Icons/interval.svg'
 import BigButton from "../../../Components/Buttons/BigButton";
 
 const IntervalForm = () => {
@@ -14,8 +15,8 @@ const IntervalForm = () => {
           label="Name of Interval"
           onChange={() => {}}
           value=""
-          icon={time}
-          arrow={arrow}
+          icon={interval}
+         
         />
 
         <InputField
