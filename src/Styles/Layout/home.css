@@ -189,9 +189,20 @@
   margin-top: 40px;
 }
 
+.button-gallery{
+  display: flex;
+  justify-content: end;
+}
+
+.profile-menu-title{
+  font-size: var(--xxlarge);
+  color: var(--black);
+  text-align: center;
+}
 .sub-content-header {
   font-size: var(--xlarge);
   font-weight: bolder;
   padding: 20px;
   margin: 10px 0;
+
 }

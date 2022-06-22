@@ -1,14 +1,15 @@
 type PropsTypes = {
     arrow?: string;
+    isLine?:boolean;
     
 };
 
-const ArrowIcon = ({arrow}:PropsTypes) => {
+const ArrowIcon = ({arrow,isLine=false}:PropsTypes) => {
   return (
     <div>
         
         {arrow && (<div>
-            <div className="arrow-right-line"></div>
+            {isLine && <div className="arrow-right-line"></div>}
             <div
                 className="input-field-arrow"
                 style={{
