@@ -45,6 +45,7 @@ import DetailedBookingView from "./Shop/DetailedBookingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
+import ImagePage from "./Shop/ImagePage";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -146,6 +147,7 @@ const Router = () => {
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
           <Route path="edit" element={<EditProfile />} />
+          <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
           <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
@@ -168,7 +170,7 @@ const Router = () => {
             />
           }
         >
-        <Route index element={<ServiceList />} />
+          <Route index element={<ServiceList />} />
           <Route path="add-service-form" element={<AddServiceForm />} />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
