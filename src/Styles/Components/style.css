@@ -329,7 +329,13 @@
 }
 
 .add-upload-icon {
+  height: 500px;
   background-image: url(../../assets/Icons/upload-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px 200px;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .offer-rate {

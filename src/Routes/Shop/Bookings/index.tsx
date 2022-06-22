@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { BookingData } from "../../../Types/Booking";
 import bookingActive from "../../../assets/Icons/Booking-active.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import DetailedBookingView from "../DetailedBookingView";
 
 const data: Array<BookingData> = [
   {
@@ -27,24 +28,27 @@ const data: Array<BookingData> = [
 const Bookings = () => {
   const [bookings, setBookings] = useState<Array<BookingData>>(data);
 
+  const [showAll, setShowAll] = useState<boolean>(false);
+
   const navigate = useNavigate();
 
   return (
     <div>
-      {/* <button
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      >
-        All
-      </button> */}
-      <SmallButton
-        type="white"
-        label="All"
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      />
+      {!showAll && (
+        <div className="content-end">
+          <SmallButton
+            type="white"
+            label="All"
+            onClick={() => {
+              setShowAll(true);
+              // navigate("/shop/booking/detailed-booking");
+            }}
+          />
+        </div>
+      )}
+
+      {showAll && <DetailedBookingView setShowAll={setShowAll} />}
+
       {bookings.length < 1 && <div>No bookings available</div>}
       {bookings.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
