@@ -331,3 +331,28 @@
   color: #597c75;
   font-size: var(----slarge);
 }
+
+.profile-menu-card{
+  box-shadow: 0px 1px 0px #F5F5F5;
+  border-radius: 15px;
+  background: var(--light-white);
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+}
+
+.profile-card-items{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: var(--xlarge);
+  color: var(--menu-title);
+}
+
+.profile-title{
+  padding: 5px;
+}
