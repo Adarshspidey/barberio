@@ -190,7 +190,7 @@
 }
 
 .content-end-no-margin {
-  padding: 20px;
+  padding: 20px 10px 0 0;
   display: flex;
   justify-content: end;
 }
@@ -198,10 +198,6 @@
 .content-margin {
   padding: 20px;
   margin-top: 40px;
-}
-
-.calendar-div {
-  margin: 20px 0;
 }
 
 .button-end {
