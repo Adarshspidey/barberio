@@ -1,17 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import BackButton from "../../../../Components/Buttons/BackButton";
+import SmallButton from "../../../../Components/Buttons/SmallButton";
 
 const EditProfile = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <div className="wrapper-flex-justify-content">
       Edit Profile
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        back
-      </button>
+     <BackButton/>
+     </div>
       <div>Images</div>
       <div>
         {" "}
@@ -37,13 +35,13 @@ const EditProfile = () => {
         {" "}
         <input type="text" /> Add Your Email Here
       </div>
-      <button
+      <SmallButton
+      type="saveBlack"
+      label="Save"
         onClick={() => {
           navigate("/shop/profile");
         }}
-      >
-        Save
-      </button>
+      />
     </div>
   );
 };
