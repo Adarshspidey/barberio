@@ -6,15 +6,16 @@ const UploadCoverPicture = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Upload Cover Picture</h1>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/upload-more-pic");
-        }}
+      <div className="set-up-question">Upload Cover Picture</div>
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/upload-more-pic");
+          }}
         />
-      
+      </div>
     </div>
   );
 };

@@ -95,6 +95,12 @@
   padding: 10px;
 }
 
+.add-button {
+  border: 1px solid #5a7e77;
+  box-shadow: 2.44929e-16px 2px 8px rgba(45, 30, 1, 0.24);
+  border-radius: 15px;
+}
+
 .footer-center-menu-icon-box {
   width: 80px;
   height: 80px;

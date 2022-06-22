@@ -4,29 +4,35 @@ import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import ServiceListCard from "../../../Components/ServiceListCard";
-import addIcon from '../../../assets/Icons/Add.svg'
+import addIcon from "../../../assets/Icons/Add.svg";
 const AddService = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <ButtonWithIcon
-        rightIcon={addIcon}
-         label="Add"
-        onClick={() => {
-        navigate("/setup/add-service-form");
-      }} />
-      <div className="service-list">
-      <ServiceListCard/>
-      <ServiceListCard/>
+      <div className="set-up-question">Add Services</div>
+      <div className="content-end">
+        <ButtonWithIcon
+          rightIcon={addIcon}
+          type="white"
+          label="Add"
+          onClick={() => {
+            navigate("/setup/add-service-form");
+          }}
+        />
       </div>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/schedule-time");
-        }}
-      />
-       
+      <div className="service-list">
+        <ServiceListCard />
+        <ServiceListCard />
+      </div>
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/schedule-time");
+          }}
+        />
+      </div>
     </div>
   );
 };
