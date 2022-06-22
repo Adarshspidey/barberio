@@ -189,7 +189,7 @@
   margin-top: 40px;
 }
 
-.button-gallery{
+.button-end{
   display: flex;
   justify-content: end;
 }
@@ -205,4 +205,14 @@
   padding: 20px;
   margin: 10px 0;
 
+}
+
+.form-feild-container{
+  padding: 30px;
+}
+
+.title-component{
+  font-size:var(--xlarge);
+  color:var(--black);
+  padding: 5px;
 }

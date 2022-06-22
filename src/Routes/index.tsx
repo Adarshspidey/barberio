@@ -21,7 +21,6 @@ import IntervalForm from "./Shop/IntervalForm";
 import ShopType from "./Shop/ShopType";
 import NumberOfSeat from "./Shop/NumberOfSeat";
 import ProfileCompleted from "./Shop/ProfileCompleted";
-
 import loginImage from "../assets/Icons/login.svg";
 import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";

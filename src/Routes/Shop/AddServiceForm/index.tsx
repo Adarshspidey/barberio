@@ -14,6 +14,7 @@ import SmallButton from "../../../Components/Buttons/SmallButton";
 import InputField from "../../../Components/Input";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import postCall from "../../../Services/postCall";
+import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import { ValidationError } from "../../../Types/Error";
 import { ShopServiceForm, ShopServiceFormError } from "../../../Types/Shop";
 import BigButton from "../../../Components/Buttons/BigButton";
@@ -89,6 +90,7 @@ const AddServiceForm = () => {
               icon={serviceicon}
               value={name}
               submitted={submit}
+              arrow={arrowDown}
               error={serviceFormError.name}
               onChange={(value) => onChange("name", value)}
             />
@@ -104,6 +106,7 @@ const AddServiceForm = () => {
               label=" Time for a session"
               icon={sessionicon}
               value={sessionTime}
+              arrow={arrowDown}
               submitted={submit}
               error={serviceFormError.sessionTime}
               onChange={(value) => onChange("sessionTime", value)}

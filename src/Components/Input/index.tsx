@@ -61,7 +61,7 @@ const InputField = ({
       )}
       <Label label={label} type={type} value={value} />
       <IconAndInfo icon={icon} info={info} />
-      <ArrowIcon arrow={arrow} />
+      <ArrowIcon arrow={arrow} isLine={true} />
     </Layout>
   );
 };
