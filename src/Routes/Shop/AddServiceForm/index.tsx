@@ -6,15 +6,15 @@ import {
   useState,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import descriptionicon from "../../../assets/Icons/description.svg";
 import rupeeicon from "../../../assets/Icons/indian-rupee.svg";
 import sessionicon from "../../../assets/Icons/session.svg";
 import serviceicon from "../../../assets/Icons/nameofservice.svg";
+import descriptionicon from "../../../assets/Icons/description.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import InputField from "../../../Components/Input";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import postCall from "../../../Services/postCall";
-import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import { ValidationError } from "../../../Types/Error";
 import { ShopServiceForm, ShopServiceFormError } from "../../../Types/Shop";
 import BigButton from "../../../Components/Buttons/BigButton";
