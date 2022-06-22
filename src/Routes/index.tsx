@@ -168,7 +168,7 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceList />} />
+        <Route index element={<ServiceList />} />
           <Route path="add-service-form" element={<AddServiceForm />} />
           <Route path="disable-service" element={<DisableService />} />
         </Route>

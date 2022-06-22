@@ -21,7 +21,8 @@ const ServiceList = () => {
 
   return (
     <div>
-      Services <br />
+      <div className="wrapper-flex-justify-content">
+      Services 
       <ButtonWithIcon
         rightIcon={addIcon}
         label="Add"
@@ -29,6 +30,7 @@ const ServiceList = () => {
           navigate("/shop/service/add-service-form");
         }}
       />
+      </div>
       {services.map((services: ServiceData, i) => (
         <ServiceCard {...services} />
       ))}

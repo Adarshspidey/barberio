@@ -1,4 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import SmallButton from "../../../Components/Buttons/SmallButton";
+import BackButton from "../../../Components/Buttons/BackButton";
+import InputField from "../../../Components/Input";
+import arrowDown from '../../../assets/Icons/arrow-down.svg'
+import date from '../../../assets/Icons/calender.svg'
+import time from '../../../assets/Icons/time.svg'
+
 
 const DisableService = () => {
   const navigate = useNavigate();
@@ -21,20 +28,33 @@ const DisableService = () => {
       </div>
       Ending
       <div>
-        <div>
-          Date <input type="text" />
-        </div>
-        <div>
-          Time <input type="text" />
-        </div>
+
+      <form className="form-feild-container">
+      <InputField 
+          label="Date"
+          type="text"
+          icon={date}
+          arrow={arrowDown}
+         onChange={() => {}} />
+
+      <InputField 
+          label="Time" 
+          type="text"
+          icon={time}
+          arrow={arrowDown}
+          onChange={() => {}} />
+          <div className="button-end">
+            <SmallButton
+            type="saveBlack"
+            label="Save"
+            onClick={() => {
+              navigate("/shop/service/add-service-form");
+            }}
+            /></div>
+          
+          </form>
       </div>
-      <button
-        onClick={() => {
-          navigate("/shop/service/add-service-form");
-        }}
-      >
-        Save
-      </button>
+     
     </div>
   );
 };

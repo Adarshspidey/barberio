@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import BackButton from "../../../Components/Buttons/BackButton";
-import SmallButton from "../../../Components/Buttons/SmallButton";
-import InputField from "../../../Components/Input";
 import localoffer from '../../../assets/Icons/local-offer.svg'
 import percentage from '../../../assets/Icons/percentage.svg'
 import serviceicon from "../../../assets/Icons/nameofservice.svg";
 import descriptionicon from "../../../assets/Icons/description.svg";
+import SmallButton from "../../../Components/Buttons/SmallButton";
+import BackButton from "../../../Components/Buttons/BackButton";
+import InputField from "../../../Components/Input";
 import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import date from '../../../assets/Icons/calender.svg'
 import time from '../../../assets/Icons/time.svg'
@@ -64,12 +64,14 @@ const EditProfile = () => {
           icon={date}
           arrow={arrowDown}
          onChange={() => {}} />
+
         <InputField 
           label="Time" 
           type="text"
           icon={time}
           arrow={arrowDown}
           onChange={() => {}} />
+          
       </div>
       <div className="button-end">
         <SmallButton 

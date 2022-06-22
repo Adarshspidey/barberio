@@ -4,7 +4,6 @@ import InputField from "../../../Components/Input";
 import time from "../../../assets/Icons/time.svg";
 import arrow from "../../../assets/Icons/arrow-down.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
-import SmallButton from "../../../Components/Buttons/SmallButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 
 const ScheduleTime = () => {

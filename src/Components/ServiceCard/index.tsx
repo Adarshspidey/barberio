@@ -14,7 +14,7 @@ const ServiceCard = ({title}:ServicecardProps) => {
         type="black"
         label="Disable"
         onClick={() => {
-              navigate("/shop/disable-service");
+              navigate("/shop/service/disable-service");
             }}/>
       </div>
     </div>
