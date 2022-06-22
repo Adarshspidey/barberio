@@ -31,20 +31,15 @@ const Bookings = () => {
 
   return (
     <div>
-      {/* <button
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      >
-        All
-      </button> */}
-      <SmallButton
-        type="white"
-        label="All"
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      />
+      <div className="content-end">
+        <SmallButton
+          type="white"
+          label="All"
+          onClick={() => {
+            navigate("/shop/booking/detailed-booking");
+          }}
+        />
+      </div>
       {bookings.length < 1 && <div>No bookings available</div>}
       {bookings.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
