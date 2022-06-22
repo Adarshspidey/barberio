@@ -35,9 +35,6 @@ const ServiceHistory = () => {
 
   return (
     <div>
-      {/* <div>
-        Completed
-      </div> */}
       <div className="history-complete-button">
         <ButtonWithIcon
           type="noBorder"
