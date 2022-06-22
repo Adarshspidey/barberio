@@ -17,6 +17,12 @@
   color: var(--black);
 }
 
+.button-orange-big {
+  background-color: var(--orange);
+  font-size: var(--xxlarge);
+  font-weight: 400;
+}
+
 .button-big-discardBlack {
   padding: 10px 100px;
   border-radius: 30px;

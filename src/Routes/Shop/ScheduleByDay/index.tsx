@@ -9,28 +9,35 @@ const ScheduleByDay = () => {
   const navigate = useNavigate();
   return (
     <div>
-      Schedule By Day
+      <div className="set-up-question">Schedule By Day</div>
       <div>Calendar Days</div>
-      <InputField label="Start Time"
-        onChange={() => {}}
-        value=""
-        icon= {time}
-        arrow={arrow}/>
-      
-      <InputField label="End Time"
-        onChange={() => {}}
-        value=""
-        icon= {time}
-        arrow={arrow}/>
+      <div className="input-wrapper">
+        <InputField
+          label="Start Time"
+          onChange={() => {}}
+          value=""
+          icon={time}
+          arrow={arrow}
+        />
 
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/schedule-time");
-        }}
-      />
-      
+        <InputField
+          label="End Time"
+          onChange={() => {}}
+          value=""
+          icon={time}
+          arrow={arrow}
+        />
+      </div>
+
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/schedule-time");
+          }}
+        />
+      </div>
     </div>
   );
 };
