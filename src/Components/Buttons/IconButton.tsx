@@ -1,7 +1,7 @@
 import React from "react";
 
 interface PropsType {
-  type: "green" | "red" | "yellow";
+  type: "green" | "red" | "yellow" | "black";
   icon: string;
   onClick?: () => void;
 }
@@ -10,13 +10,15 @@ const IconButton = ({ icon, onClick, type }: PropsType) => {
   return (
     <button
       onClick={onClick}
-      className={`button-icon ${
+      className={`icons-button ${
         type === "green"
           ? "button-green"
           : type === "red"
           ? "button-red"
           : type === "yellow"
           ? "button-yellow"
+          : type === "black"
+          ? "icon-black"
           : ""
       }`}
     >

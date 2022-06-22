@@ -3,7 +3,7 @@ import React from "react";
 
 interface PropsType {
   leftIcon?: string;
-  type?: "black" | "green" | "white";
+  type?: "black" | "green" | "white" | "noBorder";
   rightIcon?: string;
   label: string;
   onClick?: () => void;
@@ -19,10 +19,16 @@ const ButtonWithIcon = ({
   return (
     <button
       onClick={onClick}
-      className={`back-button ${type === "white" ? "add-button" : ""}`}
+      className={`back-button ${
+        type === "white"
+          ? "add-button"
+          : type === "black"
+          ? "button-icon-black"
+          : ""
+      }`}
     >
       <img src={leftIcon} alt="" />
-      <span>{label}</span>
+      {label}
       <img src={rightIcon} alt="" />
     </button>
   );
