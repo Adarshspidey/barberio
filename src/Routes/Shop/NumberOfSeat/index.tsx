@@ -9,20 +9,27 @@ const NumberOfSeat = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h1></h1>
-      <InputField
-      icon={chair}
-        label="Number Of Seats"
-        onChange={() => {}}
-        value=""
-        arrow={plus}/>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/profile-completed");
-        }}
-      />
+      <div className="set-up-question">Number of Seats</div>
+
+      <div className="single-input-wrapper">
+        <InputField
+          icon={chair}
+          label="Number Of Seats"
+          onChange={() => {}}
+          value=""
+          arrow={plus}
+        />
+      </div>
+
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/profile-completed");
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -8,54 +8,52 @@ const AddInterval = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Intervals</h1>
+      <div className="set-up-question">Intervals</div>
       <div>
-        <div
-          onClick={() => {
-            navigate("/setup/interval-list");
-          }}
-        >
-          Spa
-        </div>
-        <IntervalListCard/>
-        <div
-          onClick={() => {
-            navigate("/setup/interval-list");
-          }}
-        >
-          <IntervalListCard/>
-        </div>
-        <div
-          onClick={() => {
-            navigate("/setup/interval-list");
-          }}
-        >
-          Hair Cutting
+        <div className="input-wrapper">
+          <div
+            onClick={() => {
+              navigate("/setup/interval-list");
+            }}
+          >
+            <IntervalListCard />
+          </div>
+
+          <div
+            onClick={() => {
+              navigate("/setup/interval-list");
+            }}
+          >
+            <IntervalListCard />
+          </div>
         </div>
       </div>
-      <br />
-      Common Interval <br /> <br />
-      <InputField label="Start Time"
+
+      <div className="sub-content-header">Common Interval</div>
+
+      <InputField
+        label="Start Time"
         onChange={() => {}}
         value=""
-        icon= {time}
-        arrow={arrow}/>
-      
+        icon={time}
+        arrow={arrow}
+      />
       <InputField
         label="End Time"
         onChange={() => {}}
         value=""
-        icon= {time}
-        arrow={arrow}/>
-
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/shop-type");
-        }}
+        icon={time}
+        arrow={arrow}
       />
-    
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/shop-type");
+          }}
+        />
+      </div>
     </div>
   );
 };

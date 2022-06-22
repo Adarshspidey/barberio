@@ -7,20 +7,27 @@ const ProfileCompleted = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>Profile Completed Successfully</div>
-      <div>
-        Please recheck your details by going back or You can edit your profile
-        by navigating to profile window later.
+      <div className="set-up-question">All Done</div>
+      <div className="input-wrapper">
+        <div className="content-title-black">
+          Profile Completed Successfully
+        </div>
+        <div className="content-discription">
+          Please recheck your details by going back or You can edit your profile
+          by navigating to profile window later.
+        </div>
       </div>
       <img src={finish} alt="finish" />
-      <BigButton
-        type="primary"
-        label="Finish"
-        onClick={() => {
-          navigate("/shop");
-        }}
-      />
-       
+
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="orange"
+          label="Finish"
+          onClick={() => {
+            navigate("/shop/booking");
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const BigButton = ({ type, onClick, label }: PropsTypes) => {
         type === "secondary"
           ? "button-big-secondary"
           : type === "orange"
-          ? "button-orange"
+          ? "button-orange-big"
           : ""
       }`}
       onClick={onClick}

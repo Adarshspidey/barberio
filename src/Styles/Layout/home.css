@@ -37,10 +37,14 @@
   padding: 30px 5px;
   padding-bottom: 50px;
 }
-.content-title {
+.content-title,
+.content-title-black {
   font-size: var(--slarge);
   color: var(--light-black);
   text-align: center;
+}
+.content-title-black {
+  color: var(--black);
 }
 
 .login-container {
@@ -168,6 +172,10 @@
   margin-top: 60px;
 }
 
+.single-input-wrapper {
+  margin-top: 150px;
+}
+
 .button-bottom-wrapper {
   position: absolute;
   bottom: 110px;
@@ -180,7 +188,7 @@
   padding: 20px;
   margin-top: 40px;
 }
- 
+
 .button-gallery{
   display: flex;
   justify-content: end;
@@ -190,4 +198,11 @@
   font-size: var(--xxlarge);
   color: var(--black);
   text-align: center;
+}
+.sub-content-header {
+  font-size: var(--xlarge);
+  font-weight: bolder;
+  padding: 20px;
+  margin: 10px 0;
+
 }
