@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import ServiceCard from "../../../Components/ServiceCard";
-import addIcon from '../../../assets/Icons/Add.svg'
+import addIcon from "../../../assets/Icons/Add.svg";
 
 type ServiceData = {
   title: string;
@@ -22,20 +22,22 @@ const ServiceList = () => {
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-      Services 
-      <ButtonWithIcon
-        rightIcon={addIcon}
-        label="Add"
-        onClick={() => {
-          navigate("/shop/service/add-service-form");
-        }}
-      />
+        Services
+        <ButtonWithIcon
+          type="white"
+          rightIcon={addIcon}
+          label="Add"
+          onClick={() => {
+            navigate("/shop/service/add-service-form");
+          }}
+        />
       </div>
-      {services.map((services: ServiceData, i) => (
-        <ServiceCard {...services} />
-      ))}
+      <div className="service-wrapper">
+        {services.map((services: ServiceData, i) => (
+          <ServiceCard {...services} />
+        ))}
+      </div>
     </div>
-    
   );
 };
 
