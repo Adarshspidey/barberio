@@ -6,14 +6,16 @@ const UploadMorePic = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Upload More Image</h1>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/add-service");
-        }}
+      <div className="set-up-question">Upload More Image</div>
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/add-service");
+          }}
         />
+      </div>
     </div>
   );
 };

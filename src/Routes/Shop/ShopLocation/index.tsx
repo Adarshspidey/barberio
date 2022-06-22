@@ -7,27 +7,34 @@ const ShopLocation = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div>Where is Your Shop Located ?</div>
-      
-      <InputField label="Location"
-        onChange={() => {}}
-        value=""
-        icon= {location}/>
-      
-      <InputField label="Address"
-        type="textarea"
-        onChange={() => {}}
-        value=""
-        icon= {location}/>
-      <BigButton
-        type="primary"
-        label="Next"
+      <div className="set-up-question">Where is Your Shop Located ?</div>
 
-        onClick={() => {
-          navigate("/setup/upload-logo");
-        }}
-      />
+      <div className="input-wrapper">
+        <InputField
+          label="Location"
+          onChange={() => {}}
+          value=""
+          icon={location}
+        />
 
+        <InputField
+          label="Address"
+          type="textarea"
+          onChange={() => {}}
+          value=""
+          icon={location}
+        />
+      </div>
+
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/upload-logo");
+          }}
+        />
+      </div>
     </div>
   );
 };

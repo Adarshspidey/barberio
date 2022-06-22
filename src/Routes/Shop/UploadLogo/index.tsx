@@ -6,14 +6,17 @@ const UploadLogo = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Upload Logo</h1>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/upload-cover-pic");
-        }}
+      <div className="set-up-question">Your Logo / Brand Image</div>
+
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/setup/upload-cover-pic");
+          }}
         />
+      </div>
     </div>
   );
 };
