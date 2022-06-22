@@ -12,16 +12,19 @@ const NotificationCard = ({ title, time }: OffercardProps) => {
   const navigate = useNavigate();
   return (
     <div
+      className="notification-card"
       onClick={() => {
         navigate("/shop/notification-body");
       }}
     >
-      {title}
-      <img src={arrowRight} alt="arrow" />
       <div>
-        <img src={clockSmall} alt="clock" />
-        {time}
+        <div className="notification-header">{title}</div>
+        <div className="time-wrapper">
+          <img src={clockSmall} alt="clock" />
+          {time}
+        </div>
       </div>
+      <img src={arrowRight} alt="arrow" />
     </div>
   );
 };

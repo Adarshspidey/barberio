@@ -134,7 +134,6 @@ const Router = () => {
         >
           <Route index element={<Bookings />} />
           <Route path="seat" element={<BookingSeatView />} />
-          {/* <Route path="detailed-booking" element={<DetailedBookingView />} /> */}
         </Route>
         <Route
           path="profile"

@@ -47,7 +47,11 @@ const Bookings = () => {
         </div>
       )}
 
-      {showAll && <DetailedBookingView setShowAll={setShowAll} />}
+      {showAll && (
+        <div className="content-margin">
+          <DetailedBookingView setShowAll={setShowAll} />
+        </div>
+      )}
 
       {bookings.length < 1 && <div>No bookings available</div>}
       {bookings.map((booking: BookingData, i) => (

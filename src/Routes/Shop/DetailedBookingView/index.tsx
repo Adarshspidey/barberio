@@ -9,7 +9,7 @@ interface PropsType {
 const DetailedBookingView = ({ setShowAll }: PropsType) => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="detailed-booking">
       <div className="wrapper-flex-justify-content">
         <SmallButton
           type="orange"
@@ -21,7 +21,7 @@ const DetailedBookingView = ({ setShowAll }: PropsType) => {
         <BackButton onClick={() => setShowAll(false)} />
       </div>
 
-      <div>Select days</div>
+      <div className="calendar-div">Select days</div>
     </div>
   );
 };

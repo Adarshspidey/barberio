@@ -12,7 +12,7 @@ const BookingSeatView = () => {
           type="orange"
           label="Seat"
           onClick={() => {
-            navigate("/shop/booking/detailed-booking");
+            navigate("/shop/booking");
           }}
         />
         <BackButton />

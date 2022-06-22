@@ -189,12 +189,21 @@
   margin-top: 40px;
 }
 
-.button-gallery{
+.content-margin {
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.calendar-div {
+  margin: 20px 0;
+}
+
+.button-gallery {
   display: flex;
   justify-content: end;
 }
 
-.profile-menu-title{
+.profile-menu-title {
   font-size: var(--xxlarge);
   color: var(--black);
   text-align: center;
@@ -204,5 +213,4 @@
   font-weight: bolder;
   padding: 20px;
   margin: 10px 0;
-
 }
