@@ -18,7 +18,7 @@ const ViewProfile = () => {
     <div>
       <div>
         <div><img src={shopImage} alt="gallery"/></div>
-        <div className=" button-gallery">
+        <div className=" button-end">
         <ButtonWithIcon
         type="white"
         label="Gallery"

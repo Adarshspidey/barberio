@@ -6,11 +6,12 @@ import {
   useState,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import descriptionicon from "../../../assets/Icons/description.svg";
 import rupeeicon from "../../../assets/Icons/indian-rupee.svg";
 import sessionicon from "../../../assets/Icons/session.svg";
 import serviceicon from "../../../assets/Icons/nameofservice.svg";
+import descriptionicon from "../../../assets/Icons/description.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import InputField from "../../../Components/Input";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import postCall from "../../../Services/postCall";
@@ -89,6 +90,7 @@ const AddServiceForm = () => {
               icon={serviceicon}
               value={name}
               submitted={submit}
+              arrow={arrowDown}
               error={serviceFormError.name}
               onChange={(value) => onChange("name", value)}
             />
@@ -104,6 +106,7 @@ const AddServiceForm = () => {
               label=" Time for a session"
               icon={sessionicon}
               value={sessionTime}
+              arrow={arrowDown}
               submitted={submit}
               error={serviceFormError.sessionTime}
               onChange={(value) => onChange("sessionTime", value)}

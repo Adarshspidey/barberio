@@ -2,29 +2,84 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import InputField from "../../../Components/Input";
+import localoffer from '../../../assets/Icons/local-offer.svg'
+import percentage from '../../../assets/Icons/percentage.svg'
+import serviceicon from "../../../assets/Icons/nameofservice.svg";
+import descriptionicon from "../../../assets/Icons/description.svg";
+import arrowDown from '../../../assets/Icons/arrow-down.svg'
+import date from '../../../assets/Icons/calender.svg'
+import time from '../../../assets/Icons/time.svg'
 
 const EditProfile = () => {
   const navigate = useNavigate();
 
   return (
     <div>
+      
       <div className="wrapper-flex-justify-content">
         <span>Add Offer</span>
         <BackButton />
       </div>
-      <InputField label="Offer" onChange={() => {}} />
-      <InputField type="textarea" label="Description" onChange={() => {}} />
+      <form className="form-feild-container">
+      
+      <InputField
+              label="Name of Service "
+              icon={serviceicon}
+              type="text"
+              arrow={arrowDown}
+              onChange={() => {}}
+            />
+          <InputField 
+            label="Offer"
+            type="text"
+            icon={localoffer}
+            arrow={percentage}
+            onChange={() => {}} />
+            <InputField
+              label="Description"
+              type="textarea"
+              icon={descriptionicon}
+              onChange={() => {}}
+            />
       <span>Start</span>
       <div className="start">
-        <InputField label="Date" onChange={() => {}} />
-        <InputField label="Time" onChange={() => {}} />
+        <InputField 
+          label="Date" 
+          type="text"
+          icon={date}
+          onChange={() => {}} />
+        <InputField 
+          label="Time" 
+          type="text"
+          icon={time}
+          arrow={arrowDown}
+          onChange={() => {}} />
       </div>
+
       <span>End</span>
       <div className="start">
-        <InputField label="Date" onChange={() => {}} />
-        <InputField label="Time" onChange={() => {}} />
+        <InputField 
+          label="Date"
+          type="text"
+          icon={date}
+          arrow={arrowDown}
+         onChange={() => {}} />
+        <InputField 
+          label="Time" 
+          type="text"
+          icon={time}
+          arrow={arrowDown}
+          onChange={() => {}} />
       </div>
-      <SmallButton label="Add" type="saveBlack" />
+      <div className="button-end">
+        <SmallButton 
+        label="Add" 
+        type="saveBlack"
+        onClick={()=>{
+          navigate("/shop/profile/offers")}
+          } />
+      </div>
+      </form>
     </div>
   );
 };
