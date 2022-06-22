@@ -4,6 +4,9 @@ import BookingCard from "../../../Components/BookingCard";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import { BookingData } from "../../../Types/Booking";
 import filtering from "../../../assets/Icons/filtering.svg";
+import historyToggle from "../../../assets/Icons/history-toggle.svg";
+import completeIcon from "../../../assets/Icons/complete-icon.svg";
+import IconButton from "../../../Components/Buttons/IconButton";
 
 const data: Array<BookingData> = [
   {
@@ -32,7 +35,18 @@ const ServiceHistory = () => {
 
   return (
     <div>
-      <div>Completed</div>
+      {/* <div>
+        Completed
+      </div> */}
+      <div className="history-complete-button">
+        <ButtonWithIcon
+          type="noBorder"
+          label="Completed"
+          leftIcon={completeIcon}
+        />
+        <IconButton type="black" icon={historyToggle} />
+      </div>
+
       {bookingsHistory.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
       ))}

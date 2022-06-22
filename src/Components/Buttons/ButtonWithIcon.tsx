@@ -3,7 +3,7 @@ import React from "react";
 
 interface PropsType {
   leftIcon?: string;
-  type?: "black" | "green" | "white";
+  type?: "black" | "green" | "white" | "noBorder";
   rightIcon?: string;
   label: string;
   onClick?: () => void;

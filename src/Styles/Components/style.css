@@ -77,6 +77,19 @@
   color: var(--white);
 }
 
+.icon-black {
+  background: linear-gradient(180deg, #646464 0%, #4b4b4b 100%);
+  border: none;
+  box-shadow: none;
+  border-radius: 50px 50px;
+}
+
+.icons-button {
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+
 .button-saveBlack,
 .button-icon-black {
   width: 120px;
