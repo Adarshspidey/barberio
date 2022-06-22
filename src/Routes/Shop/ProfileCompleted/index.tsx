@@ -24,7 +24,7 @@ const ProfileCompleted = () => {
           type="orange"
           label="Finish"
           onClick={() => {
-            navigate("/shop");
+            navigate("/shop/booking");
           }}
         />
       </div>
