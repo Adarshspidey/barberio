@@ -420,3 +420,44 @@
   color: var(--light-black);
   font-size: var(--xlarge);
 }
+
+.calendar {
+  padding: 20px 10px;
+}
+
+.calendar-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.calendar-day {
+  font-size: var(--xxlarge);
+}
+
+.month-text {
+  padding: 20px 10px;
+  color: #ff9052;
+  text-align: center;
+  font-weight: 400;
+  font-size: var(--xxlarge);
+}
+
+.month-change {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.calendar-day-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-days {
+  padding: 20px;
+  background: linear-gradient(180deg, #e6e6e6 0%, #ffffff 100%);
+  box-shadow: 3.26572e-16px 5.33333px 10.6667px rgba(51, 51, 51, 0.135),
+    inset -7.98288e-17px -1.3037px 1.3037px #dfdfdf,
+    inset 7.98288e-17px 1.3037px 1.3037px #ffffff;
+  border-radius: 15px;
+}
