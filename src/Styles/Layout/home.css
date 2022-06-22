@@ -237,3 +237,10 @@
   display: flex;
   padding: 20px 10px;
 }
+
+.logout-button{
+  color: var(--orange);
+  text-align: center;
+  padding: 5px;
+  font-size: var(--xlarge);
+}

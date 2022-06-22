@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import ProfileMenu from "../../../Components/ProfileMenu/input";
+import ProfileMenu from "../../../Components/ProfileMenu";
 import profileIcon from '../../../assets/Icons/user-profile.svg'
 import arrow from '../../../assets/Icons/arrow-right.svg'
 import offer from '../../../assets/Icons/offer.svg'
@@ -10,6 +10,7 @@ import review from '../../../assets/Icons/star-review.svg'
 import shopImage from '../../../assets/Images/Cover_image.png'
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import gallery from '../../../assets/Icons/gallery.svg'
+import logout from '../../../assets/Icons/logout.svg'
 
 const ViewProfile = () => {
   const navigate = useNavigate();
@@ -80,14 +81,20 @@ const ViewProfile = () => {
         navigate("/shop/profile/ratings");
       }}
       />
+      <div className="profile-menu-card">
+      <div className="profile-card-items">
+            <div ><img src={logout} alt="icon"  /></div>
+            <div className="logout-button">LogOut</div>
+        </div>
+      </div>
 
-      <button
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Logout
-      </button>
+    {/* <ProfileMenu
+      title=" Logout"
+      icon={logout}
+      onClick={() => {
+        navigate("/");
+      }}
+      /> */}
     </div>
   );
 };

@@ -143,6 +143,7 @@ const Router = () => {
           }
         >
           <Route index element={<ViewProfile />} />
+          <Route path="images" element={<ImagePage/>}/>
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
