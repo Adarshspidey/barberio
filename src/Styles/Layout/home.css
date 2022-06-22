@@ -200,9 +200,18 @@
   margin-top: 40px;
 }
 
-.button-end {
+.button-end,
+.button-end-with-margin {
   display: flex;
   justify-content: end;
+}
+
+.button-end-with-margin {
+  margin-top: 50px;
+}
+
+.service-wrapper {
+  margin: 20px 0;
 }
 
 .profile-menu-title {
