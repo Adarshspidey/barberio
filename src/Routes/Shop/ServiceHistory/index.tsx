@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BookingCard from "../../../Components/BookingCard";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import { BookingData } from "../../../Types/Booking";
-import filtering from '../../../assets/Icons/filtering.svg'
-
+import filtering from "../../../assets/Icons/filtering.svg";
 
 const data: Array<BookingData> = [
   {
@@ -37,16 +36,16 @@ const ServiceHistory = () => {
       {bookingsHistory.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
       ))}
-      <ButtonWithIcon
-      type="black"
-      label="filter"
-      rightIcon={filtering}
-        onClick={() => {
-          navigate("/shop/filter-list");
-        }}
-      />
-        
-      
+      <div className="filter-button">
+        <ButtonWithIcon
+          type="black"
+          label="Filter"
+          leftIcon={filtering}
+          onClick={() => {
+            navigate("/shop/filter-list");
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -224,3 +224,9 @@
   color: var(--black);
   padding: 5px;
 }
+
+.filter-button {
+  position: absolute;
+  bottom: 130px;
+  left: 41%;
+}
