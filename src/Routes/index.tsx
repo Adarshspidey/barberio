@@ -54,6 +54,7 @@ const Router = () => {
   });
 
   const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({
+    hideBackButton: false,
     activePath: "",
   });
 
@@ -142,12 +143,18 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ViewProfile />} />
-          <Route path="images" element={<ImagePage/>}/>
+          <Route
+            index
+            element={<ViewProfile setShopLayOutProps={setShopLayOutProps} />}
+          />
+          <Route path="images" element={<ImagePage />} />
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
-          <Route path="edit" element={<EditProfile />} />
+          <Route
+            path="edit"
+            element={<EditProfile setShopLayOutProps={setShopLayOutProps} />}
+          />
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
           <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />

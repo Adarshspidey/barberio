@@ -72,10 +72,15 @@
   padding-top: 10px;
 }
 
-.back-button-left {
+.back-button-left,
+.back-button-left-shop {
   position: absolute;
   right: 20px;
   top: 20px;
+}
+
+.back-button-left-shop {
+  top: 80px;
 }
 
 .form-container {
