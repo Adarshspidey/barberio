@@ -24,6 +24,12 @@
   backdrop-filter: blur(4px);
 }
 
+.home-content {
+  display: grid;
+  height: 100%;
+  align-items: center;
+}
+
 .home-content-title {
   font-size: var(--xxxxlarge);
   text-align: center;
@@ -82,7 +88,7 @@
   width: 100%;
   padding: 20px 0;
 }
-.form-container-block{
+.form-container-block {
   padding: 20px;
 }
 
@@ -164,8 +170,10 @@
 }
 
 .set-up-question {
-  padding-left: 20px;
+  width: 100%;
+  text-align: center;
   position: absolute;
+  left: 0;
   top: -45px;
   align-self: center;
   color: var(--white);
@@ -212,7 +220,7 @@
   justify-content: end;
 }
 
-.waper{
+.waper {
   padding-right: 30px;
 }
 
@@ -258,22 +266,18 @@
   padding: 20px 10px;
 }
 
-.logout-button{
+.logout-button {
   color: var(--orange);
   text-align: center;
   padding: 5px;
   font-size: var(--xlarge);
 }
 
-.home-content-discription{
-  padding-bottom: 70px;
+.otp-content-container {
+  padding: 100px 0 50px 0;
 }
 
-.otp-content-container{
-  padding:100px 0 50px 0;
-}
-
-.login-content-container{
+.login-content-container {
   padding: 35px;
 }
 
@@ -281,7 +285,7 @@
   padding: 40px 0;
 } */
 
-.edit-profile-title{
+.edit-profile-title {
   color: var(--light-black);
   font-size: var(--xxlarge);
 }
@@ -290,28 +294,28 @@
   padding-bottom: 110px;
 }  */
 
-.image-gallery{
+.image-gallery {
   position: relative;
   left: 20px;
 }
 
-.logo-gallery{
+.logo-gallery {
   position: absolute;
   left: 4px;
   top: 80.8px;
 }
 
-.waper-main-container{
+.waper-main-container {
   height: 100%;
   overflow: auto;
   padding-bottom: 50px;
 }
 
-.shop-content{
-  background: #597C75;
+.shop-content {
+  background: #597c75;
 }
 
-.shop-image{
- display: flex;
- place-items: center;
+.shop-image {
+  display: flex;
+  place-items: center;
 }
