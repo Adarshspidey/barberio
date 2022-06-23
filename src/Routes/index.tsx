@@ -41,7 +41,6 @@ import QrScanner from "./Shop/QrScanner";
 import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
-import DetailedBookingView from "./Shop/DetailedBookingView";
 import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
@@ -103,7 +102,6 @@ const Router = () => {
           element={<Verification setLayoutProps={setLayoutProps} />}
         />
       </Route>
-
       <Route path="setup" element={<ShopSetUpLayout />}>
         <Route index element={<ShopLocation />} />
         <Route path="upload-logo" element={<UploadLogo />} />

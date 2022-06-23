@@ -463,3 +463,30 @@
     inset 7.98288e-17px 1.3037px 1.3037px #ffffff;
   border-radius: 15px;
 }
+
+.rating-component{
+  display: grid;
+  padding: 20px;
+  margin: 20px;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  background: var(--light-white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.rating-dtails{
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+.rating-title{
+  font-size: var(--xlarge);
+}
+
+.rating-discription{
+  font-size: var(--small);
+  color: var(--menu-title);
+}

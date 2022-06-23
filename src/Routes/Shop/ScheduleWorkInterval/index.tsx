@@ -2,15 +2,22 @@ import { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import profileActive from "../../../assets/Icons/Profile-active.svg";
 import BackButton from "../../../Components/Buttons/BackButton";
+import BigButton from "../../../Components/Buttons/BigButton";
+import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
+import IntervalListCard from "../../../Components/IntervalListCard";
+import addplus from "../../../assets/Icons/add-plus.svg";
 
 const ScheduleWorkInterval = () => {
   const navigate = useNavigate();
 
   return (
     <div>
-      Select Service
-      <BackButton/>
+      <div className="wrapper-flex-justify-content">
+      <div className="edit-profile-title"> Select Service</div>
+        <BackButton/>
+      </div>
       <div className="service-wrapper">
+
         <div
           onClick={() => {
             navigate("/shop/profile/schedule-interval-list");
@@ -27,19 +34,47 @@ const ScheduleWorkInterval = () => {
         </div>
       </div>
       Common Intervals
-      <div>
-        Start Time <input type="text" />{" "}
+      <div className="sub-content-header">Common Interval</div>
+      <div className="button-end">
+        <ButtonWithIcon
+          rightIcon={addplus}
+          type="white"
+          label="Add"
+          onClick={() => {
+            navigate("/setup/interval-form");
+          }}
+        />
       </div>
+
       <div>
-        End Time <input type="text" />{" "}
+        <div className="input-wrapper">
+          <div
+            onClick={() => {
+              navigate("/setup/interval-list");
+            }}
+          >
+            <IntervalListCard />
+          </div>
+
+          <div
+            onClick={() => {
+              navigate("/setup/interval-list");
+            }}
+          >
+            <IntervalListCard />
+          </div>
+        </div>
       </div>
-      <button
-        onClick={() => {
-          navigate("/shop/profile");
-        }}
-      >
-        Save
-      </button>
+      <div className="button-bottom-wrapper">
+        <BigButton
+          type="primary"
+          label="Next"
+          onClick={() => {
+            navigate("/shop/profile");
+          }}
+        
+        />
+      </div>
     </div>
   );
 };
