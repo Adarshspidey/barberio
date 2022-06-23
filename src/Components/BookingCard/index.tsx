@@ -31,7 +31,7 @@ const BookingCard = ({
       <div>
         <div className="booking-card-component-group">
           <div className="booking-card-title">{title}</div>
-          <div className="booking-carditime">{time}</div>
+          <div className="booking-carditime">{time} AM</div>
         </div>
         <div className="booking-card-duration-component">
           {!isDetailed && (

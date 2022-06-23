@@ -1,5 +1,5 @@
 type PropsTypes = {
-    icon:string;
+    icon?:string;
     title:string;
     arrow?:string;
     onClick: () => void;
@@ -7,12 +7,13 @@ type PropsTypes = {
     
 };
 
-const ProfileMenu = ({icon,title,arrow,onClick}:PropsTypes) => {
+const ProfileMenuCard = ({icon,title,arrow,onClick}:PropsTypes) => {
   return (
     <div className="profile-menu-card"
     onClick={onClick}>
         <div className="profile-card-items">
-            <div ><img src={icon} alt="icon"  /></div>
+          {icon && <div ><img src={icon} alt="icon"  /></div>}
+            
             <div className="profile-title">{title}</div>
         </div>
         {arrow && <div><img src={arrow} alt="arrow"  /></div>}
@@ -21,4 +22,4 @@ const ProfileMenu = ({icon,title,arrow,onClick}:PropsTypes) => {
   )
 }
 
-export default ProfileMenu
+export default ProfileMenuCard

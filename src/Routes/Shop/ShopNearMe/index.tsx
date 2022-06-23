@@ -9,7 +9,7 @@ const ShopNearMe = () => {
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-      <div>ShopNearMe</div>
+      <div className="edit-profile-title">ShopNearMe</div>
       <BackButton/>
       </div>
       <ShopNearCard/>

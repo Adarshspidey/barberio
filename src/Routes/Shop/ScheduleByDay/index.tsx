@@ -32,7 +32,7 @@ const ScheduleByDay = () => {
       <div className="button-bottom-wrapper">
         <BigButton
           type="primary"
-          label="Next"
+          label="Save"
           onClick={() => {
             navigate("/setup/schedule-time");
           }}

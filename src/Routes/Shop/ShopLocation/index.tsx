@@ -8,22 +8,23 @@ const ShopLocation = () => {
   return (
     <div>
       <div className="set-up-question">Where is Your Shop Located ?</div>
+      <div className="location-container">
+        <div className="input-wrapper">
+          <InputField
+            label="Location"
+            onChange={() => {}}
+            value=""
+            icon={location}
+          />
 
-      <div className="input-wrapper">
-        <InputField
-          label="Location"
-          onChange={() => {}}
-          value=""
-          icon={location}
-        />
-
-        <InputField
-          label="Address"
-          type="textarea"
-          onChange={() => {}}
-          value=""
-          icon={location}
-        />
+          <InputField
+            label="Address"
+            type="textarea"
+            onChange={() => {}}
+            value=""
+            icon={location}
+          />
+        </div>
       </div>
 
       <div className="button-bottom-wrapper">

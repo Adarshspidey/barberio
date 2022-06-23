@@ -1,9 +1,10 @@
+
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Sofia Pro Regular";
+  font-family: "Sofia Pro";
 }
 
 #__next {
@@ -55,7 +56,6 @@ form {
   --red: #ff0004;
   --orange: #ff9052;
   --gray: #595959;
-  --dark-gray: rgba(0, 0, 0, 0.4);
   --light-gray: #e8e8e8;
   --green: #059805;
   --light-green: #19a036;

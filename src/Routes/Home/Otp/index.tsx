@@ -77,24 +77,25 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-
+    <div className="otp-main-container">
+      <div className="otp-content-container">
       <div className="content-discription">Hi, it's you and me in this together.</div>
       <div className="content-title">Enter your OTP</div>
-      <form onSubmit={submit} >
+      </div>
+      <form onSubmit={submit} className="form-container">
         <div className="otp-input-feild">
           <OtpField
             otp={otp}
             handleOtpChange={(value) => setOtp(value)}
             otpError={otpErrorData.otp}
            />
-        
+        </div>
         <div className="otp-button">
         <BigButton
           type="secondary"
           label="Verify"
         />
-        </div>
+        
         </div>
       </form>
     </div>

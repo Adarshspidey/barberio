@@ -12,7 +12,7 @@ const ShopType = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="set-up-question">Shop Type</div>
+      <div className="set-up-question">Other</div>
       <div className="single-input-wrapper">
       <InputField
           icon={chair}

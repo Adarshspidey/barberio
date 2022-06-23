@@ -23,19 +23,24 @@ const Offers = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <BackButton />
-      <ButtonWithIcon
-      label="Add"
-      rightIcon={plus}
-      type="white"
-        onClick={() => {
-          navigate("/shop/profile/add-offers");
-        }}
-      />
-       
+
+        <div className="button-end"> <BackButton /></div>
+        <div className="button-end">
+        <ButtonWithIcon
+          label="Add"
+          rightIcon={plus}
+          type="white"
+          onClick={() => {
+            navigate("/shop/profile/add-offers");
+          }}
+        />
+      </div>
       {offers.map((offers: OfferData, i) => (
         <OfferCard {...offers} />
       ))}
+      <OfferCard
+      title="HairCutting" 
+      offer={10}/>
       <Outlet />
     </div>
   );

@@ -2,8 +2,10 @@ import shopImage from '../../assets/Images/shopImage.png'
 const ShopNearCard = () => {
   return (
     <div className='shop-card-component'>
+      <div className="shop-content">
         <div className='shop-image'>
             <img src={shopImage} alt='shop'/>
+        </div>
         </div>
         <div className='shop-details-card'>
             <div className='shop-details'>

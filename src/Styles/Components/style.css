@@ -1,5 +1,5 @@
 .button-big-primary {
-  padding: 10px 100px;
+  padding: 14px 100px;
   background-color: var(--button-primary-color);
   box-shadow: inset 10.6667px -10.6667px 10.6667px rgba(68, 94, 89, 0.1),
     inset -10.6667px 10.6667px 10.6667px rgba(255, 255, 255, 0.1);
@@ -41,7 +41,7 @@
     inset 1.1938e-16px 1.94963px 1.94963px #ffffff;
   border-radius: 25px;
   border: none;
-  padding: 10px 20px;
+  padding: 7px 14px;
   display: grid;
   gap: 8px;
   grid-auto-flow: column;
@@ -120,9 +120,11 @@
 }
 
 .add-button {
-  border: 1px solid #5a7e77;
+  border: 1px solid #5A7E77;
   box-shadow: 2.44929e-16px 2px 8px rgba(45, 30, 1, 0.24);
   border-radius: 15px;
+  padding: 14px 30px;
+  font-size: 18px;
 }
 
 .footer-center-menu-icon-box {
@@ -160,7 +162,7 @@
 
 .booking-card-component {
   background: var(--light-white);
-  padding: 20px 20px 10px 20px;
+  padding: 25px;
   margin: 0 10px;
   box-shadow: 1.64511e-15px 26.8667px 53.7333px rgba(50, 50, 50, 0.05),
     inset -3.69236e-16px -6.03007px 6.03007px #eff0f0,

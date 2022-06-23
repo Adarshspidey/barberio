@@ -16,6 +16,7 @@ const AddService = () => {
           label="Add"
           onClick={() => {
             navigate("/setup/add-service-form");
+            
           }}
         />
       </div>
