@@ -6,7 +6,6 @@ interface PropsType{
     label?:string;
     onClick?:()=>void;
 }
-
 const BackButton = ({icon=backButtonIcon,label="Back",onClick}:PropsType) => {
     const navigate = useNavigate();
 
