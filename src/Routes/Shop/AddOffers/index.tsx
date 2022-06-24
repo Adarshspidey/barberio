@@ -4,7 +4,6 @@ import percentage from "../../../assets/Icons/percentage.svg";
 import serviceicon from "../../../assets/Icons/nameofservice.svg";
 import descriptionicon from "../../../assets/Icons/description.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
-import BackButton from "../../../Components/Buttons/BackButton";
 import InputField from "../../../Components/Input";
 import arrowDown from "../../../assets/Icons/arrow-down.svg";
 import date from "../../../assets/Icons/calender.svg";
@@ -14,10 +13,12 @@ const EditProfile = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="waper-main-container">
+      
       <div className="wrapper-flex-justify-content">
         <div className="edit-profile-title"> Add Offer</div>
         {/* <span>Add Offer</span> */}
+
       </div>
       <form className="form-feild-container">
         <InputField
@@ -86,6 +87,7 @@ const EditProfile = () => {
         </div>
       </form>
     </div>
+
   );
 };
 

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import InputField from "../Input";
-import arrow from "../../../assets/Icons/arrow-down.svg";
-import time from "../../../assets/Icons/time.svg";
-import interval from '../../../assets/Icons/interval.svg'
+import arrow from "../../assets/Icons/arrow-down.svg";
+import time from "../../assets/Icons/time.svg";
+import interval from '../../assets/Icons/interval.svg'
 import BigButton from "../Buttons/BigButton";
 import SmallButton from "../Buttons/SmallButton";
 
@@ -10,7 +10,7 @@ interface PropsTypes {
   IsButton?:boolean;
 }
 
-const ServiceForm = ({IsButton=false}:PropsTypes) => {
+const IntervalFormCard = ({IsButton=false}:PropsTypes) => {
     const navigate = useNavigate();
   return (
     
@@ -67,4 +67,4 @@ const ServiceForm = ({IsButton=false}:PropsTypes) => {
   )
 }
 
-export default ServiceForm
+export default IntervalFormCard
