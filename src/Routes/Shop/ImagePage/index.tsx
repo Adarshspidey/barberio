@@ -10,12 +10,16 @@ const ImagePage = () => {
       <div className="wrapper-flex-justify-content">
         <div className="edit-profile-title">Images</div>
       </div>
-      
-        <UploadImageCard title="Cover Page"/>
-        {/* <div className="image-button-title">Cover Page</div>
+
+      <UploadImageCard title="Cover Page" />
+
+      <UploadImageCard title="Logo/Brand Image" />
+
+      <UploadImageCard title="Image Gallery" />
+      {/* <div className="image-button-title">Cover Page</div>
         <ButtonWithIcon label="Upload" type="green" leftIcon={upload} /> */}
 
-        {/* <div className="image-button-title">Logo/Brand Image</div>
+      {/* <div className="image-button-title">Logo/Brand Image</div>
         <ButtonWithIcon label="Upload" type="green" leftIcon={upload} />
 
         <div className="image-button-title">Image Gallery</div>
