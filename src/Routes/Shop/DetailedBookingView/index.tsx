@@ -20,7 +20,7 @@ const DetailedBookingView = ({ setShowAll }: PropsType) => {
             navigate("/shop/booking/seat");
           }}
         />
-        {/* <BackButton onClick={() => setShowAll(false)} /> */}
+        <BackButton onClick={() => setShowAll(false)} />
       </div>
 
       <Calendar />
