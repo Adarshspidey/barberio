@@ -9,7 +9,7 @@ const ScheduleIntervalForm = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <BackButton/>
+      {/* <BackButton/> */}
       Name of Interval
       <div className="input-wrapper">
         <InputField
@@ -29,8 +29,8 @@ const ScheduleIntervalForm = () => {
         />
       </div>
       <SmallButton
-      type="saveBlack"
-      label="Save"
+        type="saveBlack"
+        label="Save"
         onClick={() => {
           navigate("/shop/profile/schedule-interval-list");
         }}

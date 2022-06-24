@@ -13,11 +13,9 @@ const ScheduleWorkInterval = () => {
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-      <div className="edit-profile-title"> Select Service</div>
-        <BackButton/>
+        <div className="edit-profile-title"> Select Service</div>
       </div>
       <div className="service-wrapper">
-
         <div
           onClick={() => {
             navigate("/shop/profile/schedule-interval-list");
@@ -45,7 +43,6 @@ const ScheduleWorkInterval = () => {
           }}
         />
       </div>
-
       <div>
         <div className="input-wrapper">
           <div
@@ -72,7 +69,6 @@ const ScheduleWorkInterval = () => {
           onClick={() => {
             navigate("/shop/profile");
           }}
-        
         />
       </div>
     </div>
