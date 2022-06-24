@@ -19,6 +19,7 @@ interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
 }
 
+
 const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
   useEffect(() => {
     setShopLayOutProps({
