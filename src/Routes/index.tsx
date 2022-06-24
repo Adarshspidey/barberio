@@ -114,7 +114,7 @@ const Router = () => {
         <Route path="schedule-by-day" element={<ScheduleByDay />} />
         <Route path="interval" element={<AddInterval />} />
         <Route path="interval-list" element={<IntervalList />} />
-        <Route path="interval-form" element={<IntervalForm />} />
+        <Route path="interval-form" element={<IntervalForm IsButton={false} />} />
         <Route path="shop-type" element={<ShopType />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
         <Route
