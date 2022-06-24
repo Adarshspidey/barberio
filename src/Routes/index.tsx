@@ -117,7 +117,7 @@ const Router = () => {
         <Route path="interval-form" element={<IntervalForm />} />
         <Route path="shop-type" element={<ShopType />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
-        <Route path="add-service-form" element={<AddServiceForm />} />
+        <Route path="add-service-form" element={<AddServiceForm IsButton={false}/>} />
       </Route>
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
