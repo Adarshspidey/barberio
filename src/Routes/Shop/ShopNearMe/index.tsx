@@ -7,7 +7,7 @@ const ShopNearMe = () => {
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-        <div className="edit-profile-title">ShopNearMe</div>
+        <div className="edit-profile-title">Shop Near Me</div>
       </div>
       <div className="shop-card-container">
         <ShopNearCard />

@@ -24,6 +24,8 @@ const ButtonWithIcon = ({
           ? "add-button"
           : type === "black"
           ? "button-icon-black"
+          : type === "green"
+          ? "button-green"
           : ""
       }`}
     >
