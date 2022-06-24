@@ -17,11 +17,7 @@ import arrow from "../../../../assets/Icons/arrow-down.svg";
 import { Dispatch, SetStateAction } from "react";
 import { ShopLayOutProps } from "../../../../Types/Props";
 
-interface PropsType {
-  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
-}
-
-const EditProfile = ({ setShopLayOutProps }: PropsType) => {
+const EditProfile = () => {
   const navigate = useNavigate();
   return (
     <div className="waper-main-container">

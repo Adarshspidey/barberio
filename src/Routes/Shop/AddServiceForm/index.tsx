@@ -149,18 +149,20 @@
 
 // export default AddServiceForm;
 
-import ServiceForm from '../../../Components/ServiceForm'
+import ServiceForm from "../../../Components/ServiceForm";
 interface PropsTypes {
-  IsButton?:boolean;
-  title?:string;
+  IsButton?: boolean;
+  title?: string;
 }
 
-const AddServiceForm = ({IsButton=true}:PropsTypes) => {
+const AddServiceForm = ({ IsButton = true }: PropsTypes) => {
   return (
-    <div >
-      <ServiceForm IsButton={IsButton}/>
+    <div>
+      <div className="set-up-question">Add Services</div>
+      {IsButton && <div className="edit-profile-title"> Edit Profile</div>}
+      <ServiceForm IsButton={IsButton} />
     </div>
-  )
-}
+  );
+};
 
-export default AddServiceForm
+export default AddServiceForm;

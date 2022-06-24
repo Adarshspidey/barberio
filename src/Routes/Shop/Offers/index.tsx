@@ -4,7 +4,7 @@ import { useState } from "react";
 import OfferCard from "../../../Components/OfferCard";
 import BackButton from "../../../Components/Buttons/BackButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
-import plus from '../../../assets/Icons/add-plus.svg'
+import plus from "../../../assets/Icons/add-plus.svg";
 
 type OfferData = {
   title: string;
@@ -23,9 +23,8 @@ const Offers = () => {
   const navigate = useNavigate();
   return (
     <div>
-
-        <div className="button-end"> <BackButton /></div>
-        <div className="button-end">
+      {/* <div className="button-end"> <BackButton /></div> */}
+      <div className="button-end-with-margin">
         <ButtonWithIcon
           label="Add"
           rightIcon={plus}
@@ -38,9 +37,7 @@ const Offers = () => {
       {offers.map((offers: OfferData, i) => (
         <OfferCard {...offers} />
       ))}
-      <OfferCard
-      title="HairCutting" 
-      offer={10}/>
+      <OfferCard title="HairCutting" offer={10} />
       <Outlet />
     </div>
   );

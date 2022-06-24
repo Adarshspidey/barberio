@@ -291,6 +291,7 @@
 } */
 
 .edit-profile-title {
+  padding-left: 15px;
   color: var(--light-black);
   font-size: var(--xxlarge);
 }
@@ -325,10 +326,10 @@
   place-items: center;
 }
 
-.service-form-contaner{
+.service-form-contaner {
   padding: 15px;
 }
 
-.service-wapper-component{
+.service-wapper-component {
   padding-top: 70px;
 }

@@ -103,8 +103,8 @@ const Router = () => {
           element={<Verification setLayoutProps={setLayoutProps} />}
         />
       </Route>
-      
-      <Route path="setup" element={<ShopSetUpLayout/>}>
+
+      <Route path="setup" element={<ShopSetUpLayout />}>
         <Route index element={<ShopLocation />} />
         <Route path="upload-logo" element={<UploadLogo />} />
         <Route path="upload-cover-pic" element={<UploadCoverPicture />} />
@@ -117,7 +117,10 @@ const Router = () => {
         <Route path="interval-form" element={<IntervalForm />} />
         <Route path="shop-type" element={<ShopType />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
-        <Route path="add-service-form" element={<AddServiceForm IsButton={false}/>} />
+        <Route
+          path="add-service-form"
+          element={<AddServiceForm IsButton={false} />}
+        />
       </Route>
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
@@ -130,7 +133,10 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<Bookings setShopLayOutProps={setShopLayOutProps}/>} />
+          <Route
+            index
+            element={<Bookings setShopLayOutProps={setShopLayOutProps} />}
+          />
           <Route path="seat" element={<BookingSeatView />} />
         </Route>
         <Route
@@ -150,10 +156,7 @@ const Router = () => {
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
-          <Route
-            path="edit"
-            element={<EditProfile setShopLayOutProps={setShopLayOutProps} />}
-          />
+          <Route path="edit" element={<EditProfile />} />
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
           <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
@@ -177,7 +180,10 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceList setShopLayOutProps={setShopLayOutProps}/>} />
+          <Route
+            index
+            element={<ServiceList setShopLayOutProps={setShopLayOutProps} />}
+          />
           <Route path="add-service" element={<AddServiceForm />} />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
@@ -190,7 +196,10 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceHistory setShopLayOutProps={setShopLayOutProps}/>} />
+          <Route
+            index
+            element={<ServiceHistory setShopLayOutProps={setShopLayOutProps} />}
+          />
         </Route>
         <Route path="qr-scan" element={<QrScanner />} />
         <Route path="notification-list" element={<NotificationList />} />
