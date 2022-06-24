@@ -11,7 +11,7 @@ const BookingSeatView = () => {
       <div className="wrapper-flex-justify-content">
         <SmallButton
           type="orange"
-          label="Seat"
+          label="Service"
           onClick={() => {
             navigate("/shop/booking");
           }}
