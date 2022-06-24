@@ -251,8 +251,15 @@
   margin: 10px 0;
 }
 
-.form-feild-container {
+.form-feild-container,
+.shop-card-container {
+  margin-top: 20px;
   padding: 20px;
+}
+
+.shop-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .title-component {

@@ -1,18 +1,18 @@
-
 import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
 import ShopNearCard from "../../../Components/ShopnearCard";
-
 
 const ShopNearMe = () => {
   const navigate = useNavigate();
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-      <div className="edit-profile-title">ShopNearMe</div>
-      <BackButton/>
+        <div className="edit-profile-title">ShopNearMe</div>
       </div>
-      <ShopNearCard/>
+      <div className="shop-card-container">
+        <ShopNearCard />
+        <ShopNearCard />
+      </div>
     </div>
   );
 };
