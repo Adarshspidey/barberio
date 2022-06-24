@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingCard from "../../../Components/BookingCard";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
@@ -7,7 +7,11 @@ import filtering from "../../../assets/Icons/filtering.svg";
 import historyToggle from "../../../assets/Icons/history-toggle.svg";
 import completeIcon from "../../../assets/Icons/complete-icon.svg";
 import IconButton from "../../../Components/Buttons/IconButton";
+import { ShopLayOutProps } from "../../../Types/Props";
 
+interface PropsTypes {
+  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>
+}
 const data: Array<BookingData> = [
   {
     title: "Hair cutting",
@@ -27,7 +31,22 @@ const data: Array<BookingData> = [
   },
 ];
 
-const ServiceHistory = () => {
+const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
+
+  useEffect(() => {
+    setShopLayOutProps({
+      hideBackButton: true,
+    });
+
+    //ReSet Props For The LayOut
+    return () => {
+      setShopLayOutProps((prev) => ({
+        ...prev,
+        hideBackButton: false,
+      }));
+    };
+  }, []);
+
   const [bookingsHistory, setBookingsHistory] =
     useState<Array<BookingData>>(data);
 

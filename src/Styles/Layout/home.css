@@ -123,7 +123,7 @@
     inset -1.61566e-15px -26.3858px 26.3858px #e2e2e2,
     inset 1.61566e-15px 26.3858px 26.3858px #ffffff;
   border-radius: 25px;
-  padding: 30px 10px;
+  /* padding: 30px 10px; */
 }
 
 .shop-main-layout-container {
@@ -323,4 +323,12 @@
 .shop-image {
   display: flex;
   place-items: center;
+}
+
+.service-form-contaner{
+  padding: 15px;
+}
+
+.service-wapper-component{
+  padding-top: 70px;
 }

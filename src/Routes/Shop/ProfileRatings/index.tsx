@@ -9,7 +9,6 @@ const ProfileRatings = () => {
     <div className="waper-main-container">
       <div className="wrapper-flex-justify-content">
       <div className="edit-profile-title"> Ratings And Reviews</div>
-      <BackButton/>
       </div>
       <RatingCard/>
       <RatingCard/>

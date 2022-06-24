@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import Calendar from "../../../Components/Calendar";
+
 interface PropsType {
   setShowAll: Dispatch<SetStateAction<boolean>>;
 }
@@ -19,7 +20,7 @@ const DetailedBookingView = ({ setShowAll }: PropsType) => {
             navigate("/shop/booking/seat");
           }}
         />
-        <BackButton onClick={() => setShowAll(false)} />
+        {/* <BackButton onClick={() => setShowAll(false)} /> */}
       </div>
 
       <Calendar />

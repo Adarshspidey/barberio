@@ -5,7 +5,11 @@ import { BookingData } from "../../../Types/Booking";
 import bookingActive from "../../../assets/Icons/Booking-active.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import DetailedBookingView from "../DetailedBookingView";
+import { ShopLayOutProps } from "../../../Types/Props";
 
+interface PropsTypes {
+  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>
+}
 const data: Array<BookingData> = [
   {
     title: "Hair cutting",
@@ -25,7 +29,22 @@ const data: Array<BookingData> = [
   },
 ];
 
-const Bookings = () => {
+const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
+
+  useEffect(() => {
+    setShopLayOutProps({
+      hideBackButton: true,
+    });
+
+    //ReSet Props For The LayOut
+    return () => {
+      setShopLayOutProps((prev) => ({
+        ...prev,
+        hideBackButton: false,
+      }));
+    };
+  }, []);
+
   const [bookings, setBookings] = useState<Array<BookingData>>(data);
 
   const [showAll, setShowAll] = useState<boolean>(false);

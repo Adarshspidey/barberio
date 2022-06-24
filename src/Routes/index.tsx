@@ -103,7 +103,8 @@ const Router = () => {
           element={<Verification setLayoutProps={setLayoutProps} />}
         />
       </Route>
-      <Route path="setup" element={<ShopSetUpLayout />}>
+      
+      <Route path="setup" element={<ShopSetUpLayout/>}>
         <Route index element={<ShopLocation />} />
         <Route path="upload-logo" element={<UploadLogo />} />
         <Route path="upload-cover-pic" element={<UploadCoverPicture />} />
@@ -129,7 +130,7 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<Bookings />} />
+          <Route index element={<Bookings setShopLayOutProps={setShopLayOutProps}/>} />
           <Route path="seat" element={<BookingSeatView />} />
         </Route>
         <Route
@@ -176,8 +177,8 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceList />} />
-          <Route path="add-service-form" element={<AddServiceForm />} />
+          <Route index element={<ServiceList setShopLayOutProps={setShopLayOutProps}/>} />
+          <Route path="add-service" element={<AddServiceForm />} />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
         <Route
@@ -189,7 +190,7 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceHistory />} />
+          <Route index element={<ServiceHistory setShopLayOutProps={setShopLayOutProps}/>} />
         </Route>
         <Route path="qr-scan" element={<QrScanner />} />
         <Route path="notification-list" element={<NotificationList />} />

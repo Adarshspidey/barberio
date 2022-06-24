@@ -16,7 +16,7 @@ const BookingSeatView = () => {
             navigate("/shop/booking");
           }}
         />
-        <BackButton />
+        {/* <BackButton /> */}
       </div>
 
       <div className="content-end-no-margin">
