@@ -9,14 +9,13 @@ const AddService = () => {
   return (
     <div>
       <div className="set-up-question">Add Services</div>
-      <div className="content-end">
+      <div className="button-end-with-margin">
         <ButtonWithIcon
           rightIcon={addIcon}
           type="white"
           label="Add"
           onClick={() => {
             navigate("/setup/add-service-form");
-            
           }}
         />
       </div>
