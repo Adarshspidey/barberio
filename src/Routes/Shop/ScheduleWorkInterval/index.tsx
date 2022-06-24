@@ -7,13 +7,14 @@ import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import IntervalListCard from "../../../Components/IntervalListCard";
 import addplus from "../../../assets/Icons/add-plus.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import CommenInterval from "../../../Components/CommenInterval";
 
 const ScheduleWorkInterval = () => {
   const navigate = useNavigate();
 
   return (
     <div>
-      <div className="wrapper-flex-justify-content">
+      {/* <div className="wrapper-flex-justify-content">
       <div className="edit-profile-title"> Select Service</div>
       </div>
       <div className="sub-content-header">Common Interval</div>
@@ -54,7 +55,8 @@ const ScheduleWorkInterval = () => {
           navigate("/shop/profile");
         }}
         />
-        </div>
+        </div> */}
+        <CommenInterval/>
     </div>
   );
 };
