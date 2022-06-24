@@ -158,8 +158,8 @@ interface PropsTypes {
 const AddServiceForm = ({ IsButton = true }: PropsTypes) => {
   return (
     <div>
-      <div className="set-up-question">Add Services</div>
-      {IsButton && <div className="edit-profile-title"> Edit Profile</div>}
+      {!IsButton && <div className="set-up-question">Add Services</div>}
+      {IsButton && <div className="edit-profile-title"> Add Services</div>}
       <ServiceForm IsButton={IsButton} />
     </div>
   );
