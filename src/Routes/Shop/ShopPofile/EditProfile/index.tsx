@@ -16,6 +16,7 @@ import unisexual from "../../../../assets/Icons/unisexual.svg";
 import arrow from "../../../../assets/Icons/arrow-down.svg";
 import { Dispatch, SetStateAction } from "react";
 import { ShopLayOutProps } from "../../../../Types/Props";
+import NotificationCard from "../../../../Components/NotificationCard";
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -25,8 +26,13 @@ const EditProfile = () => {
         <div className="edit-profile-title"> Edit Profile</div>
         {/* <BackButton /> */}
       </div>
+      <NotificationCard
+        title="Image"
+        onClick={() => {
+          navigate("/shop/profile/images");
+        }}
+      />
       <div className="form-container-block">
-        <InputField label="Images" onChange={() => {}} />
         <InputField
           label="Shop Name"
           icon={shopIcon}

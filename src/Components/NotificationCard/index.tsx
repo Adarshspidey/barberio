@@ -5,24 +5,22 @@ import clockSmall from "../../assets/Icons/small-clock.svg";
 
 interface OffercardProps {
   title: string;
-  time: string;
+  time?: string;
+  onClick?: () => void;
 }
 
-const NotificationCard = ({ title, time }: OffercardProps) => {
+const NotificationCard = ({ title, time, onClick }: OffercardProps) => {
   const navigate = useNavigate();
   return (
-    <div
-      className="notification-card"
-      onClick={() => {
-        navigate("/shop/notification-body");
-      }}
-    >
+    <div className="notification-card" onClick={onClick}>
       <div>
         <div className="notification-header">{title}</div>
-        <div className="time-wrapper">
-          <img src={clockSmall} alt="clock" />
-          {time}
-        </div>
+        {time && (
+          <div className="time-wrapper">
+            <img src={clockSmall} alt="clock" />
+            {time}
+          </div>
+        )}
       </div>
       <img src={arrowRight} alt="arrow" />
     </div>
