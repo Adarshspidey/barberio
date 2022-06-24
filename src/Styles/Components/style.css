@@ -69,6 +69,7 @@
 
 .button-green {
   background: linear-gradient(180deg, #3a514c 0%, #4d6c65 100%);
+  padding: 15px;
   color: var(--white);
 }
 
@@ -120,7 +121,7 @@
 }
 
 .add-button {
-  border: 1px solid #5A7E77;
+  border: 1px solid #5a7e77;
   box-shadow: 2.44929e-16px 2px 8px rgba(45, 30, 1, 0.24);
   border-radius: 15px;
   padding: 14px 30px;
@@ -464,7 +465,7 @@
   border-radius: 15px;
 }
 
-.rating-component{
+.rating-component {
   display: grid;
   padding: 20px;
   margin: 20px;
@@ -475,18 +476,17 @@
   border-radius: 15px;
 }
 
-.rating-dtails{
+.rating-dtails {
   display: grid;
   grid-auto-flow: row;
   justify-content: space-between;
   gap: 10px;
-
 }
-.rating-title{
+.rating-title {
   font-size: var(--xlarge);
 }
 
-.rating-discription{
+.rating-discription {
   font-size: var(--small);
   color: var(--menu-title);
 }
