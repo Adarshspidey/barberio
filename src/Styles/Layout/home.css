@@ -330,12 +330,45 @@
 }
 
 .shop-content {
+  display: grid;
+  place-items: center;
   background: #597c75;
 }
 
 .shop-image {
+  margin-top: 5px;
+}
+
+.shop-distance {
   display: flex;
-  place-items: center;
+  gap: 5px;
+  color: #eea106;
+}
+
+.shop-away {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.shop-rating {
+  display: flex;
+  padding: 0 10px;
+}
+
+.shop-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-name {
+  padding: 10px 0;
+  font-size: var(--medium);
+  color: #656565;
+}
+
+.shop-address {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 10px;
 }
 
 .service-form-contaner {
