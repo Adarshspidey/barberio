@@ -111,12 +111,12 @@ const Router = () => {
         <Route path="upload-more-pic" element={<UploadMorePic />} />
         <Route path="add-service" element={<AddService />} />
         <Route path="schedule-time" element={<ScheduleTime />} />
-        <Route path="schedule-by-day" element={<ScheduleByDay />} />
         <Route path="interval" element={<AddInterval />} />
         <Route path="interval-list" element={<IntervalList />} />
         <Route path="interval-form" element={<IntervalForm IsButton={false} />} />
         <Route path="shop-type" element={<ShopType />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
+        <Route path="schedule-by-day" element={<ScheduleByDay IsButton={false}/>} />
         <Route
           path="add-service-form"
           element={<AddServiceForm IsButton={false} />}
@@ -159,8 +159,8 @@ const Router = () => {
           <Route path="edit" element={<EditProfile />} />
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
-          <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
+          <Route path="schedule-working-day" element={<ScheduleByDay/>} />
           <Route
             path="schedule-interval-list"
             element={<ScheduleIntervalList />}

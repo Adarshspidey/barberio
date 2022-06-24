@@ -10,15 +10,17 @@ const ScheduleWork = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="set-up-question">Schedule Your Worktime</div>
-
+    <div className="waper-main-container">
+      <div className="wrapper-flex-justify-content">
+        <div className="edit-profile-title"> Schedule Your Worktime</div>
+        {/* <BackButton /> */}
+      </div>
       <div className="content-end">
         <ButtonWithIcon
           type="white"
           label="Schedule By Day"
           onClick={() => {
-            navigate("/setup/schedule-by-day");
+            navigate("/shop/profile/schedule-working-day");
           }}
         />
       </div>

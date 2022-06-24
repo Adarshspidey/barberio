@@ -6,6 +6,7 @@ import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import IntervalListCard from "../../../Components/IntervalListCard";
 import addplus from "../../../assets/Icons/add-plus.svg";
+import SmallButton from "../../../Components/Buttons/SmallButton";
 
 const ScheduleWorkInterval = () => {
   const navigate = useNavigate();
@@ -13,25 +14,8 @@ const ScheduleWorkInterval = () => {
   return (
     <div>
       <div className="wrapper-flex-justify-content">
-        <div className="edit-profile-title"> Select Service</div>
+      <div className="edit-profile-title"> Select Service</div>
       </div>
-      <div className="service-wrapper">
-        <div
-          onClick={() => {
-            navigate("/shop/profile/schedule-interval-list");
-          }}
-        >
-          Spa
-        </div>
-        <div
-          onClick={() => {
-            navigate("/shop/profile/schedule-interval-list");
-          }}
-        >
-          Facial
-        </div>
-      </div>
-      Common Intervals
       <div className="sub-content-header">Common Interval</div>
       <div className="button-end">
         <ButtonWithIcon
@@ -62,15 +46,15 @@ const ScheduleWorkInterval = () => {
           </div>
         </div>
       </div>
-      <div className="button-bottom-wrapper">
-        <BigButton
-          type="primary"
-          label="Next"
-          onClick={() => {
-            navigate("/shop/profile");
-          }}
+      <div className="button-end">
+        <SmallButton
+        type="saveBlack"
+        label="Save"
+        onClick={() => {
+          navigate("/shop/profile");
+        }}
         />
-      </div>
+        </div>
     </div>
   );
 };
