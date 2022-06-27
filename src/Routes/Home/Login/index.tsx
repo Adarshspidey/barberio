@@ -98,7 +98,6 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   return (
     <div>
       <div className="login-container">
-        
         <div className="login-screen-pin">Login With Secret Pin</div>
         <div className="login-content-container">
         <div className="content-title">Welcome Back</div>
@@ -122,15 +121,6 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
             />
           </div>
       </form>
-
-        {/* <input type="text" />
-      <button
-        onClick={() => {
-          navigate("/otp");
-        }}
-      >
-        Login
-      </button> */}
       </div>
     </div>
   );
