@@ -1,5 +1,6 @@
 .home-container {
   display: grid;
+  height: 100%;
   grid-template-rows: 1fr 2fr;
   background-color: var(--light-black);
   position: relative;
@@ -392,8 +393,7 @@
 /* mediaquery */
 
 @media screen and (min-width: 940px) {
-
-  .home-container{
+  .home-container {
     background-color: var(--white);
     background-image: url("../../assets/Images/blurbackground.png");
     background-repeat: no-repeat;
@@ -404,9 +404,7 @@
     justify-content: space-evenly;
   }
 
-  .home-body-container{
+  /* .home-body-container{
     width: 540px;
-  }
-
-
+  } */
 }
