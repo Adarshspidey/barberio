@@ -4,6 +4,7 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import { ShopLayOutProps } from "../../../Types/Props";
 import BackButton from "../../Buttons/BackButton";
+import Sidepain from "../../Sidepain";
 
 const ShopLayout = ({
   activePath,
@@ -13,12 +14,18 @@ const ShopLayout = ({
   return (
     <div className="shop-main-layout-container">
       <Header />
+      
       {!hideBackButton && (
         <div className="back-button-left-shop">
           <BackButton />
         </div>
       )}
+      <div className="footer-sidepain">
+      <Sidepain/>
+      
       <Outlet />
+      </div>
+      
       <Footer activePath={activePath} />
     </div>
   );

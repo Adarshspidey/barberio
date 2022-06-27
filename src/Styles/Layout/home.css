@@ -403,7 +403,6 @@
 }
 
 .footer-left-content{
-  width: 300px;
   padding: 10px;
   display: grid;
   grid-auto-flow: column;
@@ -411,16 +410,31 @@
   align-items: center;
   font-size:var(--xlarge);
   gap: 10px;
+  
   background: #FAFAFA;
-  gap: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
 }
 
+.footer-left-container{
+  display: none;
+}
+.footer-left-container{
+  background: #FFFFFF;
+  height: 100%;
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1), inset 15.1786px 1.59534px 15.2622px #FFFFFF;
+  
+}
 .qr-content{
   color:var(--white);
   background: linear-gradient(180deg, #6A938B 0%, #435D58 100%);
   box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(18, 25, 23, 0.3975), inset -1.67822e-16px -2.74074px 2.74074px #3D5550, inset 1.67822e-16px 2.74074px 2.74074px #6F9B92;
 }
+  .peofile-waper{
+    display: block;
+  }
+  .desktop-waper-component{
+    display: none;
+  }
 
 /* mediaquery */
 
@@ -448,6 +462,60 @@
   
   .menu-footer-section{
     display: none;
+  }
+
+  .footer-sidepain{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+  }
+  .shop-main-layout-container{
+    grid-template-rows: auto 1fr;
+  }
+  .header-container{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+  }
+  .service-wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+  .peofile-waper{
+    display: none;
+  }
+  
+  .desktop-waper-container{
+    display: grid;
+  }
+  
+  .desktop-waper-component{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 100px 0;
+    padding-bottom: 0;
+    
+
+  }
+  .isdestop{
+    display: none;
+  }
+  
+  .footer-left-container{
+    display: block;
+    background: #FFFFFF;
+    height: 100%;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1), inset 15.1786px 1.59534px 15.2622px #FFFFFF;
+    
+  }
+  .qr-content{
+    color:var(--white);
+    background: linear-gradient(180deg, #6A938B 0%, #435D58 100%);
+    box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(18, 25, 23, 0.3975), inset -1.67822e-16px -2.74074px 2.74074px #3D5550, inset 1.67822e-16px 2.74074px 2.74074px #6F9B92;
+  }
+
+  .back-button-left-shop{
+    top: 115px;
   }
 
 }

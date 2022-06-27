@@ -4,10 +4,10 @@ import "./style.css";
 
 const ShopSetupLayout = () => {
   return (
-    <div className="home-container">
+    <div className="home-container setup-container">
       <div className="home-header-image">
       </div>
-      <div className="home-body-container home-setup-body-container">
+      <div className=" home-setup-body-container">
       </div>
       <div className="setup-section-container">
         <div className="back-button-left">
