@@ -14,49 +14,14 @@ const ScheduleWorkInterval = () => {
 
   return (
     <div>
-      {/* <div className="wrapper-flex-justify-content">
-      <div className="edit-profile-title"> Select Service</div>
-      </div>
-      <div className="sub-content-header">Common Interval</div>
-      <div className="button-end">
-        <ButtonWithIcon
-          rightIcon={addplus}
-          type="white"
-          label="Add"
-          onClick={() => {
-            navigate("/setup/interval-form");
-          }}
-        />
-      </div>
-      <div>
-        <div className="input-wrapper">
-          <div
-            onClick={() => {
-              navigate("/setup/interval-list");
-            }}
-          >
-            <IntervalListCard />
-          </div>
-
-          <div
-            onClick={() => {
-              navigate("/setup/interval-list");
-            }}
-          >
-            <IntervalListCard />
-          </div>
-        </div>
-      </div>
-      <div className="button-end">
-        <SmallButton
-        type="saveBlack"
-        label="Save"
-        onClick={() => {
-          navigate("/shop/profile");
+      <CommonInterval
+        onClickButton={() => {
+          navigate("/shop/profile/service-interval-by-day");
         }}
-        />
-        </div> */}
-      <CommonInterval />
+        onClickList={() => {
+          navigate("/shop/profile/schedule-interval-form");
+        }}
+      />
     </div>
   );
 };

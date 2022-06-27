@@ -46,6 +46,7 @@ import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 import ImagePage from "./Shop/ImagePage";
 import IntervalServiceList from "./Shop/IntervalServiceList";
+import ScheduleIntervalByDay from "./Shop/ScheduleIntervalByDay";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -114,6 +115,7 @@ const Router = () => {
         <Route path="schedule-time" element={<ScheduleTime />} />
         <Route path="interval" element={<AddInterval />} />
         <Route path="service-list" element={<IntervalServiceList />} />
+
         <Route path="interval-list" element={<IntervalList />} />
         <Route
           path="interval-form"
@@ -167,8 +169,12 @@ const Router = () => {
           <Route path="edit" element={<EditProfile />} />
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
-          <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
           <Route path="schedule-working-day" element={<ScheduleByDay />} />
+          <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
+          <Route
+            path="service-interval-by-day"
+            element={<ScheduleIntervalByDay />}
+          />
           <Route
             path="schedule-interval-list"
             element={<ScheduleIntervalList />}
