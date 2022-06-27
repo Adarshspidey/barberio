@@ -227,7 +227,7 @@
 
 .content-margin {
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .button-end,
@@ -338,6 +338,11 @@
   height: 100%;
   overflow: auto;
   padding-bottom: 50px;
+}
+
+.service-list {
+  display: grid;
+  margin-top: 100px;
 }
 
 .shop-content {

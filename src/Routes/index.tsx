@@ -45,6 +45,7 @@ import BookingSeatView from "./Shop/BookingSeatView";
 import { LayOutProps, ShopLayOutProps } from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 import ImagePage from "./Shop/ImagePage";
+import IntervalServiceList from "./Shop/IntervalServiceList";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -112,11 +113,18 @@ const Router = () => {
         <Route path="add-service" element={<AddService />} />
         <Route path="schedule-time" element={<ScheduleTime />} />
         <Route path="interval" element={<AddInterval />} />
+        <Route path="service-list" element={<IntervalServiceList />} />
         <Route path="interval-list" element={<IntervalList />} />
-        <Route path="interval-form" element={<IntervalForm IsButton={false} />} />
+        <Route
+          path="interval-form"
+          element={<IntervalForm IsButton={false} />}
+        />
         <Route path="shop-type" element={<ShopType />} />
         <Route path="profile-completed" element={<ProfileCompleted />} />
-        <Route path="schedule-by-day" element={<ScheduleByDay IsButton={false}/>} />
+        <Route
+          path="schedule-by-day"
+          element={<ScheduleByDay IsButton={false} />}
+        />
         <Route
           path="add-service-form"
           element={<AddServiceForm IsButton={false} />}
@@ -160,7 +168,7 @@ const Router = () => {
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
-          <Route path="schedule-working-day" element={<ScheduleByDay/>} />
+          <Route path="schedule-working-day" element={<ScheduleByDay />} />
           <Route
             path="schedule-interval-list"
             element={<ScheduleIntervalList />}

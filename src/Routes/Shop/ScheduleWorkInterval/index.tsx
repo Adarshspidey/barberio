@@ -7,7 +7,7 @@ import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import IntervalListCard from "../../../Components/IntervalListCard";
 import addplus from "../../../assets/Icons/add-plus.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
-import CommenInterval from "../../../Components/CommenInterval";
+import CommonInterval from "../../../Components/CommonInterval";
 
 const ScheduleWorkInterval = () => {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const ScheduleWorkInterval = () => {
         }}
         />
         </div> */}
-        <CommenInterval/>
+      <CommonInterval />
     </div>
   );
 };

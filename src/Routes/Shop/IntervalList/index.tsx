@@ -10,7 +10,7 @@ const IntervalList = () => {
   return (
     <div>
       <div className="set-up-question">Intervals</div>
-      <div className="content-end">
+      <div className="content-end content-margin">
         <ButtonWithIcon
           rightIcon={addIcon}
           type="white"
@@ -35,7 +35,7 @@ const IntervalList = () => {
           type="primary"
           label="Save"
           onClick={() => {
-            navigate("/setup/interval");
+            navigate("/setup/service-list");
           }}
         />
       </div>

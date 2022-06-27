@@ -19,7 +19,7 @@ import IntervalFormCard from "../../../Components/IntervalFormCard";
 //           onChange={() => {}}
 //           value=""
 //           icon={interval}
-         
+
 //         />
 
 //         <InputField
@@ -53,7 +53,6 @@ import IntervalFormCard from "../../../Components/IntervalFormCard";
 
 // export default IntervalForm;
 
-
 //
 
 interface PropsTypes {
@@ -64,11 +63,16 @@ interface PropsTypes {
 const IntervalForm = ({ IsButton = true }: PropsTypes) => {
   return (
     <div>
-      {!IsButton && <div className="set-up-question">Add Services</div>}
-      {IsButton && <div className="edit-profile-title"> Add Services</div>}
+      <div
+        className={`${
+          IsButton === true ? "edit-profile-title" : "set-up-question"
+        }`}
+      >
+        Add Interval
+      </div>
       <IntervalFormCard IsButton={IsButton} />
     </div>
   );
 };
 
-export default IntervalForm
+export default IntervalForm;
