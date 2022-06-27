@@ -43,7 +43,7 @@ const IntervalFormCard = ({ IsButton = false }: PropsTypes) => {
             type="primary"
             label="Save"
             onClick={() => {
-              navigate("/setup/interval-list");
+              navigate(-1);
             }}
           />
         </div>
@@ -55,7 +55,7 @@ const IntervalFormCard = ({ IsButton = false }: PropsTypes) => {
             type="saveBlack"
             label="Save"
             onClick={() => {
-              navigate("shop/profile/schedule-interval");
+              navigate(-1);
             }}
           />
         </div>

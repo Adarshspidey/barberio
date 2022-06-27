@@ -4,13 +4,22 @@ import addplus from "../../assets/Icons/add-plus.svg";
 import { useNavigate } from "react-router-dom";
 import IntervalListCard from "../IntervalListCard";
 
-const CommonInterval = () => {
+interface PropsTypes {
+  onClickList?: () => void;
+  onClickButton?: () => void;
+}
+
+const CommonInterval = ({ onClickList, onClickButton }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
     <div>
       <div className="button-end-margin-top">
-        <ButtonWithIcon type="white" label="Set By service" />
+        <ButtonWithIcon
+          type="white"
+          label="Set By service"
+          onClick={onClickButton}
+        />
       </div>
       <div className="sub-content-header">Common Interval</div>
       <div className="button-end service-wrapper">
@@ -18,13 +27,16 @@ const CommonInterval = () => {
           rightIcon={addplus}
           type="white"
           label="Add"
-          onClick={() => {
-            navigate("/setup/interval-form");
-          }}
+          onClick={onClickList}
+          // onClick={() => {
+          //   navigate("/setup/interval-form");
+          // }}
         />
       </div>
-      <IntervalListCard />
-      <IntervalListCard />
+      <div onClick={onClickList}>
+        <IntervalListCard />
+        <IntervalListCard />
+      </div>
     </div>
   );
 };

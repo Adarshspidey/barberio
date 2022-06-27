@@ -28,13 +28,15 @@ const ScheduleIntervalForm = () => {
           arrow={arrow}
         />
       </div>
-      <SmallButton
-        type="saveBlack"
-        label="Save"
-        onClick={() => {
-          navigate("/shop/profile/schedule-interval-list");
-        }}
-      />
+      <div className="button-black-save">
+        <SmallButton
+          type="saveBlack"
+          label="Save"
+          onClick={() => {
+            navigate(-1);
+          }}
+        />
+      </div>
     </div>
   );
 };

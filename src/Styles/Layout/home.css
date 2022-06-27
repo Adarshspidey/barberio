@@ -234,6 +234,7 @@
 .button-end-with-margin {
   display: flex;
   justify-content: end;
+  padding: 0 20px;
 }
 
 .waper {
@@ -311,6 +312,12 @@
 
 .login-content-container {
   padding: 35px;
+}
+
+.button-black-save {
+  position: absolute;
+  bottom: 180px;
+  right: 20px;
 }
 
 .edit-profile-title {

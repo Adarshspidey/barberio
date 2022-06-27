@@ -1,25 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import BigButton from "../../../Components/Buttons/BigButton";
-import IntervalListCard from "../../../Components/IntervalListCard";
+import SmallButton from "../../../Components/Buttons/SmallButton";
 import ServiceListComponent from "../../../Components/ServiceListComponent";
+import IntervalServiceList from "../IntervalServiceList";
 
-const IntervalServiceList = () => {
+const ScheduleIntervalByDay = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="set-up-question">Select Service</div>
       <ServiceListComponent
         onClick={() => {
-          navigate("/setup/interval-list");
+          navigate("/shop/profile/schedule-interval-list");
         }}
       />
-      <div className="button-bottom-wrapper">
-        <BigButton
-          type="primary"
+
+      <div className="button-black-save">
+        <SmallButton
+          type="saveBlack"
           label="Save"
           onClick={() => {
-            navigate("/setup/interval");
+            navigate("/shop/profile/schedule-interval");
           }}
         />
       </div>
@@ -27,4 +28,4 @@ const IntervalServiceList = () => {
   );
 };
 
-export default IntervalServiceList;
+export default ScheduleIntervalByDay;
