@@ -15,7 +15,7 @@ const AddInterval = () => {
           type="white"
           label="Set By Service"
           onClick={() => {
-            navigate("/setup/interval-form");
+            navigate("/setup/service-list");
           }}
         />
       </div>

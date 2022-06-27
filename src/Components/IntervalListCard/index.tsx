@@ -1,11 +1,14 @@
-import React from 'react'
-
-const IntervalListCard = () => {
-  return (
-    <div className='interval-list-component'>
-        <div className='interval-title'>Interval</div>
-    </div>
-  )
+import React from "react";
+interface PropsTypes {
+  name?: string;
 }
 
-export default IntervalListCard
+const IntervalListCard = ({ name = "Interval" }: PropsTypes) => {
+  return (
+    <div className="interval-list-component">
+      <div className="interval-title">{name}</div>
+    </div>
+  );
+};
+
+export default IntervalListCard;
