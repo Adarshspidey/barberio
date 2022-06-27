@@ -107,7 +107,18 @@
   padding: 50px 0 100px 0;
   font-size: var(--medium);
   color: var(--black);
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 10px;
 }
+
+.button-label {
+  font-size: var(--large);
+  color: var(--light-black);
+  padding: 8px 0;
+}
+
 .otp-button {
   padding: 30px;
 }
