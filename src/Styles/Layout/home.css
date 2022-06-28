@@ -448,6 +448,20 @@
   display: none;
 }
 
+ .radio-button{
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
+  padding: 20px;
+  font-size: var(--large);
+ }
+
+ .card-title{
+  font-size: var(--xlarge);
+  padding-left: 20px;
+ }
+
+
 /* mediaquery */
 
 @media screen and (min-width: 940px) {
