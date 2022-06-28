@@ -17,12 +17,13 @@ const Sidepain = () => {
         <div className="footer-left-content"
         onClick={()=>navigate("/shop/service")}
         >
-        <div><img src={bookingIcon} alt="booking"/></div>
+          <div><img src={servicesIcon} alt="Serive"/></div>
+        
         <div>Services</div>
         </div>
         <div className="footer-left-content"
         onClick={()=>navigate("/shop/booking")}>
-        <div><img src={servicesIcon} alt="Serive"/></div>
+        <div><img src={bookingIcon} alt="booking"/></div>
         <div>Bookings</div>
         </div>
         <div className="footer-left-content"

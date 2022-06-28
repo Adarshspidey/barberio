@@ -27,6 +27,7 @@ const BookingCard = ({
 }: BookingcardProps) => {
   const [isDetailed, setIsDetailed] = useState<boolean>(false);
   return (
+    <div className="booking-card-waper">
     <div className="booking-card-component">
       <div>
         <div className="booking-card-component-group">
@@ -101,6 +102,7 @@ const BookingCard = ({
         </>
       )}
     </div>
+    </div> 
   );
 };
 

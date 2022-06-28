@@ -543,4 +543,8 @@
   .back-button-left-shop {
     top: 115px;
   }
+
+  .profile-waper-component{
+    border-left: 0.5px solid  #E7E7E7;;
+  }
 }

@@ -6,6 +6,7 @@ import bookingActive from "../../../assets/Icons/Booking-active.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
 import DetailedBookingView from "../DetailedBookingView";
 import { ShopLayOutProps } from "../../../Types/Props";
+import BookingDetailedView from "../../../Components/BookingDetaildView";
 
 interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>
@@ -76,6 +77,32 @@ const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
       {bookings.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
       ))}
+      <div className="bookingcard-waper">
+      <BookingDetailedView
+      time="11"
+      title="HairCuting"
+      duration={30}
+      rate={100}
+      name="Shini"
+      phone={999598463}
+      />
+      <BookingDetailedView
+      time="11"
+      title="HairCuting"
+      duration={30}
+      rate={100}
+      name="Shini"
+      phone={999598463}
+      />
+      <BookingDetailedView
+      time="11"
+      title="HairCuting"
+      duration={30}
+      rate={100}
+      name="Shini"
+      phone={999598463}
+      />
+    </div>
     </div>
   );
 };
