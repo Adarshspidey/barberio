@@ -11,24 +11,24 @@ const DisableService = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      Disable Service
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
-      <div>
-        <input type="radio" />
-        Until I manually enable
-        <input type="radio" />
-        For a Period of Time
+    <div className="waper-main-container">
+      <div className="wrapper-flex-justify-content">
+        <div className="edit-profile-title">  Disable Service</div>
       </div>
-      Ending
+     
+      <div className="radio-button">
+        <div className="radio-button-title">
+          <input type="radio" />
+          Until I manually enable
+        </div>
+        <div className="radio-button-title">
+          <input type="radio" />
+          For a Period of Time
+        </div>
+        
+      </div>
       <div>
-
+      <div className="card-title">Ending</div>
       <form className="form-feild-container">
       <InputField 
           label="Date"
