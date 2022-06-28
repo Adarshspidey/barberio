@@ -127,28 +127,99 @@ const Router = () => {
             <ShopLocation setShopSetupLayoutProps={setShopSetupLayoutProps} />
           }
         />
-        <Route path="upload-logo" element={<UploadLogo />} />
-        <Route path="upload-cover-pic" element={<UploadCoverPicture />} />
-        <Route path="upload-more-pic" element={<UploadMorePic />} />
-        <Route path="add-service" element={<AddService />} />
-        <Route path="schedule-time" element={<ScheduleTime />} />
-        <Route path="interval" element={<AddInterval />} />
-        <Route path="service-list" element={<IntervalServiceList />} />
+        <Route
+          path="upload-logo"
+          element={
+            <UploadLogo setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="upload-cover-pic"
+          element={
+            <UploadCoverPicture
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
+        <Route
+          path="upload-more-pic"
+          element={
+            <UploadMorePic setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="add-service"
+          element={
+            <AddService setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="schedule-time"
+          element={
+            <ScheduleTime setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="interval"
+          element={
+            <AddInterval setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="service-list"
+          element={
+            <IntervalServiceList
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
 
-        <Route path="interval-list" element={<IntervalList />} />
+        <Route
+          path="interval-list"
+          element={
+            <IntervalList setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
         <Route
           path="interval-form"
-          element={<IntervalForm IsButton={false} />}
+          element={
+            <IntervalForm
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+              IsButton={false}
+            />
+          }
         />
-        <Route path="shop-type" element={<ShopType />} />
-        <Route path="profile-completed" element={<ProfileCompleted />} />
+        <Route
+          path="shop-type"
+          element={
+            <ShopType setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="profile-completed"
+          element={
+            <ProfileCompleted
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
         <Route
           path="schedule-by-day"
-          element={<ScheduleByDay IsButton={false} />}
+          element={
+            <ScheduleByDay
+              IsButton={false}
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
         />
         <Route
           path="add-service-form"
-          element={<AddServiceForm IsButton={false} />}
+          element={
+            <AddServiceForm
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+              IsButton={false}
+            />
+          }
         />
       </Route>
 
@@ -188,7 +259,14 @@ const Router = () => {
           <Route path="edit" element={<EditProfile />} />
           <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
-          <Route path="schedule-working-day" element={<ScheduleByDay />} />
+          <Route
+            path="schedule-working-day"
+            element={
+              <ScheduleByDay
+                setShopSetupLayoutProps={setShopSetupLayoutProps}
+              />
+            }
+          />
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
           <Route
             path="service-interval-by-day"
@@ -217,7 +295,14 @@ const Router = () => {
             index
             element={<ServiceList setShopLayOutProps={setShopLayOutProps} />}
           />
-          <Route path="add-service" element={<AddServiceForm />} />
+          <Route
+            path="add-service"
+            element={
+              <AddServiceForm
+                setShopSetupLayoutProps={setShopSetupLayoutProps}
+              />
+            }
+          />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
         <Route

@@ -3,7 +3,6 @@ import InputField from "../Input";
 import arrow from "../../assets/Icons/arrow-down.svg";
 import time from "../../assets/Icons/time.svg";
 import interval from "../../assets/Icons/interval.svg";
-import BigButton from "../Buttons/BigButton";
 import SmallButton from "../Buttons/SmallButton";
 
 interface PropsTypes {
@@ -37,17 +36,6 @@ const IntervalFormCard = ({ IsButton = false }: PropsTypes) => {
           arrow={arrow}
         />
       </div>
-      {!IsButton && (
-        <div className="button-bottom-wrapper">
-          <BigButton
-            type="primary"
-            label="Save"
-            onClick={() => {
-              navigate(-1);
-            }}
-          />
-        </div>
-      )}
 
       {IsButton && (
         <div className="button-end">

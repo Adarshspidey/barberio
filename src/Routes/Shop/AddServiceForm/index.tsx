@@ -149,13 +149,39 @@
 
 // export default AddServiceForm;
 
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ServiceForm from "../../../Components/ServiceForm";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 interface PropsTypes {
   IsButton?: boolean;
   title?: string;
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
 }
 
-const AddServiceForm = ({ IsButton = true }: PropsTypes) => {
+const AddServiceForm = ({
+  IsButton = true,
+  setShopSetupLayoutProps,
+}: PropsTypes) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/add-service");
+      },
+      buttonLabel: "Save",
+    }));
+
+    return () => {
+      setShopSetupLayoutProps((prev) => ({
+        ...prev,
+        buttonLabel: "Next",
+      }));
+    };
+  }, []);
+
+  const navigate = useNavigate();
+
   return (
     <div>
       {!IsButton && <div className="set-up-question">Add Services</div>}
