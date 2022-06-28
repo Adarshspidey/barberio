@@ -42,7 +42,11 @@ import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
 import BookingSeatView from "./Shop/BookingSeatView";
-import { LayOutProps, ShopLayOutProps } from "../Types/Props";
+import {
+  LayOutProps,
+  ShopLayOutProps,
+  ShopSetupLayOutProps,
+} from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 import ImagePage from "./Shop/ImagePage";
 import IntervalServiceList from "./Shop/IntervalServiceList";
@@ -53,6 +57,13 @@ const Router = () => {
     hideBackButton: false,
     headerImage: loginImage,
   });
+
+  const [shopSetuplayOutProps, setShopSetupLayoutProps] =
+    useState<ShopSetupLayOutProps>({
+      buttonType: "primary",
+      buttonLabel: "Next",
+      goto: () => {},
+    });
 
   const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({
     hideBackButton: false,
@@ -106,8 +117,16 @@ const Router = () => {
         />
       </Route>
 
-      <Route path="setup" element={<ShopSetUpLayout />}>
-        <Route index element={<ShopLocation />} />
+      <Route
+        path="setup"
+        element={<ShopSetUpLayout {...shopSetuplayOutProps} />}
+      >
+        <Route
+          index
+          element={
+            <ShopLocation setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
         <Route path="upload-logo" element={<UploadLogo />} />
         <Route path="upload-cover-pic" element={<UploadCoverPicture />} />
         <Route path="upload-more-pic" element={<UploadMorePic />} />

@@ -1,9 +1,24 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../Components/Input";
 import location from "../../../assets/Icons/location.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
-const ShopLocation = () => {
+import { ShopSetupLayOutProps } from "../../../Types/Props";
+
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const ShopLocation = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/upload-logo");
+      },
+    }));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div>
@@ -27,7 +42,7 @@ const ShopLocation = () => {
         </div>
       </div>
 
-      <div className="button-bottom-wrapper">
+      {/* <div className="button-bottom-wrapper">
         <BigButton
           type="primary"
           label="Next"
@@ -35,7 +50,7 @@ const ShopLocation = () => {
             navigate("/setup/upload-logo");
           }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

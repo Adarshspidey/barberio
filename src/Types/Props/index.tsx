@@ -10,3 +10,9 @@ export type ShopFooterPropsTypes = {
 export interface ShopLayOutProps extends ShopFooterPropsTypes {
   hideBackButton?: boolean;
 }
+
+export type ShopSetupLayOutProps = {
+  buttonType: "primary" | "orange";
+  buttonLabel: string;
+  goto: () => void;
+};
