@@ -5,7 +5,10 @@
 // import time from "../../../assets/Icons/time.svg";
 // import arrow from "../../../assets/Icons/arrow-down.svg";
 
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import SheduleDayForm from "../../../Components/SheduleDayForm";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
 // const ScheduleByDay = () => {
 //   const navigate = useNavigate();
@@ -49,10 +52,32 @@ import SheduleDayForm from "../../../Components/SheduleDayForm";
 interface PropsTypes {
   IsButton?: boolean;
   title?: string;
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
 }
 
+const ScheduleByDay = ({
+  IsButton = true,
+  setShopSetupLayoutProps,
+}: PropsTypes) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/schedule-time");
+      },
+      buttonLabel: "Save",
+    }));
 
-const ScheduleByDay = ({ IsButton = true }: PropsTypes) => {
+    return () => {
+      setShopSetupLayoutProps((prev) => ({
+        ...prev,
+        buttonLabel: "Next",
+      }));
+    };
+  }, []);
+
+  const navigate = useNavigate();
+
   return (
     <div>
       {!IsButton && <div className="set-up-question">Schedule By Day</div>}
@@ -62,4 +87,4 @@ const ScheduleByDay = ({ IsButton = true }: PropsTypes) => {
   );
 };
 
-export default ScheduleByDay
+export default ScheduleByDay;

@@ -1,10 +1,25 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import ServiceListCard from "../../../Components/ServiceListCard";
 import addIcon from "../../../assets/Icons/Add.svg";
-const AddService = () => {
+import { ShopSetupLayOutProps } from "../../../Types/Props";
+
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/schedule-time");
+      },
+    }));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div>
@@ -22,15 +37,6 @@ const AddService = () => {
       <div className="service-list">
         <ServiceListCard />
         <ServiceListCard />
-      </div>
-      <div className="button-bottom-wrapper">
-        <BigButton
-          type="primary"
-          label="Next"
-          onClick={() => {
-            navigate("/setup/schedule-time");
-          }}
-        />
       </div>
     </div>
   );

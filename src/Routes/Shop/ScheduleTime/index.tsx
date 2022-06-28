@@ -1,21 +1,35 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../Components/Input";
 import time from "../../../assets/Icons/time.svg";
 import arrow from "../../../assets/Icons/arrow-down.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
-const ScheduleTime = () => {
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const ScheduleTime = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/interval");
+      },
+    }));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div>
       <div className="set-up-question">Schedule Your Worktime</div>
 
-      <div className="content-end">
+      <div className="button-end-margin-top">
         <ButtonWithIcon
           type="white"
-          label="Schedule By Day"
+          label="Schedule by Day"
           onClick={() => {
             navigate("/setup/schedule-by-day");
           }}

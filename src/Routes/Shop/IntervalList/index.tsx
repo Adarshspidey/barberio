@@ -1,11 +1,32 @@
 import { useNavigate } from "react-router-dom";
-import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import IntervalListCard from "../../../Components/IntervalListCard";
 import addIcon from "../../../assets/Icons/Add.svg";
 import ShopNearCard from "../../../Components/ShopnearCard";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
-const IntervalList = () => {
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const IntervalList = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/service-list");
+      },
+      buttonLabel: "Save",
+    }));
+
+    return () => {
+      setShopSetupLayoutProps((prev) => ({
+        ...prev,
+        buttonLabel: "Next",
+      }));
+    };
+  }, []);
   const navigate = useNavigate();
   return (
     <div>
@@ -30,7 +51,7 @@ const IntervalList = () => {
         <IntervalListCard />
         <IntervalListCard />
       </div>
-      <div className="button-bottom-wrapper">
+      {/* <div className="button-bottom-wrapper">
         <BigButton
           type="primary"
           label="Save"
@@ -38,7 +59,7 @@ const IntervalList = () => {
             navigate("/setup/service-list");
           }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

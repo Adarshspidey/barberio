@@ -1,25 +1,28 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import BigButton from "../../../Components/Buttons/BigButton";
 import UploadIcon from "../../../Components/UploadIcon";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
-const UploadLogo = () => {
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const UploadLogo = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/setup/upload-cover-pic");
+      },
+    }));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div>
       <div className="set-up-question">Your Logo / Brand Image</div>
 
       <UploadIcon />
-
-      <div className="button-bottom-wrapper">
-        <BigButton
-          type="primary"
-          label="Next"
-          onClick={() => {
-            navigate("/setup/upload-cover-pic");
-          }}
-        />
-      </div>
     </div>
   );
 };

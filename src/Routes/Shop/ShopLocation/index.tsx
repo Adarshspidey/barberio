@@ -41,16 +41,6 @@ const ShopLocation = ({ setShopSetupLayoutProps }: PropsType) => {
           />
         </div>
       </div>
-
-      {/* <div className="button-bottom-wrapper">
-        <BigButton
-          type="primary"
-          label="Next"
-          onClick={() => {
-            navigate("/setup/upload-logo");
-          }}
-        />
-      </div> */}
     </div>
   );
 };

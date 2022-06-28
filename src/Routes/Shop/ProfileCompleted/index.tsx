@@ -1,9 +1,31 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import finish from "../../../assets/Icons/finish.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
-const ProfileCompleted = () => {
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const ProfileCompleted = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      goto: () => {
+        navigate("/shop/booking");
+      },
+      buttonType: "orange",
+      buttonLabel: "Finish",
+    }));
+
+    return () => {
+      setShopSetupLayoutProps((prev) => ({
+        ...prev,
+        buttonLabel: "Next",
+      }));
+    };
+  }, []);
   const navigate = useNavigate();
   return (
     <div>
@@ -18,16 +40,6 @@ const ProfileCompleted = () => {
         </div>
       </div>
       <img src={finish} alt="finish" />
-
-      <div className="button-bottom-wrapper">
-        <BigButton
-          type="orange"
-          label="Finish"
-          onClick={() => {
-            navigate("/shop/booking");
-          }}
-        />
-      </div>
     </div>
   );
 };
