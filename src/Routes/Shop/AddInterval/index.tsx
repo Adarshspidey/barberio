@@ -21,7 +21,7 @@ const AddInterval = () => {
           type="primary"
           label="Next"
           onClick={() => {
-            navigate("/setup/add-service");
+            navigate("/setup/shop-type");
           }}
         />
       </div>
