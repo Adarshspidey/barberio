@@ -11,7 +11,7 @@ import { ShopLayOutProps } from "../../../Types/Props";
 import BookingDetailedView from "../../../Components/BookingDetaildView";
 
 interface PropsTypes {
-  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>
+  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
 }
 const data: Array<BookingData> = [
   {
@@ -33,11 +33,11 @@ const data: Array<BookingData> = [
 ];
 
 const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
-
   useEffect(() => {
-    setShopLayOutProps({
+    setShopLayOutProps((prev) => ({
+      ...prev,
       hideBackButton: true,
-    });
+    }));
 
     //ReSet Props For The LayOut
     return () => {
@@ -78,24 +78,23 @@ const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
         />
       </div>
       <div className="bookingcard-waper">
-      <BookingDetailedView
-      time="11"
-      title="HairCuting"
-      duration={30}
-      rate={100}
-      name="Shini"
-      phone={999598463}
-      />
-      <BookingDetailedView
-      time="11"
-      title="HairCuting"
-      duration={30}
-      rate={100}
-      name="Shini"
-      phone={999598463}
-      />
-      
-    </div>
+        <BookingDetailedView
+          time="11"
+          title="HairCuting"
+          duration={30}
+          rate={100}
+          name="Shini"
+          phone={999598463}
+        />
+        <BookingDetailedView
+          time="11"
+          title="HairCuting"
+          duration={30}
+          rate={100}
+          name="Shini"
+          phone={999598463}
+        />
+      </div>
     </div>
   );
 };

@@ -19,12 +19,12 @@ interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
 }
 
-
 const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
   useEffect(() => {
-    setShopLayOutProps({
+    setShopLayOutProps((prev) => ({
+      ...prev,
       hideBackButton: true,
-    });
+    }));
 
     //ReSet Props For The LayOut
     return () => {
@@ -49,71 +49,71 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
         <div className=" button-end waper">
           <BackButton label="Gallery" icon={gallery} />
         </div>
-     
-      <div className="profile-menu-title">John Doe Salon & Spa</div>
-      <ProfileMenuCard
-        title="Edit Profile"
-        icon={profileIcon}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/edit");
-        }}
-      />
 
-      <ProfileMenuCard
-        title="Offers"
-        icon={offer}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/offers");
-        }}
-      />
+        <div className="profile-menu-title">John Doe Salon & Spa</div>
+        <ProfileMenuCard
+          title="Edit Profile"
+          icon={profileIcon}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/edit");
+          }}
+        />
 
-      <ProfileMenuCard
-        title=" Shops Near Me"
-        icon={shop}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/shop-near-me");
-        }}
-      />
+        <ProfileMenuCard
+          title="Offers"
+          icon={offer}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/offers");
+          }}
+        />
 
-      <ProfileMenuCard
-        title="Schedule Worktime"
-        icon={timer}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/schedule-work");
-        }}
-      />
+        <ProfileMenuCard
+          title=" Shops Near Me"
+          icon={shop}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/shop-near-me");
+          }}
+        />
 
-      <ProfileMenuCard
-        title=" Service Time Interval"
-        icon={scheduletime}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/schedule-interval");
-        }}
-      />
+        <ProfileMenuCard
+          title="Schedule Worktime"
+          icon={timer}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/schedule-work");
+          }}
+        />
 
-      <ProfileMenuCard
-        title=" Ratings & Reviews"
-        icon={review}
-        arrow={arrow}
-        onClick={() => {
-          navigate("/shop/profile/ratings");
-        }}
-      />
-      <div className="logout-container">
-        <div className="profile-menu-card">
-          <div className="profile-card-items">
-            <div>
-              <img src={logout} alt="icon" />
+        <ProfileMenuCard
+          title=" Service Time Interval"
+          icon={scheduletime}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/schedule-interval");
+          }}
+        />
+
+        <ProfileMenuCard
+          title=" Ratings & Reviews"
+          icon={review}
+          arrow={arrow}
+          onClick={() => {
+            navigate("/shop/profile/ratings");
+          }}
+        />
+        <div className="logout-container">
+          <div className="profile-menu-card">
+            <div className="profile-card-items">
+              <div>
+                <img src={logout} alt="icon" />
+              </div>
+              <div className="logout-button">LogOut</div>
             </div>
-            <div className="logout-button">LogOut</div>
           </div>
         </div>
-      </div>
       </div>
 
       {/* dektopview */}
@@ -130,71 +130,70 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
           </div>
           <div className="profile-menu-title">John Doe Salon & Spa</div>
           <ProfileMenuCard
-          title="Edit Profile"
-          icon={profileIcon}
-          arrow={arrow}
-          onClick={() => {
-          navigate("/shop/profile/edit");
-          }}
+            title="Edit Profile"
+            icon={profileIcon}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/edit");
+            }}
           />
           <div className="logout-container">
             <div className="profile-menu-card">
               <div className="profile-card-items">
                 <div>
-                <img src={logout} alt="icon" />
+                  <img src={logout} alt="icon" />
                 </div>
-              <div className="logout-button">LogOut</div>
+                <div className="logout-button">LogOut</div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
         <div className="profile-waper-component">
           <ProfileMenuCard
-          title="Offers"
-          icon={offer}
-          arrow={arrow}
-          onClick={() => {
-            navigate("/shop/profile/offers");
-          }}
+            title="Offers"
+            icon={offer}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/offers");
+            }}
           />
 
           <ProfileMenuCard
-          title=" Shops Near Me"
-          icon={shop}
-          arrow={arrow}
-          onClick={() => {
-            navigate("/shop/profile/shop-near-me");
-          }}
+            title=" Shops Near Me"
+            icon={shop}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/shop-near-me");
+            }}
           />
 
           <ProfileMenuCard
-          title="Schedule Worktime"
-          icon={timer}
-          arrow={arrow}
-          onClick={() => {
-            navigate("/shop/profile/schedule-work");
-          }}
+            title="Schedule Worktime"
+            icon={timer}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/schedule-work");
+            }}
           />
 
           <ProfileMenuCard
-          title=" Service Time Interval"
-          icon={scheduletime}
-          arrow={arrow}
-          onClick={() => {
-            navigate("/shop/profile/schedule-interval");
-          }}
+            title=" Service Time Interval"
+            icon={scheduletime}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/schedule-interval");
+            }}
           />
 
           <ProfileMenuCard
-          title=" Ratings & Reviews"
-          icon={review}
-          arrow={arrow}
-          onClick={() => {
-            navigate("/shop/profile/ratings");
-          }}
+            title=" Ratings & Reviews"
+            icon={review}
+            arrow={arrow}
+            onClick={() => {
+              navigate("/shop/profile/ratings");
+            }}
           />
         </div>
-       
       </div>
     </div>
   );
