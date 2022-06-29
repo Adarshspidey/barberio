@@ -60,6 +60,7 @@ const FilterForm = () => {
         />
       </div>
       </form>
+      
     </div>
   );
 };

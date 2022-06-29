@@ -8,6 +8,7 @@ import historyToggle from "../../../assets/Icons/history-toggle.svg";
 import completeIcon from "../../../assets/Icons/complete-icon.svg";
 import IconButton from "../../../Components/Buttons/IconButton";
 import { ShopLayOutProps } from "../../../Types/Props";
+import BookingDetailedView from "../../../Components/BookingDetaildView";
 
 interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>
@@ -76,6 +77,25 @@ const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
           }}
         />
       </div>
+      <div className="bookingcard-waper">
+      <BookingDetailedView
+      time="11"
+      title="HairCuting"
+      duration={30}
+      rate={100}
+      name="Shini"
+      phone={999598463}
+      />
+      <BookingDetailedView
+      time="11"
+      title="HairCuting"
+      duration={30}
+      rate={100}
+      name="Shini"
+      phone={999598463}
+      />
+      
+    </div>
     </div>
   );
 };

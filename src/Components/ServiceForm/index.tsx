@@ -78,6 +78,7 @@ const ServiceForm = ({ IsButton = false }: PropsTypes) => {
 
   const navigate = useNavigate();
   return (
+    <div>
     <div className="service-form-contaner">
       <div className="input-wrapper">
         <InputField
@@ -116,17 +117,6 @@ const ServiceForm = ({ IsButton = false }: PropsTypes) => {
           onChange={(value) => onChange("rate", value)}
         />
       </div>
-      {/* <div className="button-bottom-wrapper">
-            {!IsButton&&
-            <BigButton
-              type="primary"
-              label="Save"
-              onClick={() => {
-                navigate("/setup/add-service");
-              }}
-            />
-          }
-          </div> */}
       {IsButton && (
         <div className="button-end">
           <SmallButton
@@ -138,6 +128,60 @@ const ServiceForm = ({ IsButton = false }: PropsTypes) => {
           />
         </div>
       )}
+    </div>
+
+    <div className="desktop-waper-component">
+    <div className="peofile-waper-component">
+    <InputField
+          label="Name of Service "
+          icon={serviceicon}
+          value={name}
+          submitted={submit}
+          arrow={arrowDown}
+          error={serviceFormError.name}
+          onChange={(value) => onChange("name", value)}
+        />
+        <InputField
+          label=" Time for a session"
+          icon={sessionicon}
+          value={sessionTime}
+          arrow={arrowDown}
+          submitted={submit}
+          error={serviceFormError.sessionTime}
+          onChange={(value) => onChange("sessionTime", value)}
+        />
+        <InputField
+          label=" Rate"
+          icon={rupeeicon}
+          value={rate}
+          submitted={submit}
+          error={serviceFormError.rate}
+          onChange={(value) => onChange("rate", value)}
+        />
+    </div>
+    <div>
+        <InputField
+          label="Description"
+          type="textarea"
+          icon={descriptionicon}
+          value={description}
+          submitted={submit}
+          error={serviceFormError.description}
+          onChange={(value) => onChange("description", value)}
+        />
+        <div className="button-end">
+          <SmallButton
+            type="saveBlack"
+            label="Save"
+            onClick={() => {
+              navigate("/shop/service");
+            }}
+          />
+        </div>
+    </div>
+    
+    </div>
+
     </div>
   );
 };

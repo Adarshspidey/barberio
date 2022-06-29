@@ -579,4 +579,7 @@ input:checked + .slider:before {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .service-form-contaner{
+    display: none;
+  }
 }
