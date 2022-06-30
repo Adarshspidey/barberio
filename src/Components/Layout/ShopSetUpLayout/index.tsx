@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import BackButton from "../../Buttons/BackButton";
 import BigButton from "../../Buttons/BigButton";
+import SidePaneNavigator from "../../SidePaneNavigator";
 import "./style.css";
 
 interface PropsType {
@@ -23,6 +24,9 @@ const ShopSetupLayout = ({ buttonType, buttonLabel, goto }: PropsType) => {
 
         <div className="button-bottom-wrapper">
           <BigButton type={buttonType} label={buttonLabel} onClick={goto} />
+        </div>
+        <div className="side-pane-navigator">
+          <SidePaneNavigator />
         </div>
       </div>
     </div>

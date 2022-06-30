@@ -222,6 +222,15 @@
   justify-content: center;
 }
 
+.side-pane-navigator {
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .content-end {
   display: flex;
   justify-content: end;
