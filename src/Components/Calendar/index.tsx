@@ -2,7 +2,7 @@ import IconButton from "../Buttons/IconButton";
 import leftArrow from "../../assets/Icons/left-arrow-white.svg";
 import rightArrow from "../../assets/Icons/right-arrow-white.svg";
 
-const Calendar = () => {
+const BookingCalendar = () => {
   return (
     <div className="calendar">
       <div className="calendar-heading-wrapper">
@@ -26,4 +26,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default BookingCalendar;
