@@ -22,6 +22,7 @@ const ProfileCompleted = ({ setShopSetupLayoutProps }: PropsType) => {
     return () => {
       setShopSetupLayoutProps((prev) => ({
         ...prev,
+        buttonType: "primary",
         buttonLabel: "Next",
       }));
     };
