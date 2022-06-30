@@ -25,8 +25,9 @@ const ShopSetupLayout = ({
         <div className="back-button-left">
           <BackButton />
         </div>
-        <Outlet />
-
+        <div className="setup-body-oulet">
+          <Outlet />
+        </div>
         <div className="button-bottom-wrapper">
           <BigButton type={buttonType} label={buttonLabel} onClick={goto} />
         </div>
