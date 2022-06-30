@@ -6,10 +6,6 @@ const NotificationContent = () => {
 
   return (
     <div>
-      <div className="content-end">
-        <BackButton />
-      </div>
-
       <div className="header-wraper-space-between">
         <div className="notification-header">Notification Title</div>
         <div className="notification-time">10:45 AM </div>

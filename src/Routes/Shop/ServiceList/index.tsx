@@ -41,18 +41,16 @@ const ServiceList = ({ setShopLayOutProps }: PropsTypes) => {
 
   return (
     <div className="waper-main-container">
-      <div className="service-wapper-component">
-        <div className="wrapper-flex-justify-content">
-          <div className="edit-profile-title">Services</div>
-          <ButtonWithIcon
-            type="white"
-            rightIcon={addIcon}
-            label="Add"
-            onClick={() => {
-              navigate("/shop/service/add-service");
-            }}
-          />
-        </div>
+      <div className="wrapper-flex-justify-content">
+        <div className="edit-profile-title">Services</div>
+        <ButtonWithIcon
+          type="white"
+          rightIcon={addIcon}
+          label="Add"
+          onClick={() => {
+            navigate("/shop/service/add-service");
+          }}
+        />
       </div>
       <div className="service-wrapper">
         {services.map((services: ServiceData, i) => (
