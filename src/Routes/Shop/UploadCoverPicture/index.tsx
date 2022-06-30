@@ -11,6 +11,7 @@ const UploadCoverPicture = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 2,
       goto: () => {
         navigate("/setup/upload-more-pic");
       },

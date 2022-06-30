@@ -12,6 +12,7 @@ const UploadMorePic = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 3,
       goto: () => {
         navigate("/setup/add-service");
       },

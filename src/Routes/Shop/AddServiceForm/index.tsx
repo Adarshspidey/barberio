@@ -166,6 +166,7 @@ const AddServiceForm = ({
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 4,
       goto: () => {
         navigate("/setup/add-service");
       },

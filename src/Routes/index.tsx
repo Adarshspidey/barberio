@@ -63,6 +63,7 @@ const Router = () => {
       buttonType: "primary",
       buttonLabel: "Next",
       goto: () => {},
+      pageIndex: 0,
     });
 
   const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({

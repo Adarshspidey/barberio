@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import BackButton from "../../Buttons/BackButton";
 import BigButton from "../../Buttons/BigButton";
 import SidePaneNavigator from "../../SidePaneNavigator";
@@ -8,10 +8,15 @@ interface PropsType {
   buttonType: "primary" | "orange";
   buttonLabel: string;
   goto: () => void;
+  pageIndex: number;
 }
 
-const ShopSetupLayout = ({ buttonType, buttonLabel, goto }: PropsType) => {
-  const navigate = useNavigate();
+const ShopSetupLayout = ({
+  buttonType,
+  buttonLabel,
+  goto,
+  pageIndex,
+}: PropsType) => {
   return (
     <div className="home-container setup-container">
       <div className="home-header-image"></div>
@@ -26,7 +31,7 @@ const ShopSetupLayout = ({ buttonType, buttonLabel, goto }: PropsType) => {
           <BigButton type={buttonType} label={buttonLabel} onClick={goto} />
         </div>
         <div className="side-pane-navigator">
-          <SidePaneNavigator />
+          <SidePaneNavigator pageIndex={pageIndex} />
         </div>
       </div>
     </div>

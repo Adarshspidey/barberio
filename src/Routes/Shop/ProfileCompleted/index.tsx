@@ -12,6 +12,7 @@ const ProfileCompleted = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 8,
       goto: () => {
         navigate("/shop/booking");
       },

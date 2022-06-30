@@ -1,6 +1,10 @@
 import React from "react";
 
-const SidePaneNavigator = () => {
+interface PropsType {
+  pageIndex: number;
+}
+
+const SidePaneNavigator = ({ pageIndex }: PropsType) => {
   const array: Array<string> = [
     "Location",
     "UploadLogo",
@@ -17,7 +21,7 @@ const SidePaneNavigator = () => {
       {array.map((item, index) => (
         <div
           className={`side-pane-icon ${
-            index === 1 ? "side-pane-active-icon" : ""
+            index === pageIndex ? "side-pane-active-icon" : ""
           }`}
         ></div>
       ))}

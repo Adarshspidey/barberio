@@ -11,6 +11,7 @@ const AddInterval = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 6,
       goto: () => {
         navigate("/setup/shop-type");
       },

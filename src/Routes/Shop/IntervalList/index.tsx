@@ -14,6 +14,7 @@ const IntervalList = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 6,
       goto: () => {
         navigate("/setup/service-list");
       },

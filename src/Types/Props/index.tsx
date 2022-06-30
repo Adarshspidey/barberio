@@ -15,4 +15,5 @@ export type ShopSetupLayOutProps = {
   buttonType: "primary" | "orange";
   buttonLabel: string;
   goto: () => void;
+  pageIndex: number;
 };

@@ -62,6 +62,7 @@ const ScheduleByDay = ({
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 5,
       goto: () => {
         navigate("/setup/schedule-time");
       },

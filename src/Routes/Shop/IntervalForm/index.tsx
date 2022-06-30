@@ -16,6 +16,7 @@ const IntervalForm = ({
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 6,
       goto: () => {
         navigate(-1);
       },

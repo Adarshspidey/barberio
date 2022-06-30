@@ -14,6 +14,7 @@ const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 4,
       goto: () => {
         navigate("/setup/schedule-time");
       },

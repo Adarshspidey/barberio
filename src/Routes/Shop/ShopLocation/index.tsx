@@ -13,6 +13,7 @@ const ShopLocation = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 0,
       goto: () => {
         navigate("/setup/upload-logo");
       },

@@ -15,6 +15,7 @@ const ScheduleTime = ({ setShopSetupLayoutProps }: PropsType) => {
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
+      pageIndex: 5,
       goto: () => {
         navigate("/setup/interval");
       },
