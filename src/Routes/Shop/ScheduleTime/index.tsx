@@ -6,6 +6,7 @@ import arrow from "../../../assets/Icons/arrow-down.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import { ShopSetupLayOutProps } from "../../../Types/Props";
+import ServiceCalender from "../../../Components/Calendar/ServiceCalender";
 
 interface PropsType {
   setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
@@ -36,7 +37,8 @@ const ScheduleTime = ({ setShopSetupLayoutProps }: PropsType) => {
         />
       </div>
 
-      <div>Calendar Days</div>
+      <div><ServiceCalender/></div>
+      
       <div className="input-wrapper">
         <InputField
           label="Start Time"

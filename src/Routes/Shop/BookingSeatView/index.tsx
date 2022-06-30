@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import BackButton from "../../../Components/Buttons/BackButton";
 import SmallButton from "../../../Components/Buttons/SmallButton";
-import Calendar from "../../../Components/Calendar";
 
 const BookingSeatView = () => {
   const navigate = useNavigate();
@@ -29,7 +27,6 @@ const BookingSeatView = () => {
         />
       </div>
 
-      <Calendar />
       <SmallButton
         type="yellow"
         label="Disable"

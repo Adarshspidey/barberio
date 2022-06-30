@@ -105,7 +105,10 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
           }}
         />
         <div className="logout-container">
-          <div className="profile-menu-card">
+          <div className="profile-menu-card"
+          onClick={() => {
+            navigate("/");
+          }}>
             <div className="profile-card-items">
               <div>
                 <img src={logout} alt="icon" />
@@ -139,11 +142,16 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
           />
           <div className="logout-container">
             <div className="profile-menu-card">
-              <div className="profile-card-items">
+              <div className="profile-card-items"
+              onClick={() => {
+                navigate("/");
+              }}>
                 <div>
                   <img src={logout} alt="icon" />
                 </div>
-                <div className="logout-button">LogOut</div>
+                <div className="logout-button"
+                
+                >LogOut</div>
               </div>
             </div>
           </div>
