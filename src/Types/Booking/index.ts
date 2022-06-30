@@ -6,3 +6,8 @@ export type BookingData = {
   name: string;
   phone: number;
 };
+
+export type SeatData = {
+  seatNumber: number;
+  disable: boolean;
+};
