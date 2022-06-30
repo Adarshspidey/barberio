@@ -1,8 +1,8 @@
-import  { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
 import SmallButton from "../../../Components/Buttons/SmallButton";
-
+import BookingCalendar from "../../../Components/Calendar/BookingCalendar";
 
 interface PropsType {
   setShowAll: Dispatch<SetStateAction<boolean>>;
@@ -22,7 +22,8 @@ const DetailedBookingView = ({ setShowAll }: PropsType) => {
         />
         <BackButton onClick={() => setShowAll(false)} />
       </div>
-          
+
+      <BookingCalendar />
     </div>
   );
 };
