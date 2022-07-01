@@ -636,6 +636,9 @@
   .service-form-waper-component{
     padding: 15px;
     display: block;
+    margin-top: 50px;
+    overflow: auto;
+    max-height: 350px;
   }
 
 }
