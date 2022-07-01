@@ -17,32 +17,36 @@ const DisableService = () => {
       </div>
      
       <div className="radio-button">
+        <form>
         <div className="radio-button-title">
-          <input type="radio" />
-          Until I manually enable
+          <input type="radio"/>
+          <label>Until I manually enable</label>
         </div>
         <div className="radio-button-title">
           <input type="radio" />
-          For a Period of Time
+          <label>For a Period of Time</label>
         </div>
-        
+        </form>
       </div>
+      
       <div>
       <div className="card-title">Ending</div>
       <form className="form-feild-container">
+      <div className="profile-waper-component">
       <InputField 
           label="Date"
           type="text"
           icon={date}
           arrow={arrowDown}
          onChange={() => {}} />
-
-      <InputField 
+      
+        <InputField 
           label="Time" 
           type="text"
           icon={time}
           arrow={arrowDown}
           onChange={() => {}} />
+          </div>
           <div className="button-end">
             <SmallButton
             type="saveBlack"

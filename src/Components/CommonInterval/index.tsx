@@ -22,7 +22,7 @@ const CommonInterval = ({ onClickList, onClickButton }: PropsTypes) => {
         />
       </div>
       <div className="sub-content-header">Common Interval</div>
-      <div className="button-end service-wrapper">
+      <div className="button-end-with-padding">
         <ButtonWithIcon
           rightIcon={addplus}
           type="white"

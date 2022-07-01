@@ -39,7 +39,7 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
 
   return (
     <div className="waper-main-container">
-      <div className="isdestop">
+      <div className="desktop-view">
         <div className="image-gallery">
           <img src={shopImage} alt="gallery" />
           <div className="logo-gallery">
@@ -156,7 +156,7 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
             </div>
           </div>
         </div>
-        <div className="profile-waper-component">
+        <div className="profile-waper-component border-left">
           <ProfileMenuCard
             title="Offers"
             icon={offer}

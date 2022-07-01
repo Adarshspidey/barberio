@@ -21,6 +21,7 @@ const EditProfile = () => {
 
       </div>
       <form className="form-feild-container">
+        <div className="profile-waper-component">
         <InputField
           label="Name of Service "
           icon={serviceicon}
@@ -84,6 +85,7 @@ const EditProfile = () => {
               navigate("/shop/profile/offers");
             }}
           />
+        </div>
         </div>
       </form>
     </div>

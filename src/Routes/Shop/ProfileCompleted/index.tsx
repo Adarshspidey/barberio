@@ -41,7 +41,8 @@ const ProfileCompleted = ({ setShopSetupLayoutProps }: PropsType) => {
           by navigating to profile window later.
         </div>
       </div>
-      <img src={finish} alt="finish" />
+      <div className="finish-image"><img src={finish} alt="finish" /></div>
+      
     </div>
   );
 };

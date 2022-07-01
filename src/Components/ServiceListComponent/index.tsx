@@ -9,7 +9,7 @@ interface PropsTypes {
 const ServiceListComponent = ({ onClick }: PropsTypes) => {
   const navigate = useNavigate();
   return (
-    <div className="service-list" onClick={onClick}>
+    <div className="service-list service-list-with-margin" onClick={onClick}>
       <IntervalListCard name="Spa" />
       <IntervalListCard name="Facial" />
     </div>

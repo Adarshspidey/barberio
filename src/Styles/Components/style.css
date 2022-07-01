@@ -285,9 +285,6 @@
 }
 
 .shop-card-component {
-  box-shadow: 1.15525e-15px 18.8667px 37.7333px rgba(18, 25, 23, 0.24),
-    inset -3.59411e-16px -5.86963px 5.86963px #52736c,
-    inset 3.59411e-16px 5.86963px 5.86963px #5e837c;
   border-radius: 2px;
   width: 159px;
 }
@@ -295,9 +292,8 @@
   background: var(--dark-green);
 }
 .shop-details-card {
-  box-shadow: 1.15525e-15px 18.8667px 37.7333px rgba(48, 48, 48, 0.1035),
-    inset -2.59289e-16px -4.23452px 4.23452px #e7e7e7,
-    inset 2.59289e-16px 4.23452px 4.23452px #f8f8f8;
+  box-shadow: 1.15525e-15px 18.8667px 37.7333px rgba(48, 48, 48, 0.1035);
+   
   border-radius: 2px;
   padding: 10px;
 }
