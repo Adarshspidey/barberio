@@ -533,7 +533,9 @@
 .profile-waper-component{
   max-width: 500px;
 }
-
+.service-form-waper-component{
+  display: none;
+}
 @media screen and (min-width: 940px) {
   .home-container {
     background-color: var(--white);
@@ -630,6 +632,10 @@
   
   .home-setup-body-container{
     display: none;
+  }
+  .service-form-waper-component{
+    padding: 15px;
+    display: block;
   }
 
 }

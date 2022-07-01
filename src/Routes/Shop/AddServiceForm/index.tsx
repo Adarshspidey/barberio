@@ -155,12 +155,14 @@ import ServiceForm from "../../../Components/ServiceForm";
 import { ShopSetupLayOutProps } from "../../../Types/Props";
 interface PropsTypes {
   IsButton?: boolean;
+  IsDesktop?:boolean;
   title?: string;
   setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
 }
 
 const AddServiceForm = ({
   IsButton = true,
+  IsDesktop=true,
   setShopSetupLayoutProps,
 }: PropsTypes) => {
   useEffect(() => {
@@ -187,7 +189,8 @@ const AddServiceForm = ({
     <div>
       {!IsButton && <div className="set-up-question">Add Services</div>}
       {IsButton && <div className="edit-profile-title"> Add Services</div>}
-      <ServiceForm IsButton={IsButton} />
+      <ServiceForm IsButton={IsButton} IsDesktop={IsDesktop} />
+      
     </div>
   );
 };
