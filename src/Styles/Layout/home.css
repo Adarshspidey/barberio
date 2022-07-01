@@ -165,7 +165,7 @@
 }
 
 .shop-outlet {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 .menu-footer-section {
   width: 100%;
@@ -198,7 +198,7 @@
   padding: 0 20px;
 }
 
-.finish-image{
+.finish-image {
   display: grid;
   place-items: center;
 }
@@ -264,13 +264,13 @@
 } */
 
 .button-end,
-.button-end-with-margin ,
-.button-end-with-padding{
+.button-end-with-margin,
+.button-end-with-padding {
   display: flex;
   justify-content: end;
   padding: 0 20px;
 }
-.button-end-with-padding{
+.button-end-with-padding {
   padding: 20px 0;
 }
 .waper {
@@ -308,6 +308,7 @@
 .shop-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
 
 .title-component {
@@ -385,10 +386,9 @@
 
 .service-list {
   display: grid;
-
 }
 
-.service-list-with-margin{
+.service-list-with-margin {
   margin-top: 100px;
 }
 
@@ -396,6 +396,10 @@
   display: grid;
   place-items: center;
   background: #597c75;
+}
+
+.shop-image-width {
+  object-fit: cover;
 }
 
 .shop-image {
@@ -475,17 +479,16 @@
 }
 
 .radio-button {
- 
   padding-top: 20px;
   display: grid;
   grid-auto-flow: row;
-  font-size: var(--large); 
+  font-size: var(--large);
 }
-.radio-button-title{
+.radio-button-title {
   margin-bottom: 20px;
   margin-left: 20px;
 }
-.radio-button-title>input{
+.radio-button-title > input {
   margin-right: 5px;
 }
 
@@ -495,8 +498,6 @@
 }
 
 /* mediaquery */
-
-
 
 .seat-button-wrapper {
   padding: 20px;
@@ -530,7 +531,7 @@
   place-items: center;
   border: 1px solid rgba(0, 0, 0, 0.65);
 }
-.profile-waper-component{
+.profile-waper-component {
   max-width: 500px;
 }
 
@@ -544,7 +545,7 @@
     /* height: 100%; */
   }
 
-  .setup-section-container{
+  .setup-section-container {
     max-width: 600px;
     left: 50%;
     transform: translateX(-50%);
@@ -621,15 +622,14 @@
     top: 115px;
   }
 
- .border-left{
+  .border-left {
     border-left: 0.5px solid #e7e7e7;
-  } 
-  .shop-card-container{
+  }
+  .shop-card-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  .home-setup-body-container{
+
+  .home-setup-body-container {
     display: none;
   }
-
 }

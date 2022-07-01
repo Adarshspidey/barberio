@@ -7,7 +7,7 @@ const ShopNearCard = () => {
     <div className="shop-card-component">
       <div className="shop-content">
         <div className="shop-image">
-          <img src={shopImage} alt="shop" />
+          <img src={shopImage} alt="shop" className="shop-image-width" />
         </div>
       </div>
       <div className="shop-details-card">
