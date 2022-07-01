@@ -219,6 +219,7 @@ const Router = () => {
             <AddServiceForm
               setShopSetupLayoutProps={setShopSetupLayoutProps}
               IsButton={false}
+              IsDesktop={false}
             />
           }
         />
