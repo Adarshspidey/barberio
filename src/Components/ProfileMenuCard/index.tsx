@@ -2,7 +2,7 @@ type PropsTypes = {
     icon?:string;
     title:string;
     arrow?:string;
-    onClick: () => void;
+    onClick?: () => void;
 
     
 };

@@ -604,6 +604,16 @@ input:checked + .slider:before {
     inset -1.67822e-16px -2.74074px 2.74074px #3d5550,
     inset 1.67822e-16px 2.74074px 2.74074px #6f9b92;
 }
+.qr-icon{
+  display: grid;
+  justify-content: space-around;
+}
+.socialmedia-icon-contaier{
+  padding: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+}
 
 @media screen and (min-width: 940px) {
   .booking-card-waper {

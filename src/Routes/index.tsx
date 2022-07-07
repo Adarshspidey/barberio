@@ -52,6 +52,7 @@ import ImagePage from "./Shop/ImagePage";
 import IntervalServiceList from "./Shop/IntervalServiceList";
 import ScheduleIntervalByDay from "./Shop/ScheduleIntervalByDay";
 import EditGallery from "./Shop/EditGallery";
+import QrShare from "./Shop/QrShare";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -330,6 +331,7 @@ const Router = () => {
           />
         </Route>
         <Route path="qr-scan" element={<QrScanner />} />
+        <Route path="QrShare" element={<QrShare/>}/>
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
         <Route path="filter-list" element={<FilterForm />} />{" "}
