@@ -20,7 +20,7 @@
 .home-body-container {
   background-color: var(--white);
   border-radius: 25px 25px 0 0;
-  padding: 30px;
+  padding:0 30px;
   position: relative;
 }
 
@@ -69,7 +69,7 @@
   font-size: var(--medium);
   text-decoration-line: underline;
   text-align: end;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .form-discription {
@@ -537,6 +537,25 @@
 .service-form-waper-component {
   display: none;
 }
+
+.gallery-contaner{
+  position: relative;
+
+}
+.gallery-content{
+  position: absolute;
+  top: 0px;
+  left: 55px;
+}
+.gallery-wapper-container{
+  padding-top: 20px;
+  padding-left: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
+}
+
 @media screen and (min-width: 940px) {
   .home-container {
     background-color: var(--white);
@@ -635,8 +654,8 @@
     display: none;
   }
   .service-form-waper-component {
-    padding: 15px;
     display: block;
+    padding: 15px;
     margin-top: 50px;
     overflow: auto;
     max-height: 350px;

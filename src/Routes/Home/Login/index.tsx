@@ -23,13 +23,16 @@ interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   setPhone: Dispatch<SetStateAction<string>>;
   setOtpGoto: Dispatch<SetStateAction<string>>;
+  setIsLogin:Dispatch<SetStateAction<boolean>>;
+  IsPhone?:boolean;
+  title?:string;
 }
 
 const emptyForm: ShopLogin = {
   phone: "",
 };
 
-const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
+const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,title}: PropsTypes) => {
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -48,6 +51,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
 
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const[isPhone,setIsPhone]=useState("Login With Secret Pin")
 
   useIdleCall(
     () => {
@@ -76,6 +80,10 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
       });
     }
   };
+  
+  const changePhoneHandiler = ()=>{
+    setIsPhone("Login With Phone")
+  }
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -90,15 +98,26 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
     }
     setPhone(loginData.phone);
     setOtpGoto("/shop/booking");
+    setIsLogin(true);
     return navigate("/otp");
   };
 
+  
+
   const navigate = useNavigate();
+
+
 
   return (
     <div>
       <div className="login-container">
-        <div className="login-screen-pin">Login With Secret Pin</div>
+        
+        <div className="login-screen-pin"
+          onClick={changePhoneHandiler}
+        >{isPhone}</div>
+        {IsPhone&&
+        <div className="login-screen-pin"></div>
+        }
         <div className="login-content-container">
         <div className="content-title">Welcome Back</div>
         <div className="content-discription">Remember me? I'm your barberio.</div>

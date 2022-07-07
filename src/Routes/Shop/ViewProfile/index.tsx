@@ -47,7 +47,11 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
           </div>
         </div>
         <div className=" button-end waper">
-          <BackButton label="Gallery" icon={gallery} />
+          <BackButton
+          onClick={() => {
+            navigate("/shop/profile/gallery");
+          }}
+           label="Gallery" icon={gallery} />
         </div>
 
         <div className="profile-menu-title">John Doe Salon & Spa</div>
@@ -129,7 +133,13 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
             </div>
           </div>
           <div className=" button-end waper">
-            <BackButton label="Gallery" icon={gallery} />
+            <BackButton 
+            onClick={() => {
+              navigate("/shop/profile/gallery");
+            }}
+              label="Gallery" 
+              icon={gallery} />
+              
           </div>
           <div className="profile-menu-title">John Doe Salon & Spa</div>
           <ProfileMenuCard

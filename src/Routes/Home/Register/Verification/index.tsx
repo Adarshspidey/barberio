@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import verificatioImage from "../../../../assets/Icons/VerificationImage.svg";
 import BigButton from "../../../../Components/Buttons/BigButton";
@@ -7,9 +7,12 @@ import { LayOutProps } from "../../../../Types/Props";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
+  
 }
 
 const Verification = ({ setLayoutProps }: PropsTypes) => {
+  const[isChecked,setIsChecked] = useState(false);
+  // const[acceptConformation,setAcceptConfermation] =useState("");
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -26,17 +29,35 @@ const Verification = ({ setLayoutProps }: PropsTypes) => {
           You've got this! Just a few more steps. I'll never get in your way.
         </div>
         <div className="terms-service-title">
-          <ToggleButton />
+          {""}
+          <label className="toggle-button-container">
+          <input type="checkbox"
+          onClick={() => {
+            setIsChecked(!isChecked);
+        }}
+        checked={isChecked === true}
+          />
+          <span className="slider round"></span>
+    </label>
           <div className="button-label">I Agree to terms and services</div>
         </div>
         <div className="otp-input-feild">
-          <BigButton
+          {!isChecked&&(
+           <BigButton
             label="Continue"
-            type="primary"
-            onClick={() => {
+            type="secondary"/>
+          )
+          }
+            {isChecked&&(
+            <BigButton
+              label="Continue"
+             type="primary"
+              onClick={() => {
               navigate("/setup");
             }}
           />
+            )
+}
         </div>
       </div>
     </div>

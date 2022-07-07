@@ -51,6 +51,7 @@ import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 import ImagePage from "./Shop/ImagePage";
 import IntervalServiceList from "./Shop/IntervalServiceList";
 import ScheduleIntervalByDay from "./Shop/ScheduleIntervalByDay";
+import EditGallery from "./Shop/EditGallery";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -73,6 +74,7 @@ const Router = () => {
 
   const [phone, setPhone] = useState<string>("");
   const [otpGoto, setOtpGoto] = useState<string>("");
+  const [isLogin,setIsLogin] = useState<boolean>(false);
   const [popupState, setPopupState] = useState<boolean>(false);
 
   return (
@@ -89,6 +91,8 @@ const Router = () => {
               setLayoutProps={setLayoutProps}
               setPhone={setPhone}
               setOtpGoto={setOtpGoto}
+              setIsLogin={setIsLogin}
+              
             />
           }
         />
@@ -98,7 +102,8 @@ const Router = () => {
             <RegisterForm
               setLayoutProps={setLayoutProps}
               setPhone={setPhone}
-              setOtpGoto={setOtpGoto}
+              setOtpGoto={setOtpGoto} 
+              setIsLogin={setIsLogin} 
             />
           }
         />
@@ -109,6 +114,8 @@ const Router = () => {
               setLayoutProps={setLayoutProps}
               phone={phone}
               otpGoto={otpGoto}
+              isLogin={isLogin}
+
             />
           }
         />
@@ -254,6 +261,7 @@ const Router = () => {
             index
             element={<ViewProfile setShopLayOutProps={setShopLayOutProps} />}
           />
+          <Route path="gallery" element={<EditGallery/>}/>
           <Route path="images" element={<ImagePage />} />
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />

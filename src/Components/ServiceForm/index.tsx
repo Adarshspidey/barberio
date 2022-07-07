@@ -79,7 +79,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
   const navigate = useNavigate();
   return (
     <div >
-    <div className="service-form-contaner">
+       <div className="service-form-contaner">
       <div className="input-wrapper">
         <InputField
           label="Name of Service "

@@ -1,9 +1,14 @@
-import React from "react";
+type PropsTypes = {
+  value?: string;
+  onClick?: () => void;
+}
 
-const ToggleButton = () => {
+const ToggleButton = ({  onClick, value }: PropsTypes) => {
   return (
     <label className="toggle-button-container">
-      <input type="checkbox" />
+      <input type="checkbox" 
+      
+      />
       <span className="slider round"></span>
     </label>
   );

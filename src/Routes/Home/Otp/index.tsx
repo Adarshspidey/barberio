@@ -18,13 +18,14 @@ interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   phone: string;
   otpGoto: string;
+  isLogin:boolean;
 }
 
 const emptyForm: OtpForm = {
   otp: "",
 };
 
-const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
+const Otp = ({ setLayoutProps, phone,isLogin, otpGoto }: PropsTypes) => {
 
   useEffect(() => {
     setLayoutProps(prev=>({
@@ -91,11 +92,18 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
            />
         </div>
         <div className="otp-button">
+        {isLogin&&
         <BigButton
           type="secondary"
           label="Verify"
         />
-        
+}
+        {!isLogin&&
+          <BigButton
+          type="primary"
+          label="Verify"
+        />
+}    
         </div>
       </form>
     </div>

@@ -23,6 +23,8 @@ interface PropsTypes {
   setOtpGoto: Dispatch<SetStateAction<string>>;
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   setPhone: Dispatch<SetStateAction<string>>;
+  setIsLogin:Dispatch<SetStateAction<boolean>>;
+  
 }
 
 const emptyForm: ShopRegister = {
@@ -32,7 +34,7 @@ const emptyForm: ShopRegister = {
   ownerName: "",
 };
 
-const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
+const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone ,setIsLogin}: PropsTypes) => {
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -91,7 +93,9 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
     }
     setPhone(registerFormData.phone);
     setOtpGoto("/confirmation");
+    setIsLogin(false)
     return navigate("/otp");
+    
   };
 
   const navigate = useNavigate();
