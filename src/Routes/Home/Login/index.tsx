@@ -16,7 +16,7 @@ import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
 import phoneIcon from '../../../assets/Icons/phone.svg'
-import arrowDown from "../../../assets/Icons/arrow-down.svg";
+import pinIcon from "../../../assets/Icons/pin.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
 
 interface PropsTypes {
@@ -30,6 +30,7 @@ interface PropsTypes {
 
 const emptyForm: ShopLogin = {
   phone: "",
+  pin:"",
 };
 
 const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,title}: PropsTypes) => {
@@ -42,7 +43,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,t
 
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
-  const { phone } = loginData;
+  const { phone,pin } = loginData;
 
   const [loginErrorData, setLoginErrorData] = useState<ShopLoginError>({
     ...emptyForm,
@@ -51,7 +52,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,t
   const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
 
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const[isPhone,setIsPhone]=useState("Login With Secret Pin")
+  const[isPhone,setIsPhone]= useState<boolean>(false);
 
   useIdleCall(
     () => {
@@ -81,9 +82,9 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,t
     }
   };
   
-  const changePhoneHandiler = ()=>{
-    setIsPhone("Login With Phone")
-  }
+  // const changePhoneHandiler = ()=>{
+  //   setIsPhone("Login With Phone")
+  // }
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -112,18 +113,25 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,t
     <div>
       <div className="login-container">
         
-        <div className="login-screen-pin"
-          onClick={changePhoneHandiler}
-        >{isPhone}</div>
-        {IsPhone&&
-        <div className="login-screen-pin"></div>
-        }
+        {!isPhone ? <div className="login-screen-pin"
+          onClick={() =>{
+            setIsPhone(!isPhone)
+          }}
+        >Login With Secret Pin</div>
+      :
+      <div className="login-screen-pin"
+          onClick={() =>{
+            setIsPhone(!isPhone)
+          }}
+        >Login With Phone</div>
+      }
         <div className="login-content-container">
         <div className="content-title">Welcome Back</div>
         <div className="content-discription">Remember me? I'm your barberio.</div>
         </div>
         <form onSubmit={submit}>
           <div className="form-container">
+          {!isPhone ?
             <InputField
               label="Phone Number"
               icon={phoneIcon}
@@ -132,8 +140,16 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,t
               error={loginErrorData.phone}
               onChange={(value) => onChange("phone", value)}
             />
-
-
+            :
+            <InputField
+              label="Enter Your Secret Pin"
+              icon={pinIcon}
+              value={pin}
+              submitted={submitted}
+              error={loginErrorData.pin}
+              onChange={(value) => onChange("pin", value)}
+            />
+            }
             <BigButton
               type="secondary"
               label="Login"

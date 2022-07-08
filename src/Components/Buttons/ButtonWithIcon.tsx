@@ -3,7 +3,7 @@ import React from "react";
 
 interface PropsType {
   leftIcon?: string;
-  type?: "black" | "green" | "white" | "noBorder";
+  type?: "black" | "green" | "white" | "upload" | "noBorder";
   rightIcon?: string;
   label: string;
   onClick?: () => void;
@@ -24,6 +24,8 @@ const ButtonWithIcon = ({
           ? "add-button"
           : type === "black"
           ? "button-icon-black"
+          : type === "upload"
+          ? "button-upload"
           : type === "green"
           ? "button-green"
           : ""

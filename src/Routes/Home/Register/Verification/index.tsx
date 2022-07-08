@@ -45,7 +45,7 @@ const Verification = ({ setLayoutProps }: PropsTypes) => {
           {!isChecked&&(
            <BigButton
             label="Continue"
-            type="secondary"/>
+            type="continue"/>
           )
           }
             {isChecked&&(

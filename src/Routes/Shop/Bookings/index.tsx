@@ -7,6 +7,7 @@ import SmallButton from "../../../Components/Buttons/SmallButton";
 import DetailedBookingView from "../DetailedBookingView";
 import { ShopLayOutProps } from "../../../Types/Props";
 import BookingDetailedView from "../../../Components/BookingDetaildView";
+import DeletePopup from "../../../Components/DeletePopup";
 
 interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
@@ -31,6 +32,7 @@ const data: Array<BookingData> = [
 ];
 
 const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
+  
   useEffect(() => {
     setShopLayOutProps((prev) => ({
       ...prev,

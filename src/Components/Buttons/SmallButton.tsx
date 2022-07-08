@@ -26,6 +26,7 @@ const SmallButton = ({ label, onClick, type }: PropsType) => {
           ? "button-green"
           : type === "black"
           ? "button-black"
+          
           : type === "saveBlack"
           ? "button-saveBlack"
           : ""

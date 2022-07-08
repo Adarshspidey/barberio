@@ -90,16 +90,6 @@ const EditProfile = () => {
           icon={unisexual}
           arrow={arrow}
         />
-
-        <div className="button-end">
-          <SmallButton
-            type="saveBlack"
-            label="Save"
-            onClick={() => {
-              navigate("/shop/profile");
-            }}
-          />
-        </div>
       </div>
       </div>
 

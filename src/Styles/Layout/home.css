@@ -497,6 +497,32 @@
   padding-left: 20px;
 }
 
+.day-container{
+  background: var(--white);
+  box-shadow: 6.93967e-16px 11.3333px 22.6667px rgba(51, 51, 51, 0.24), inset -2.15901e-16px -3.52593px 3.52593px #ECECEC, inset 2.15901e-16px 3.52593px 3.52593px #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+.change-week-container{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.change-day{
+  background: var(--white);
+  border: 1px solid #597C75;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+.day-previous{
+  font-size: 10px;
+}
+.day-content-container{
+  display: grid;
+  grid-auto-flow: column;
+}
 /* mediaquery */
 
 .seat-button-wrapper {

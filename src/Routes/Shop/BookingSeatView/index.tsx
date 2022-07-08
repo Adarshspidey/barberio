@@ -73,6 +73,12 @@ const BookingSeatView = () => {
           />
         </div>
       </div>
+      <div className="time-container">
+        <div>AM
+       <div className="time-line"></div></div>
+       <div> PM
+       <div className="time-line"></div></div> 
+      </div>
     </div>
   );
 };

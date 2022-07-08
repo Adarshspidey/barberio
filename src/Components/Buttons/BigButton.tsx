@@ -1,7 +1,7 @@
 import React from "react";
 
 interface PropsTypes {
-  type?: "primary" | "secondary" | "orange";
+  type?: "primary" | "secondary" | "orange" |"continue";
   label: string;
   onClick?: () => void;
 }
@@ -12,6 +12,8 @@ const BigButton = ({ type, onClick, label }: PropsTypes) => {
       className={`button-big-primary ${
         type === "secondary"
           ? "button-big-secondary"
+          :type === "continue"
+          ? "button-continue-big"
           : type === "orange"
           ? "button-orange-big"
           : ""

@@ -262,7 +262,7 @@ const Router = () => {
             index
             element={<ViewProfile setShopLayOutProps={setShopLayOutProps} />}
           />
-          <Route path="gallery" element={<EditGallery/>}/>
+          <Route path="gallery" element={<EditGallery />}/>
           <Route path="images" element={<ImagePage />} />
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />

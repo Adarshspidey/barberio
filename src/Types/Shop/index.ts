@@ -27,10 +27,12 @@ export type ShopServiceFormError = {
 };
 export type ShopLogin = {
   phone: string;
+  pin:string;
 };
 
 export type ShopLoginError = {
   phone: string;
+  pin:string;
 };
 
 export type OtpForm = {

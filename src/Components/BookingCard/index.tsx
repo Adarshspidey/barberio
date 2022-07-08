@@ -97,6 +97,7 @@ const BookingCard = ({
               <img src={chair} alt="chair" />
               <div className="booking-seat-number-count">1</div>
             </div>
+            
           </div>
           {/* <div>Service Status: Completed</div> */}
         </>
