@@ -86,6 +86,15 @@
   border-radius: 50px 50px;
 }
 
+.button-disable{
+  background: var(--white);
+  font-size:var(--medium);
+  padding: 7px 10px;
+  border: 1px solid #E2E2E2;
+  box-shadow: 6.93967e-16px 0px 25px rgba(18, 18, 18, 0.13);
+  border-radius: 15px;
+}
+
 .icons-button {
   padding: 10px;
   display: grid;

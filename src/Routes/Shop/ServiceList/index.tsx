@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import ServiceCard from "../../../Components/ServiceCard";
 import addIcon from "../../../assets/Icons/Add.svg";
+
 import { ShopLayOutProps } from "../../../Types/Props";
 
 interface PropsTypes {
@@ -11,13 +12,19 @@ interface PropsTypes {
 
 type ServiceData = {
   title: string;
+  description:string;
+  rate:number;
 };
 const data: Array<ServiceData> = [
   {
     title: "Hair cutting",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum lacus, interdum vel viverra quis, rutrum sed odio.",
+    rate:100,
   },
   {
     title: "Spa",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum lacus, interdum vel viverra quis, rutrum sed odio.",
+    rate:100
   },
 ];
 const ServiceList = ({ setShopLayOutProps }: PropsTypes) => {

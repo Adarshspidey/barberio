@@ -11,7 +11,9 @@ interface PropsType {
     | "orange"
     | "green"
     | "black"
-    | "saveBlack";
+    | "saveBlack"
+    | "disable"
+    | "enable";
 }
 
 const SmallButton = ({ label, onClick, type }: PropsType) => {
@@ -26,7 +28,10 @@ const SmallButton = ({ label, onClick, type }: PropsType) => {
           ? "button-green"
           : type === "black"
           ? "button-black"
-          
+          : type === "disable"
+          ? "button-disable"
+          : type ==="enable"
+          ? "button-enable"
           : type === "saveBlack"
           ? "button-saveBlack"
           : ""
