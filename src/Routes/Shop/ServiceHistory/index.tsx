@@ -62,13 +62,13 @@ const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
           label="Completed"
           leftIcon={completeIcon}
         />
-        <IconButton type="black" icon={historyToggle} />
+        <IconButton type="black" icon={historyToggle} label="Cancelled" />
       </div>
 
       {bookingsHistory.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
       ))}
-      <div className="filter-button">
+      <div className="filter-button"> 
         <ButtonWithIcon
           type="black"
           label="Filter"
@@ -77,7 +77,7 @@ const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
             navigate("/shop/filter-list");
           }}
         />
-      </div>
+      </div> 
       <div className="bookingcard-waper">
         <BookingDetailedView
           time="11"
