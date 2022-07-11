@@ -5,6 +5,7 @@ import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
 import ServiceListCard from "../../../Components/ServiceListCard";
 import addIcon from "../../../assets/Icons/Add.svg";
 import { ShopSetupLayOutProps } from "../../../Types/Props";
+import PopUpForm from "../../../Components/PopUpForm";
 
 interface PropsType {
   setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
@@ -39,6 +40,7 @@ const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
         <ServiceListCard />
         <ServiceListCard />
       </div>
+      <PopUpForm/>
     </div>
   );
 };

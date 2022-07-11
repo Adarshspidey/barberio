@@ -1,6 +1,5 @@
 import gallery from "../../../assets/Images/galllerycollection.png"
 import ImageGalleryCard from "../../../Components/ImageGalleryCard"
-import Popup from "../../../Components/Popup"
 const EditGallery = () => {
   return (
     <div className="waper-main-container">
