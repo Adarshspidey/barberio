@@ -1,2 +1,2 @@
 import apiCall from "./apiCall";
-export default (url:string, file:string)=> apiCall(url,"POST",file,true)
+export default (url:string, file:File)=> apiCall(url,"POST",file,true)
