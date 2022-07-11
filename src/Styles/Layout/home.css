@@ -352,6 +352,13 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
+.booking-description{
+  font-size: var(--medium);
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  padding: 10px;
+}
+
 
 .history-complete-button {
   display: flex;
@@ -611,7 +618,13 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
  
 }
-
+.booking-welcome{
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  place-items: center;
+  text-align: center;
+}
 @media screen and (min-width: 940px) {
   .home-container {
     background-color: var(--white);

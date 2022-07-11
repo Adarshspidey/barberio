@@ -7,6 +7,7 @@ import SmallButton from "../../../Components/Buttons/SmallButton";
 import DetailedBookingView from "../DetailedBookingView";
 import { ShopLayOutProps } from "../../../Types/Props";
 import BookingDetailedView from "../../../Components/BookingDetaildView";
+import emptybooking from '../../../assets/Icons/empty-booking.svg'
 import DeletePopup from "../../../Components/DeletePopup";
 
 interface PropsTypes {
@@ -56,6 +57,17 @@ const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
 
   return (
     <div>
+       <div>
+        <div className='service-card'>
+            <div className="booking-welcome">
+              <div><img src={emptybooking} alt="welcome"/></div>
+              <div>Welcome user!</div>
+              <div><img src={emptybooking} alt="welcome"/></div>
+            </div>    
+          <div className="booking-description">Booking From User Will Appear Here </div>
+
+        </div>
+      </div> 
       {!showAll && (
         <div className="content-end">
           <SmallButton
