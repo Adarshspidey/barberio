@@ -16,20 +16,24 @@ import { ValidationError } from "../../../Types/Error";
 import useIdleCall from "../../../Hooks/useIdleCall";
 import { LayOutProps } from "../../../Types/Props";
 import phoneIcon from '../../../assets/Icons/phone.svg'
-import arrowDown from "../../../assets/Icons/arrow-down.svg";
+import pinIcon from "../../../assets/Icons/pin.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
 
 interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   setPhone: Dispatch<SetStateAction<string>>;
   setOtpGoto: Dispatch<SetStateAction<string>>;
+  setIsLogin:Dispatch<SetStateAction<boolean>>;
+  IsPhone?:boolean;
+  title?:string;
 }
 
 const emptyForm: ShopLogin = {
   phone: "",
+  pin:"",
 };
 
-const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
+const Login = ({ setPhone, setOtpGoto, setLayoutProps,setIsLogin,IsPhone=false,title}: PropsTypes) => {
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -39,7 +43,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
 
   const [loginData, setLoginData] = useState<ShopLogin>({ ...emptyForm });
 
-  const { phone } = loginData;
+  const { phone,pin } = loginData;
 
   const [loginErrorData, setLoginErrorData] = useState<ShopLoginError>({
     ...emptyForm,
@@ -48,6 +52,7 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
   const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
 
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const[isPhone,setIsPhone]= useState<boolean>(false);
 
   useIdleCall(
     () => {
@@ -76,6 +81,10 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
       });
     }
   };
+  
+  // const changePhoneHandiler = ()=>{
+  //   setIsPhone("Login With Phone")
+  // }
 
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -90,44 +99,63 @@ const Login = ({ setPhone, setOtpGoto, setLayoutProps }: PropsTypes) => {
     }
     setPhone(loginData.phone);
     setOtpGoto("/shop/booking");
+    setIsLogin(true);
     return navigate("/otp");
   };
 
+  
+
   const navigate = useNavigate();
+
+
 
   return (
     <div>
-      <div>
-        <div>Login With Secret Pin</div>
-
-        <div>Welcome Back</div>
-        <div>Remember me? I'm your barberio.</div>
+      <div className="login-container">
+        
+        {!isPhone ? <div className="login-screen-pin"
+          onClick={() =>{
+            setIsPhone(!isPhone)
+          }}
+        >Login With Secret Pin</div>
+      :
+      <div className="login-screen-pin"
+          onClick={() =>{
+            setIsPhone(!isPhone)
+          }}
+        >Login With Phone</div>
+      }
+        <div className="login-content-container">
+        <div className="content-title">Welcome Back</div>
+        <div className="content-discription">Remember me? I'm your barberio.</div>
+        </div>
         <form onSubmit={submit}>
           <div className="form-container">
+          {!isPhone ?
             <InputField
               label="Phone Number"
+              icon={phoneIcon}
               value={phone}
               submitted={submitted}
               error={loginErrorData.phone}
               onChange={(value) => onChange("phone", value)}
             />
-
-
+            :
+            <InputField
+              label="Enter Your Secret Pin"
+              icon={pinIcon}
+              value={pin}
+              submitted={submitted}
+              error={loginErrorData.pin}
+              onChange={(value) => onChange("pin", value)}
+            />
+            }
             <BigButton
               type="secondary"
               label="Login"
             />
           </div>
       </form>
-
-        {/* <input type="text" />
-      <button
-        onClick={() => {
-          navigate("/otp");
-        }}
-      >
-        Login
-      </button> */}
       </div>
     </div>
   );

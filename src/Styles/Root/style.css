@@ -1,9 +1,10 @@
+
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Sofia Pro Regular";
+  font-family: "Sofia Pro";
 }
 
 #__next {
@@ -55,12 +56,13 @@ form {
   --red: #ff0004;
   --orange: #ff9052;
   --gray: #595959;
-  --dark-gray: rgba(0, 0, 0, 0.4);
   --light-gray: #e8e8e8;
   --green: #059805;
   --light-green: #19a036;
   --footer-gray: #ebebeb;
-
+  --light-orange:#E99B05;
+  --menu-title:rgba(0, 0, 0, 0.4);
+  
   --small: 12px;
   --medium: 14px;
   --large: 16px;
@@ -114,7 +116,7 @@ input[type="file"] {
   padding: 20px 20px 20px 40px;
   border: 1px solid transparent;
   background-color: var(--input-background-color);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .input-field-container-error .input-field input,

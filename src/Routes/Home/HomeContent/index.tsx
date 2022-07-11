@@ -29,13 +29,13 @@ const HomeContent = ({ setLayoutProps }: PropsTypes) => {
   return (
     <div className="home-content">
       <div className="home-content-title">Barberio</div>
-      <div className="home-content-discription">
-        <div className="content-title">Hello and welcome to Barberio!</div>
-        <div className="content-discription">
-          Our barbers will pamper you with a haircut and shave of your choice.
-          Have a seat and we'll be right with you!
-        </div>
+
+      <div className="content-title">Hello and welcome to Barberio!</div>
+      <div className="content-discription">
+        Our barbers will pamper you with a haircut and shave of your choice.
+        Have a seat and we'll be right with you!
       </div>
+
       <div className="login-button-wrapper">
         <BigButton
           type="secondary"

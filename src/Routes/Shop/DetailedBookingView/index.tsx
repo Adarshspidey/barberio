@@ -1,12 +1,17 @@
-import React from "react";
+import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "../../../Components/Buttons/BackButton";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import BookingCalendar from "../../../Components/Calendar/BookingCalendar";
 
-const DetailedBookingView = () => {
+interface PropsType {
+  setShowAll: Dispatch<SetStateAction<boolean>>;
+}
+
+const DetailedBookingView = ({ setShowAll }: PropsType) => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="detailed-booking">
       <div className="wrapper-flex-justify-content">
         <SmallButton
           type="orange"
@@ -15,10 +20,10 @@ const DetailedBookingView = () => {
             navigate("/shop/booking/seat");
           }}
         />
-        <BackButton />
+        <BackButton onClick={() => setShowAll(false)} />
       </div>
 
-      <div>Select days</div>
+      <BookingCalendar />
     </div>
   );
 };

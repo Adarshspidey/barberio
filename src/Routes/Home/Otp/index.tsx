@@ -18,13 +18,14 @@ interface PropsTypes {
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   phone: string;
   otpGoto: string;
+  isLogin:boolean;
 }
 
 const emptyForm: OtpForm = {
   otp: "",
 };
 
-const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
+const Otp = ({ setLayoutProps, phone,isLogin, otpGoto }: PropsTypes) => {
 
   useEffect(() => {
     setLayoutProps(prev=>({
@@ -77,22 +78,33 @@ const Otp = ({ setLayoutProps, phone, otpGoto }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-
-      <div>Hi, it's you and me in this together.</div>
-      <div>Enter your OTP</div>
-
-      <form onSubmit={submit}>
-        <OtpField
-          otp={otp}
-          handleOtpChange={(value) => setOtp(value)}
-          otpError={otpErrorData.otp}
-        />
-
+    <div className="otp-main-container">
+      <div className="otp-content-container">
+      <div className="content-discription">Hi, it's you and me in this together.</div>
+      <div className="content-title">Enter your OTP</div>
+      </div>
+      <form onSubmit={submit} className="form-container">
+        <div className="otp-input-feild">
+          <OtpField
+            otp={otp}
+            handleOtpChange={(value) => setOtp(value)}
+            otpError={otpErrorData.otp}
+           />
+        </div>
+        <div className="otp-button">
+        {isLogin&&
         <BigButton
           type="secondary"
           label="Verify"
         />
+}
+        {!isLogin&&
+          <BigButton
+          type="primary"
+          label="Verify"
+        />
+}    
+        </div>
       </form>
     </div>
   );

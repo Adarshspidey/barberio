@@ -27,11 +27,12 @@ const BookingCard = ({
 }: BookingcardProps) => {
   const [isDetailed, setIsDetailed] = useState<boolean>(false);
   return (
+    <div className="booking-card-waper">
     <div className="booking-card-component">
       <div>
         <div className="booking-card-component-group">
           <div className="booking-card-title">{title}</div>
-          <div className="booking-carditime">{time}</div>
+          <div className="booking-carditime">{time} AM</div>
         </div>
         <div className="booking-card-duration-component">
           {!isDetailed && (
@@ -96,11 +97,13 @@ const BookingCard = ({
               <img src={chair} alt="chair" />
               <div className="booking-seat-number-count">1</div>
             </div>
+            
           </div>
           {/* <div>Service Status: Completed</div> */}
         </>
       )}
     </div>
+    </div> 
   );
 };
 

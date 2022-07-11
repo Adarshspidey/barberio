@@ -1,26 +1,48 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import finish from "../../../assets/Icons/finish.svg";
 import BigButton from "../../../Components/Buttons/BigButton";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
 
-const ProfileCompleted = () => {
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const ProfileCompleted = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      pageIndex: 8,
+      goto: () => {
+        navigate("/shop/booking");
+      },
+      buttonType: "orange",
+      buttonLabel: "Finish",
+    }));
+
+    return () => {
+      setShopSetupLayoutProps((prev) => ({
+        ...prev,
+        buttonType: "primary",
+        buttonLabel: "Next",
+      }));
+    };
+  }, []);
   const navigate = useNavigate();
   return (
     <div>
-      <div>Profile Completed Successfully</div>
-      <div>
-        Please recheck your details by going back or You can edit your profile
-        by navigating to profile window later.
+      <div className="set-up-question">All Done</div>
+      <div className="input-wrapper">
+        <div className="content-title-black">
+          Profile Completed Successfully
+        </div>
+        <div className="content-discription">
+          Please recheck your details by going back or You can edit your profile
+          by navigating to profile window later.
+        </div>
       </div>
-      <img src={finish} alt="finish" />
-      <BigButton
-        type="primary"
-        label="Finish"
-        onClick={() => {
-          navigate("/shop");
-        }}
-      />
-       
+      <div className="finish-image"><img src={finish} alt="finish" /></div>
+      
     </div>
   );
 };

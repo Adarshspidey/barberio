@@ -23,6 +23,8 @@ interface PropsTypes {
   setOtpGoto: Dispatch<SetStateAction<string>>;
   setLayoutProps: Dispatch<SetStateAction<LayOutProps>>;
   setPhone: Dispatch<SetStateAction<string>>;
+  setIsLogin:Dispatch<SetStateAction<boolean>>;
+  
 }
 
 const emptyForm: ShopRegister = {
@@ -32,7 +34,7 @@ const emptyForm: ShopRegister = {
   ownerName: "",
 };
 
-const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
+const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone ,setIsLogin}: PropsTypes) => {
   useEffect(() => {
     setLayoutProps((prev) => ({
       ...prev,
@@ -91,17 +93,19 @@ const RegisterForm = ({ setLayoutProps, setOtpGoto, setPhone }: PropsTypes) => {
     }
     setPhone(registerFormData.phone);
     setOtpGoto("/confirmation");
+    setIsLogin(false)
     return navigate("/otp");
+    
   };
 
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="form-title">
-        join the movement!
-        <span>You deserve to look good.</span>
-      </div>
+    <div className="login-container">
+      <div className="content-title">
+        join the movement!</div>
+        <div className="form-discription">You deserve to look good.</div>
+      
       <div className="form-content-container">
         <div className="form-element">
           <form onSubmit={submit}>

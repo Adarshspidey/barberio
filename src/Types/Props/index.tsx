@@ -1,11 +1,19 @@
 export type LayOutProps = {
-    hideBackButton: boolean;
-    headerImage: string;
-}
+  hideBackButton: boolean;
+  headerImage: string;
+};
 
 export type ShopFooterPropsTypes = {
-    activePath: "Profile" | "Booking" | "History" | "Service" | "";
+  activePath?: "Profile" | "Booking" | "History" | "Service" | "";
+};
+
+export interface ShopLayOutProps extends ShopFooterPropsTypes {
+  hideBackButton?: boolean;
 }
 
-export interface ShopLayOutProps extends  ShopFooterPropsTypes{
-}
+export type ShopSetupLayOutProps = {
+  buttonType: "primary" | "orange";
+  buttonLabel: string;
+  goto: () => void;
+  pageIndex: number;
+};

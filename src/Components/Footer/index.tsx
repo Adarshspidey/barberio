@@ -37,6 +37,7 @@ const Footer = ({activePath}:ShopFooterPropsTypes) => {
             >
                 <div
                     className="footer-center-menu-icon"
+                    onClick={()=>navigate("/shop/QrShare")}
                     style={{
                         backgroundImage: `url(${
                             qrIcon

@@ -1,32 +1,44 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
-import SmallButton from "../../../Components/Buttons/SmallButton";
 import ServiceListCard from "../../../Components/ServiceListCard";
-import addIcon from '../../../assets/Icons/Add.svg'
-const AddService = () => {
+import addIcon from "../../../assets/Icons/Add.svg";
+import { ShopSetupLayOutProps } from "../../../Types/Props";
+
+interface PropsType {
+  setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
+}
+
+const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
+  useEffect(() => {
+    setShopSetupLayoutProps((prev) => ({
+      ...prev,
+      pageIndex: 4,
+      goto: () => {
+        navigate("/setup/schedule-time");
+      },
+    }));
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div>
-      <ButtonWithIcon
-        rightIcon={addIcon}
-         label="Add"
-        onClick={() => {
-        navigate("/setup/add-service-form");
-      }} />
-      <div className="service-list">
-      <ServiceListCard/>
-      <ServiceListCard/>
+      <div className="set-up-question">Add Services</div>
+      <div className="button-end-with-margin">
+        <ButtonWithIcon
+          rightIcon={addIcon}
+          type="white"
+          label="Add"
+          onClick={() => {
+            navigate("/setup/add-service-form");
+          }}
+        />
       </div>
-      <BigButton
-        type="primary"
-        label="Next"
-        onClick={() => {
-          navigate("/setup/schedule-time");
-        }}
-      />
-       
+      <div className="service-list">
+        <ServiceListCard />
+        <ServiceListCard />
+      </div>
     </div>
   );
 };

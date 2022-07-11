@@ -19,9 +19,7 @@ import AddInterval from "./Shop/AddInterval";
 import IntervalList from "./Shop/IntervalList";
 import IntervalForm from "./Shop/IntervalForm";
 import ShopType from "./Shop/ShopType";
-import NumberOfSeat from "./Shop/NumberOfSeat";
 import ProfileCompleted from "./Shop/ProfileCompleted";
-
 import loginImage from "../assets/Icons/login.svg";
 import { useState } from "react";
 import ShopLayout from "../Components/Layout/ShopLayout";
@@ -43,10 +41,18 @@ import QrScanner from "./Shop/QrScanner";
 import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
-import DetailedBookingView from "./Shop/DetailedBookingView";
 import BookingSeatView from "./Shop/BookingSeatView";
-import { LayOutProps, ShopLayOutProps } from "../Types/Props";
+import {
+  LayOutProps,
+  ShopLayOutProps,
+  ShopSetupLayOutProps,
+} from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
+import ImagePage from "./Shop/ImagePage";
+import IntervalServiceList from "./Shop/IntervalServiceList";
+import ScheduleIntervalByDay from "./Shop/ScheduleIntervalByDay";
+import EditGallery from "./Shop/EditGallery";
+import QrShare from "./Shop/QrShare";
 
 const Router = () => {
   const [layOutProps, setLayoutProps] = useState<LayOutProps>({
@@ -54,12 +60,22 @@ const Router = () => {
     headerImage: loginImage,
   });
 
+  const [shopSetuplayOutProps, setShopSetupLayoutProps] =
+    useState<ShopSetupLayOutProps>({
+      buttonType: "primary",
+      buttonLabel: "Next",
+      goto: () => {},
+      pageIndex: 0,
+    });
+
   const [shopLayOutProps, setShopLayOutProps] = useState<ShopLayOutProps>({
+    hideBackButton: false,
     activePath: "",
   });
 
   const [phone, setPhone] = useState<string>("");
   const [otpGoto, setOtpGoto] = useState<string>("");
+  const [isLogin,setIsLogin] = useState<boolean>(false);
   const [popupState, setPopupState] = useState<boolean>(false);
 
   return (
@@ -76,6 +92,8 @@ const Router = () => {
               setLayoutProps={setLayoutProps}
               setPhone={setPhone}
               setOtpGoto={setOtpGoto}
+              setIsLogin={setIsLogin}
+              
             />
           }
         />
@@ -85,7 +103,8 @@ const Router = () => {
             <RegisterForm
               setLayoutProps={setLayoutProps}
               setPhone={setPhone}
-              setOtpGoto={setOtpGoto}
+              setOtpGoto={setOtpGoto} 
+              setIsLogin={setIsLogin} 
             />
           }
         />
@@ -96,6 +115,8 @@ const Router = () => {
               setLayoutProps={setLayoutProps}
               phone={phone}
               otpGoto={otpGoto}
+              isLogin={isLogin}
+
             />
           }
         />
@@ -105,24 +126,118 @@ const Router = () => {
         />
       </Route>
 
-      <Route path="setup" element={<ShopSetUpLayout />}>
-        <Route index element={<ShopLocation />} />
-        <Route path="upload-logo" element={<UploadLogo />} />
-        <Route path="upload-cover-pic" element={<UploadCoverPicture />} />
-        <Route path="upload-more-pic" element={<UploadMorePic />} />
-        <Route path="add-service" element={<AddService />} />
-        <Route path="schedule-time" element={<ScheduleTime />} />
-        <Route path="schedule-by-day" element={<ScheduleByDay />} />
-        <Route path="interval" element={<AddInterval />} />
-        <Route path="interval-list" element={<IntervalList />} />
-        <Route path="interval-form" element={<IntervalForm />} />
-        <Route path="shop-type" element={<ShopType />} />
-        <Route path="no-of-seat" element={<NumberOfSeat />} />
-        <Route path="profile-completed" element={<ProfileCompleted />} />
-        <Route path="add-service-form" element={<AddServiceForm />} />
+      <Route
+        path="setup"
+        element={<ShopSetUpLayout {...shopSetuplayOutProps} />}
+      >
+        <Route
+          index
+          element={
+            <ShopLocation setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="upload-logo"
+          element={
+            <UploadLogo setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="upload-cover-pic"
+          element={
+            <UploadCoverPicture
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
+        <Route
+          path="upload-more-pic"
+          element={
+            <UploadMorePic setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="add-service"
+          element={
+            <AddService setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="schedule-time"
+          element={
+            <ScheduleTime setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="interval"
+          element={
+            <AddInterval setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="service-list"
+          element={
+            <IntervalServiceList
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
+
+        <Route
+          path="interval-list"
+          element={
+            <IntervalList setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="interval-form"
+          element={
+            <IntervalForm
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+              IsButton={false}
+            />
+          }
+        />
+        <Route
+          path="shop-type"
+          element={
+            <ShopType setShopSetupLayoutProps={setShopSetupLayoutProps} />
+          }
+        />
+        <Route
+          path="profile-completed"
+          element={
+            <ProfileCompleted
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
+        <Route
+          path="schedule-by-day"
+          element={
+            <ScheduleByDay
+              IsButton={false}
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+            />
+          }
+        />
+        <Route
+          path="add-service-form"
+          element={
+            <AddServiceForm
+              setShopSetupLayoutProps={setShopSetupLayoutProps}
+              IsButton={false}
+              IsDesktop={false}
+            />
+          }
+        />
       </Route>
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
+      <Route
+            index
+            element={<Bookings setShopLayOutProps={setShopLayOutProps} />}
+          />
         <Route
           path="booking"
           element={
@@ -132,9 +247,7 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<Bookings />} />
-          <Route path="seat" element={<BookingSeatView />} />
-          <Route path="detailed-booking" element={<DetailedBookingView />} />
+        <Route path="seat" element={<BookingSeatView />} />
         </Route>
         <Route
           path="profile"
@@ -145,14 +258,31 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ViewProfile />} />
+          <Route
+            index
+            element={<ViewProfile setShopLayOutProps={setShopLayOutProps} />}
+          />
+          <Route path="gallery" element={<EditGallery />}/>
+          <Route path="images" element={<ImagePage />} />
           <Route path="offers" element={<Offers />} />
           <Route path="add-offers" element={<AddOffers />} />
           <Route path="shop-near-me" element={<ShopNearMe />} />
           <Route path="edit" element={<EditProfile />} />
+          <Route path="images" element={<ImagePage />} />
           <Route path="schedule-work" element={<ScheduleWork />} />
-          <Route path="schedule-work-by-day" element={<ScheduleWorkByDay />} />
+          <Route
+            path="schedule-working-day"
+            element={
+              <ScheduleByDay
+                setShopSetupLayoutProps={setShopSetupLayoutProps}
+              />
+            }
+          />
           <Route path="schedule-interval" element={<ScheduleWorkInterval />} />
+          <Route
+            path="service-interval-by-day"
+            element={<ScheduleIntervalByDay />}
+          />
           <Route
             path="schedule-interval-list"
             element={<ScheduleIntervalList />}
@@ -172,8 +302,18 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceList />} />
-          <Route path="add-service-form" element={<AddServiceForm />} />
+          <Route
+            index
+            element={<ServiceList setShopLayOutProps={setShopLayOutProps} />}
+          />
+          <Route
+            path="add-service"
+            element={
+              <AddServiceForm
+                setShopSetupLayoutProps={setShopSetupLayoutProps}
+              />
+            }
+          />
           <Route path="disable-service" element={<DisableService />} />
         </Route>
         <Route
@@ -185,9 +325,13 @@ const Router = () => {
             />
           }
         >
-          <Route index element={<ServiceHistory />} />
+          <Route
+            index
+            element={<ServiceHistory setShopLayOutProps={setShopLayOutProps} />}
+          />
         </Route>
         <Route path="qr-scan" element={<QrScanner />} />
+        <Route path="QrShare" element={<QrShare/>}/>
         <Route path="notification-list" element={<NotificationList />} />
         <Route path="notification-body" element={<NotificationContent />} />
         <Route path="filter-list" element={<FilterForm />} />{" "}

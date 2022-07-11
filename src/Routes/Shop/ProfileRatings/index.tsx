@@ -1,19 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../../../Components/Buttons/BackButton";
+import RatingCard from "../../../Components/RatingCard";
 
 const ProfileRatings = () => {
   const navigate = useNavigate();
   return (
-    <div>
-      Ratings And Reviews
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Back
-      </button>
-      <div>Jhon Doe</div>
+    <div className="waper-main-container">
+      <div className="wrapper-flex-justify-content">
+      <div className="edit-profile-title"> Ratings And Reviews</div>
+      </div>
+      <RatingCard/>
+      <RatingCard/>
     </div>
   );
 };

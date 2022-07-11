@@ -4,7 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { BookingData } from "../../../Types/Booking";
 import bookingActive from "../../../assets/Icons/Booking-active.svg";
 import SmallButton from "../../../Components/Buttons/SmallButton";
+import DetailedBookingView from "../DetailedBookingView";
+import { ShopLayOutProps } from "../../../Types/Props";
+import BookingDetailedView from "../../../Components/BookingDetaildView";
+import emptybooking from '../../../assets/Icons/empty-booking.svg'
+import DeletePopup from "../../../Components/DeletePopup";
 
+interface PropsTypes {
+  setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
+}
 const data: Array<BookingData> = [
   {
     title: "Hair cutting",
@@ -24,31 +32,91 @@ const data: Array<BookingData> = [
   },
 ];
 
-const Bookings = () => {
+const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
+  
+  useEffect(() => {
+    setShopLayOutProps((prev) => ({
+      ...prev,
+      hideBackButton: true,
+    }));
+
+    //ReSet Props For The LayOut
+    return () => {
+      setShopLayOutProps((prev) => ({
+        ...prev,
+        hideBackButton: false,
+      }));
+    };
+  }, []);
+
   const [bookings, setBookings] = useState<Array<BookingData>>(data);
+
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
   return (
     <div>
-      {/* <button
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      >
-        All
-      </button> */}
-      <SmallButton
-        type="white"
-        label="All"
-        onClick={() => {
-          navigate("/shop/booking/detailed-booking");
-        }}
-      />
+       <div>
+        <div className='service-card'>
+            <div className="booking-welcome">
+              <div><img src={emptybooking} alt="welcome"/></div>
+              <div>Welcome user!</div>
+              <div><img src={emptybooking} alt="welcome"/></div>
+            </div>    
+          <div className="booking-description">Booking From User Will Appear Here </div>
+
+        </div>
+      </div> 
+      {!showAll && (
+        <div className="content-end">
+          <SmallButton
+            type="white"
+            label="All"
+            onClick={() => {
+              setShowAll(true);
+              // navigate("/shop/booking/detailed-booking");
+            }}
+          />
+        </div>
+      )}
+
+      {showAll && (
+        <div className="content-margin">
+          <DetailedBookingView setShowAll={setShowAll} />
+        </div>
+      )}
+
       {bookings.length < 1 && <div>No bookings available</div>}
       {bookings.map((booking: BookingData, i) => (
         <BookingCard {...booking} />
       ))}
+      <div className="bookingcard-waper">
+        <BookingDetailedView
+          time="11"
+          title="HairCuting"
+          duration={30}
+          rate={100}
+          name="Shini"
+          phone={999598463}
+        />
+        <BookingDetailedView
+          time="11"
+          title="HairCuting"
+          duration={30}
+          rate={100}
+          name="Shini"
+          phone={999598463}
+        />
+        <BookingDetailedView
+          time="11"
+          title="HairCuting"
+          duration={30}
+          rate={100}
+          name="Shini"
+          phone={999598463}
+        />
+      </div>
     </div>
   );
 };
