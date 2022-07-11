@@ -363,7 +363,6 @@
   display: grid;
   gap: 15px;
 }
-
 .add-upload-icon {
   height: 500px;
   background-image: url(../../assets/Icons/upload-icon.svg);
@@ -373,13 +372,52 @@
   justify-content: center;
   cursor: pointer;
 }
-
+.booking-card-container{
+  display: grid;
+  grid-auto-flow: column;
+}
+.offer-list{
+  background: rgba(89, 124, 117, 0.02);
+  border-left: 1px solid #597C75;
+  border-radius: 10px 0px 0px 10px;
+  padding: 6px 12px;
+  margin-bottom: 15px;
+  color:var( --dark-green);
+  font-size: var(--xxlarge);
+}
 .offer-rate {
   text-align: center;
   color: #597c75;
   font-size: var(----slarge);
 }
+.rupee-image{
+  width: 10px;
+  height: 10px;
+}
+.rate-container{
+  font-size: var(--large);
+}
+.warning-container{
+  display: grid;
+  grid-auto-flow: column;
+  font-size: var(--medium);
+  padding: 5px 0;
+  gap: 5px;
+  justify-content: start;
 
+}
+.days-warning{
+  color: var(--orange);
+}
+.time-warning{
+  color: #E99B05;
+}
+.mits-waring{
+  color: var(--black);
+}
+.left{
+  color: var(--red);
+}
 .profile-menu-card {
   box-shadow: 0px 1px 0px #f5f5f5;
   border-radius: 15px;

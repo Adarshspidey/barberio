@@ -13,17 +13,6 @@ interface ServicecardProps {
 const ServiceCard = ({title,description,rate}:ServicecardProps) => {
     const navigate = useNavigate();
   return (
-    // <div className="booking-card-component">
-    //   <div className="booking-card-duration-component">
-    //   <div className="booking-card-title">{title}</div>
-    //     <SmallButton 
-    //     type="black"
-    //     label="Disable"
-    //     onClick={() => {
-    //           navigate("/shop/service/disable-service");
-    //         }}/>
-    //   </div>
-    // </div>
 
     <div className='service-card'>
       <div>

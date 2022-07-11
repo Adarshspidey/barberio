@@ -1,6 +1,3 @@
-import { useState } from "react";
-import arrowUp from "../../assets/Icons/arrow-up.svg";
-import arrowDown from "../../assets/Icons/arrow-down.svg";
 import clock from "../../assets/Icons/small-clock.svg";
 import paidIcon from "../../assets/Icons/paid.svg";
 import rupee from "../../assets/Icons/money.svg";

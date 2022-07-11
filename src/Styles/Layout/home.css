@@ -16,7 +16,6 @@
   align-items: end;
   justify-content: center;
 }
-
 .home-body-container {
   background-color: var(--white);
   border-radius: 25px 25px 0 0;
@@ -329,7 +328,7 @@
   background: #F9FAFA;
   border: 1px solid rgba(80, 111, 105, 0.08);
   box-shadow: 1.64511e-15px 26.8667px 53.7333px rgba(50, 50, 50, 0.05);
-  padding: 40px;
+  padding: 30px;
   margin: 20px;
 }
 .service-card-title-container{
@@ -341,7 +340,7 @@
 }
 .service-title{
   font-size: var(--xlarge);
-
+  font-weight: 400;
 }
 .service-discripton-container{
   display: grid;
