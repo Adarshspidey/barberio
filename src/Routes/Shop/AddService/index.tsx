@@ -40,7 +40,7 @@ const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
         <ServiceListCard />
         <ServiceListCard />
       </div>
-      <PopUpForm/>
+      {/* <PopUpForm/> */}
     </div>
   );
 };

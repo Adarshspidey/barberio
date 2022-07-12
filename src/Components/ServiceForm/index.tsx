@@ -81,7 +81,17 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
     <div >
        <div className="service-form-contaner">
       <div className="input-wrapper">
-        <InputField
+        <div className="select-box">
+          <div><img src={serviceicon}/></div>
+        <select className="form-select-box">
+          <option>Name Of Service</option>
+          <option>Hair Cuting</option>
+          <option >Spa</option>
+          <option >Facial</option>
+          <option >Clean up</option>
+        </select>
+        </div> 
+        {/* <InputField
           label="Name of Service "
           icon={serviceicon}
           value={name}
@@ -89,7 +99,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           arrow={arrowDown}
           error={serviceFormError.name}
           onChange={(value) => onChange("name", value)}
-        />
+        /> */}
         <InputField
           label="Description"
           type="textarea"
