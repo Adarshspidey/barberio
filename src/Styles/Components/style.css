@@ -730,6 +730,27 @@ input:checked + .slider:before {
 .popup-input textarea{
   border: none;
 }
+.select-box{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: var(--input-background-color);
+
+}
+
+.form-select-box {
+    width: 100%;
+    border: none;
+    font-size: var(--medium);
+    text-align: start;
+    padding: 10px;
+    background-color: var(--input-background-color);
+    
+}
 
 @media screen and (min-width: 940px) {
   .booking-card-waper {
