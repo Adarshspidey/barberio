@@ -50,3 +50,38 @@ export type ServiceFormError = {
   rate:number;
 
 };
+
+export type ShopLocation = {
+  address: string;
+  location:{
+    lattitude: number;
+    longitude: number;
+  }
+};
+
+export type ShopLocationError = {
+  address: string;
+  location:{
+    lattitude: number;
+    longitude: number;
+  }
+};
+
+
+export type ShopInterval= {
+  address: string;
+  location:{
+    lattitude: number;
+    longitude: number;
+  }
+};
+
+export type ShopIntervalError = {
+  address: string;
+  location:{
+    lattitude: number;
+    longitude: number;
+  }
+};
+
+

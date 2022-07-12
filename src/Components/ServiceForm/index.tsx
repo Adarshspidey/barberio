@@ -17,6 +17,7 @@ interface PropsTypes {
   type?: "primary" | "secondary";
 }
 
+
 const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
   const emptyForm: ShopServiceForm = {
     name: "",
