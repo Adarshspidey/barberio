@@ -37,7 +37,14 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(9.17333px);
 }
-
+.button-transpernt{
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 10.6667px -10.6667px 10.6667px rgba(173, 86, 69, 0.073);
+  backdrop-filter: blur(9.17333px);
+  border-radius: 38px;
+  background: var(--white);
+  color: rgba(0, 0, 0, 0.36);
+}
 .back-button {
   background: var(--white);
   border-radius: 25px;
@@ -705,11 +712,23 @@ input:checked + .slider:before {
 .delete-popup-container{
   background: var(--white);
   border-radius: 38px;
-  width: 270px;
-  height: 220px;
   display: grid;
   align-content: space-evenly;
   justify-content: space-around;
+}
+
+.popup-input{
+  border: 0.6px solid #000000;
+  border-radius: 15px;
+  padding: 10px 5px;
+  width: 100%;
+}
+.popup-input input{
+  border: none;
+}
+
+.popup-input textarea{
+  border: none;
 }
 
 @media screen and (min-width: 940px) {

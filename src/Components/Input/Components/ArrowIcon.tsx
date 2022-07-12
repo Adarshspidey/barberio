@@ -24,9 +24,6 @@ const ArrowIcon = ({arrow,isLine=false,leftIcon}:PropsTypes) => {
                     backgroundImage: `url(${arrow})`,
                 }}
             ></div>
-            
-           
-            
             </div>
         )}
     </div>

@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import UploadDocument from "../../../Components/Input/UploadDocument";
 import UploadIcon from "../../../Components/UploadIcon";
 import { ShopSetupLayOutProps } from "../../../Types/Props";
 
@@ -24,6 +25,7 @@ const UploadLogo = ({ setShopSetupLayoutProps }: PropsType) => {
       <div className="set-up-question">Your Logo / Brand Image</div>
 
       <UploadIcon />
+      <UploadDocument/>
     </div>
   );
 };

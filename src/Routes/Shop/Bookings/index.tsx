@@ -58,7 +58,7 @@ const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
   return (
     <div>
        <div>
-        <div className='service-card'>
+        {/* <div className='service-card'>
             <div className="booking-welcome">
               <div><img src={emptybooking} alt="welcome"/></div>
               <div>Welcome user!</div>
@@ -66,7 +66,7 @@ const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
             </div>    
           <div className="booking-description">Booking From User Will Appear Here </div>
 
-        </div>
+        </div> */}
       </div> 
       {!showAll && (
         <div className="content-end">
