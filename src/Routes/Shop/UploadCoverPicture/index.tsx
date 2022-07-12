@@ -23,7 +23,11 @@ const UploadCoverPicture = ({ setShopSetupLayoutProps }: PropsType) => {
     <div>
       <div className="set-up-question">Upload Cover Picture</div>
 
-     
+      <UploadIcon 
+      files=""
+      id=""
+      url=""
+       />
     </div>
   );
 };

@@ -25,13 +25,11 @@ const UploadLogo = ({ setShopSetupLayoutProps }: PropsType) => {
   return (
     <div>
       <div className="set-up-question">Your Logo / Brand Image</div>
-
       <UploadIcon 
       files=""
       id=""
-      url="/shop/add-logo"
-      
-      />
+      url=""
+       />
     </div>
   );
 };

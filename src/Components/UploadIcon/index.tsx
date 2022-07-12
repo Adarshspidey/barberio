@@ -1,4 +1,4 @@
-import { useState,useRef } from "react";
+import { useState,useRef, memo } from "react";
 import fileUpload from "../../Services/fileUpload";
 
 type PropsTypes = {
@@ -8,21 +8,21 @@ type PropsTypes = {
 }
 
 const UploadIcon = ({id,url,files}:PropsTypes) =>{
-
-  const [selectedFile, setSelectedFile] = useState();
-  const [fileList, setFileList] = useState<File[]>([]);
+  const [file, setFile] = useState<File | null>(null);
   const fileReference = useRef<HTMLInputElement>(null);
   const changeHandler = (event: any) => {
-    setSelectedFile(event.target.files[0]);
-    addFile(event.target.files[0])
+    //addFile(event.target.files[0]);
+    setFile(event.target.files[0]);
   };
 
-  const addFile = async (file?: File) => {
-    const data = new FormData();
-    data.append("file", file as File);
-    file && setFileList([...fileList, file]);
-    data.append("id", id);
-    const res = await fileUpload(data, url);
+  const addFile = async (file: File) => {
+    // const data = new FormData();
+    // data.append("file", file as File);
+    // file && setFileList([...fileList, file]);
+    // data.append("id", id);
+    // console.log(url);
+    
+    const res = await fileUpload( url,file);
 
   }
   return (
@@ -32,9 +32,15 @@ const UploadIcon = ({id,url,files}:PropsTypes) =>{
       name="file" 
       ref={fileReference}
       onChange={changeHandler}/>
-      <div className="add-upload-icon" onClick={() => {
+      <div 
+        className="add-upload-icon"
+        style={file?{
+          backgroundImage: `url(${URL.createObjectURL(file)})`
+        }:{}}
+        onClick={() => {
         fileReference.current?.click();
        }}> 
+       <img src={process.env.REACT_APP_API_URL + files} alt="" />
       </div>
     </div>
   );

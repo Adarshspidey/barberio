@@ -10,6 +10,7 @@ interface PropsTypes {
 }
 
 const IntervalFormCard = ({ IsButton = false }: PropsTypes) => {
+
   const navigate = useNavigate();
   return (
     <div>

@@ -23,7 +23,11 @@ const UploadMorePic = ({ setShopSetupLayoutProps }: PropsType) => {
   return (
     <div>
       <div className="set-up-question">Upload More Image</div>
-
+      <UploadIcon 
+      files=""
+      id=""
+      url=""
+       />
   
     </div>
   );

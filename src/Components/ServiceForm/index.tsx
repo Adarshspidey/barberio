@@ -82,7 +82,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
       <form onSubmit={onSubmit}>
        <div className="service-form-contaner">
         <div className="input-wrapper">
-        {/* <div className="select-box">
+         <div className="select-box">
           <div><img src={serviceicon}/></div>
         <select className="form-select-box">
           <option>Name Of Service</option>
@@ -91,7 +91,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           <option >Facial</option>
           <option >Clean up</option>
         </select>
-        </div>  */}
+        </div>  
         <InputField
           label="Name of Service "
           icon={serviceicon}
