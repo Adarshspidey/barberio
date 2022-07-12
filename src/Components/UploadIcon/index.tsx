@@ -34,8 +34,7 @@ const UploadIcon = ({id,url,files}:PropsTypes) =>{
       onChange={changeHandler}/>
       <div className="add-upload-icon" onClick={() => {
         fileReference.current?.click();
-       }}>
-        
+       }}> 
       </div>
     </div>
   );

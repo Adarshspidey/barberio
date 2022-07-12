@@ -18,7 +18,7 @@ const IntervalList = ({ setShopSetupLayoutProps }: PropsType) => {
       goto: () => {
         navigate("/setup/service-list");
       },
-      buttonLabel: "Save",
+      buttonLabel: "",
     }));
 
     return () => {

@@ -17,6 +17,7 @@ const ShopLocation = ({ setShopSetupLayoutProps }: PropsType) => {
       goto: () => {
         navigate("/setup/upload-logo");
       },
+      
     }));
   }, []);
 

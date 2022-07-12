@@ -42,3 +42,11 @@ export type OtpForm = {
 export type OtpFormError = {
   otp: string;
 };
+
+export type ServiceFormError = {
+  name:string;
+  description:string;
+  sessionTime:number;
+  rate:number;
+
+};

@@ -11,7 +11,6 @@ import postCall from "../../Services/postCall";
 import { ShopServiceForm, ShopServiceFormError } from "../../Types/Shop";
 import useIdleCall from "../../Hooks/useIdleCall";
 import SmallButton from "../Buttons/SmallButton";
-
 interface PropsTypes {
   IsButton?: boolean;
   IsDesktop?:boolean;
@@ -79,9 +78,10 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
   const navigate = useNavigate();
   return (
     <div >
+      <form onSubmit={onSubmit}>
        <div className="service-form-contaner">
-      <div className="input-wrapper">
-        <div className="select-box">
+        <div className="input-wrapper">
+        {/* <div className="select-box">
           <div><img src={serviceicon}/></div>
         <select className="form-select-box">
           <option>Name Of Service</option>
@@ -90,8 +90,8 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           <option >Facial</option>
           <option >Clean up</option>
         </select>
-        </div> 
-        {/* <InputField
+        </div>  */}
+        <InputField
           label="Name of Service "
           icon={serviceicon}
           value={name}
@@ -99,7 +99,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           arrow={arrowDown}
           error={serviceFormError.name}
           onChange={(value) => onChange("name", value)}
-        /> */}
+        />
         <InputField
           label="Description"
           type="textarea"
@@ -133,9 +133,9 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           <SmallButton
             type="saveBlack"
             label="Save"
-            onClick={() => {
-              navigate("/shop/service");
-            }}
+            // onClick={() => {
+            //   navigate("/shop/service");
+            // }}
           />
         </div>
       )}
@@ -223,16 +223,13 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
           <SmallButton
             type="saveBlack"
             label="Save"
-            onClick={() => {
-              navigate("/shop/service");
-            }}
           />
         </div>
       </div>
     </div>
     )
     }
-
+  </form>
     </div>
   );
 };
