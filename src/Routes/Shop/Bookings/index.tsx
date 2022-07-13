@@ -66,7 +66,7 @@ const Bookings = ({ setShopLayOutProps }: PropsTypes) => {
             </div>    
           <div className="booking-description">Booking From User Will Appear Here </div>
 
-        </div> */}
+        </div>  */}
       </div> 
       {!showAll && (
         <div className="content-end">

@@ -17,6 +17,7 @@ const ShopSetupLayout = ({
   goto,
   pageIndex,
 }: PropsType) => {
+
   return (
     <div className="home-container setup-container">
       <div className="home-header-image"></div>

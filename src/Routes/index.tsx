@@ -235,10 +235,6 @@ const Router = () => {
 
       <Route path="shop" element={<ShopLayout {...shopLayOutProps} />}>
       <Route
-            index
-            element={<Bookings setShopLayOutProps={setShopLayOutProps} />}
-          />
-        <Route
           path="booking"
           element={
             <ShopSubLayout
@@ -247,6 +243,11 @@ const Router = () => {
             />
           }
         >
+      <Route
+            index
+            element={<Bookings setShopLayOutProps={setShopLayOutProps} />}
+          />
+        
         <Route path="seat" element={<BookingSeatView />} />
         </Route>
         <Route
