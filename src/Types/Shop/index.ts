@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export type ShopRegister = {
   name: string;
   phone: string;
@@ -54,7 +56,7 @@ export type ServiceFormError = {
 export type ShopLocation = {
   address: string;
   location:{
-    lattitude: number;
+    latitude: number;
     longitude: number;
   }
 };
@@ -62,7 +64,7 @@ export type ShopLocation = {
 export type ShopLocationError = {
   address: string;
   location:{
-    lattitude: number;
+    latitude: number;
     longitude: number;
   }
 };
@@ -71,7 +73,7 @@ export type ShopLocationError = {
 export type ShopInterval= {
   address: string;
   location:{
-    lattitude: number;
+    latitude: number;
     longitude: number;
   }
 };
@@ -84,4 +86,12 @@ export type ShopIntervalError = {
   }
 };
 
+export type ShopSheduleday ={
+  startTime: number,
+  endTime: number
+}
 
+export type ShopSheduledayError ={
+  startTime: number,
+  endTime: number
+}

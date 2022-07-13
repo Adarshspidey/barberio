@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, SyntheticEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../Components/Input";
 import location from "../../../assets/Icons/location.svg";
@@ -12,16 +12,26 @@ interface PropsType {
   setShopSetupLayoutProps: Dispatch<SetStateAction<ShopSetupLayOutProps>>;
 }
 
-
 const Shoplocation = ({ setShopSetupLayoutProps }: PropsType) => {
 
   const emptyForm: ShopLocation = {
     address: "",
     location:{
-      lattitude:11,
-      longitude:11
+      latitude:11,
+      longitude:10
     }
   };
+  const [locationData, setLocationData] = useState<ShopLocation>({ ...emptyForm });
+  const {address,location} = locationData;
+  const [locationErrorData, setLocationErrorData] = useState<ShopLocationError>({
+    ...emptyForm,
+  });
+  const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
+  const onChange = (key: string, value: string) => {
+    setCurrentUpdatingField(key);
+    setLocationData((prev) => ({ ...prev, [key]: value }));
+  };
+
   useEffect(() => {
     setShopSetupLayoutProps((prev) => ({
       ...prev,
@@ -32,12 +42,6 @@ const Shoplocation = ({ setShopSetupLayoutProps }: PropsType) => {
       
     }));
   }, []);
-
-  const [currentUpdatingField, setCurrentUpdatingField] = useState<string>("");
-  const [locationData, setLocationData] = useState<ShopLocation>({ ...emptyForm });
-  const [locationErrorData, setLocationErrorData] = useState<ShopLocationError>({
-    ...emptyForm,
-  });
 
   useIdleCall(
     () => {
@@ -53,11 +57,22 @@ const Shoplocation = ({ setShopSetupLayoutProps }: PropsType) => {
 
   const validate = async (key: string) => {
     setLocationErrorData((prev) => ({ ...prev, [key]: "" }));
-    const result = await postCall("/auth/login/validate", locationData);
+    const result = await postCall("/shop/add-location", locationData);
 
     if (!result?.status) {
       return result.data.forEach(({ path, message }: ValidationError) => {
         if (key === path) onErrorChange(path, message);
+      });
+    }
+  };
+
+  const submit = async (e: SyntheticEvent) => {
+    e.preventDefault();
+    const result = await postCall("shop/add-location", locationData);
+    if (!result?.status) {
+      console.log(result.data);
+      return result.data.forEach(({ path, message }: ValidationError) => {
+        onErrorChange(path, message);
       });
     }
   };
@@ -66,23 +81,22 @@ const Shoplocation = ({ setShopSetupLayoutProps }: PropsType) => {
     <div>
       <div className="set-up-question">Where is Your Shop Located ?</div>
       <div className="location-container">
+      <form onSubmit={submit}>
         <div className="input-wrapper">
           <InputField
             label="Location"
-            onChange={() => {}}
             value=""
-            icon={location}
+            onChange={(value) => onChange("location", value)}
           />
-
           <InputField
             label="Address"
             type="textarea"
-            onChange={() => {}}
-            value=""
-            icon={location}
+            value={address}
             error={locationErrorData.address}
+            onChange={(value) => onChange("address", value)}
           />
         </div>
+        </form>
       </div>
     </div>
   );
