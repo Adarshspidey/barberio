@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import SmallButton from '../Buttons/SmallButton';
 import paidIcon from "../../assets/Icons/paid.svg";
@@ -11,7 +11,13 @@ interface ServicecardProps {
 
   }
 const ServiceCard = ({title,description,rate}:ServicecardProps) => {
+  const[isEnable,setIsEnable] = useState(false);
     const navigate = useNavigate();
+
+    const handleEnable = () =>{
+      setIsEnable(true)
+    }
+   
   return (
 
     <div className='service-card'>
@@ -19,16 +25,27 @@ const ServiceCard = ({title,description,rate}:ServicecardProps) => {
         <div className='service-card-title-container'>
           <div className='service-title'>{title}</div>
           <div>
-            {/* <SmallButton
-            type='disable'
-            label='Disable'
-            onClick={() => {
-              navigate("/shop/service/disable-service");
-            }}
-            /> */}
+            {isEnable ? (
+            <div className="service-active-button service-inactive-button">
             <SmallButton
-            type='enable'
-            label='Enable'/>
+              type='disable'
+              label='Disable'
+              onClick={() => {
+                navigate("/shop/service/disable-service");
+              }}
+            />
+            </div>
+            
+            ):(
+            <div className="service-active-button"onClick={handleEnable}>
+             <SmallButton
+                type='enable'
+                label='Enable'
+                onClick={()=>{}}
+                />
+            </div>
+            )
+            }
           </div>
         </div>
         <div className='service-discripton-container'>
