@@ -317,7 +317,9 @@
 }
 
 .filter-button {
-  
+  display: grid;
+  padding: 40px;
+  justify-content: space-around;
 }
 
 .service-description{

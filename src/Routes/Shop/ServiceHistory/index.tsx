@@ -31,6 +31,23 @@ const data: Array<BookingData> = [
     name: "Ashik",
     phone: 8086520327,
   },
+  {
+    title: "Hair cutting",
+    time: "11:30",
+    duration: 20,
+    rate: 10,
+    name: "Ashik",
+    phone: 8086520327,
+  },
+  {
+    title: "Hair cutting",
+    time: "11:30",
+    duration: 20,
+    rate: 10,
+    name: "Ashik",
+    phone: 8086520327,
+  },
+  
 ];
 
 const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
@@ -55,8 +72,8 @@ const ServiceHistory = ({ setShopLayOutProps }: PropsTypes) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="history-complete-button">
+    <div className="waper-main-container">
+        <div className="history-complete-button">
         <ButtonWithIcon
           type="noBorder"
           label="Completed"
