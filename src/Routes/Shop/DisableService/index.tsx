@@ -5,15 +5,26 @@ import InputField from "../../../Components/Input";
 import arrowDown from '../../../assets/Icons/arrow-down.svg'
 import date from '../../../assets/Icons/calender.svg'
 import time from '../../../assets/Icons/time.svg'
+import { useState } from "react";
 
+interface PropsType {
+  isDisableQueue?:boolean
+}
 
-const DisableService = () => {
+const DisableService = ({isDisableQueue = false}:PropsType) => {
   const navigate = useNavigate();
+
 
   return (
     <div className="waper-main-container">
       <div className="wrapper-flex-justify-content">
+      {isDisableQueue ? (
+      <div className="edit-profile-title">Disable Queue</div>
+        )
+        :(
         <div className="edit-profile-title">  Disable Service</div>
+        )
+        }
       </div>
      
       <div className="radio-button">
@@ -47,13 +58,27 @@ const DisableService = () => {
           onChange={() => {}} />
           </div>
           <div className="button-end">
+
+            {isDisableQueue?(
             <SmallButton
             type="saveBlack"
             label="Save"
             onClick={() => {
-              navigate("/shop/service");
+              navigate("/shop/booking/seat");
             }}
-            /></div>
+            />
+            ):(
+          <SmallButton
+            type="saveBlack"
+            label="Save"
+            onClick={() => {
+              navigate("/shop/service");
+              
+            }}
+            />
+            )
+          }
+            </div>
           
           </form>
       </div>

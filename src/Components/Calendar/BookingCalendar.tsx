@@ -11,7 +11,7 @@ const BookingCalendar = () => {
       <div className="edit-profile-title">February, 15</div>
         <div className="month-change">
           <div> <img src={CalendarLeftArrow} alt="" /></div>
-          <div className="month-text">June</div>
+          <div className="month-text">February</div>
           <div><img src={CalendarRightArrow} alt="" /></div> 
         </div>
       </div>

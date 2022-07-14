@@ -5,7 +5,10 @@ import BookingCalendar from "../../../Components/Calendar/BookingCalendar";
 import seatActive from "../../../assets/Icons/seat-active.svg";
 import seatdisable from "../../../assets/Icons/seat-disable.svg";
 
-const BookingSeatView = () => {
+interface PropsType {
+  isDisableQueue?:boolean
+}
+const BookingSeatView = ({isDisableQueue = false}:PropsType) => {
   const navigate = useNavigate();
 
   const seat: Array<SeatData> = [
@@ -44,10 +47,11 @@ const BookingSeatView = () => {
         <SmallButton
           type="yellow"
           label="Disable Queue"
-          // onClick={() => {
-          //   navigate("/shop/booking/detailed-booking");
-          // }}
+          onClick={() => {
+           navigate("/shop/booking/disable-queue");
+           }}
         />
+        
       </div>
       <BookingCalendar />
 

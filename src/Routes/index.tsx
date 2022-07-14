@@ -248,7 +248,10 @@ const Router = () => {
             element={<Bookings setShopLayOutProps={setShopLayOutProps} />}
           />
         
-        <Route path="seat" element={<BookingSeatView />} />
+        <Route path="seat" element={<BookingSeatView/>} />
+        <Route path="disable-queue" element={<DisableService
+        isDisableQueue={true}
+        />} />
         </Route>
         <Route
           path="profile"
