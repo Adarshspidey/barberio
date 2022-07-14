@@ -28,7 +28,6 @@ const DisableService = () => {
         </div>
         </form>
       </div>
-      
       <div>
       <div className="card-title">Ending</div>
       <form className="form-feild-container">
@@ -52,7 +51,7 @@ const DisableService = () => {
             type="saveBlack"
             label="Save"
             onClick={() => {
-              navigate("/shop/service/add-service-form");
+              navigate("/shop/service");
             }}
             /></div>
           
