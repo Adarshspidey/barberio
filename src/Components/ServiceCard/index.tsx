@@ -18,9 +18,17 @@ const ServiceCard = ({title,description,rate}:ServicecardProps) => {
       <div>
         <div className='service-card-title-container'>
           <div className='service-title'>{title}</div>
-          <div><SmallButton
+          <div>
+            {/* <SmallButton
             type='disable'
-            label='Disable'/>
+            label='Disable'
+            onClick={() => {
+              navigate("/shop/service/disable-service");
+            }}
+            /> */}
+            <SmallButton
+            type='enable'
+            label='Enable'/>
           </div>
         </div>
         <div className='service-discripton-container'>

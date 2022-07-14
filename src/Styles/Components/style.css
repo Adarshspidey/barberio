@@ -720,6 +720,13 @@ input:checked + .slider:before {
   font-size: var(--xlarge);
 }
 
+.button-enable{
+  background: #638A82;
+  box-shadow: 3.26572e-16px 5.33333px 10.6667px rgba(14, 19, 18, 0.24);
+  border-radius: 15px;
+  color: var(--white);
+}
+
 /* .delete-popup-container{
   background: var(--white);
   border-radius: 38px;
