@@ -401,6 +401,13 @@
   color: var(--light-black);
   font-size: var(--xxlarge);
 }
+.gallery-group{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 40px;
+  font-size: var(--xxlarge);
+}
 
 /* .logout-container{
   padding-bottom: 110px;
