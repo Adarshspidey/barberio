@@ -1,28 +1,50 @@
 import ButtonWithIcon from "../Buttons/ButtonWithIcon";
 import upload from '../../assets/Icons/upload.svg';
 import deleteIcon from '../../assets/Icons/delete-icon-white.svg';
+import { useState } from "react";
 
-const DeletePopup = () => {
+interface PropsTypes {
+  IsPopUp?: boolean;
+  IsGallery?:boolean;
+
+}
+
+const DeletePopup = ({ IsPopUp=false,IsGallery=false}:PropsTypes) => {
   return (
-    <div className="delete-popup-component">
+    <>
+    {IsPopUp &&
+    <div className="popup-container">
       <div className="delete-popup-container">
-          <div>
+        <div>
           <ButtonWithIcon 
           leftIcon={upload}
           label="upload"
           type="upload"/>
-          </div>
-          <div>
-            <ButtonWithIcon
+        </div>
+        <div>
+          <ButtonWithIcon
             leftIcon={deleteIcon}
             label="Delete"
             type="black"
-            />
-          </div>
+          />
+        </div>
       </div>
-      <div>
+      {IsGallery&&
+       <div className="gallery-popup-container">
+        <div>Are You Sure to Delete this image ?</div>
+        <div className="radio-container"><input type="radio"/>Don’t show this message again.  </div>
+        <div>
+          <ButtonWithIcon
+            leftIcon={deleteIcon}
+            label="Delete"
+            type="black"
+          />
+        </div>
       </div>
+}
     </div>
+}
+    </>
   )
 }
 

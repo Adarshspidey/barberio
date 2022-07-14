@@ -16,6 +16,7 @@ const ShopSetupLayout = ({
   buttonLabel,
   goto,
   pageIndex,
+  
 }: PropsType) => {
 
   return (

@@ -14,7 +14,6 @@ import BackButton from "../../../Components/Buttons/BackButton";
 import shoplogo from "../../../assets/Images/shopImage.png";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { ShopLayOutProps } from "../../../Types/Props";
-import DeletePopup from "../../../Components/DeletePopup";
 
 interface PropsTypes {
   setShopLayOutProps: Dispatch<SetStateAction<ShopLayOutProps>>;
@@ -122,7 +121,6 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
             </div>
           </div>
         </div>
-        
       </div>
      
 
@@ -215,6 +213,7 @@ const ViewProfile = ({ setShopLayOutProps }: PropsTypes) => {
             }}
           />
         </div>
+       
       </div>
     </div>
   );

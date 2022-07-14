@@ -5,11 +5,15 @@ import Footer from "../../Footer";
 import { ShopLayOutProps } from "../../../Types/Props";
 import BackButton from "../../Buttons/BackButton";
 import Sidepain from "../../Sidepain";
-
+import DeletePopup from "../../DeletePopup";
+import PopUpForm from "../../PopUpForm";
+interface PropsTypes {
+  IsPopUp?: boolean;
+}
 const ShopLayout = ({
   activePath,
   hideBackButton = false,
-}: ShopLayOutProps) => {
+}: ShopLayOutProps,{IsPopUp=false}:PropsTypes) => {
   const navigate = useNavigate();
   return (
     <div className="shop-main-layout-container">
@@ -26,8 +30,12 @@ const ShopLayout = ({
           <Outlet />{" "}
         </div>
       </div>
-
+        
       <Footer activePath={activePath} />
+      {/* <PopUpForm/> */}
+      {IsPopUp&&
+      <DeletePopup IsPopUp={IsPopUp} />
+      }
     </div>
   );
 };
