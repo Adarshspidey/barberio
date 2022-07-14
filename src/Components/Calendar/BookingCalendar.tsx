@@ -8,11 +8,11 @@ const BookingCalendar = () => {
   return (
     <div className="calendar">
       <div className="calendar-heading-wrapper">
-        <div className="calendar-day">February, 15</div>
+      <div className="edit-profile-title">February, 15</div>
         <div className="month-change">
-          <img src={CalendarLeftArrow} alt="" />
+          <div> <img src={CalendarLeftArrow} alt="" /></div>
           <div className="month-text">June</div>
-          <img src={CalendarRightArrow} alt="" />
+          <div><img src={CalendarRightArrow} alt="" /></div> 
         </div>
       </div>
       <div className="calendar-day-wrapper">

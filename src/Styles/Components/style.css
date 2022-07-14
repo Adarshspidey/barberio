@@ -506,8 +506,9 @@
 }
 
 .calendar-heading-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
   margin: 15px 0;
 }
 
@@ -524,8 +525,9 @@
 }
 
 .month-change {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: end;
 }
 
 .calendar-day-wrapper {
@@ -724,7 +726,7 @@ input:checked + .slider:before {
   background: #638A82;
   box-shadow: 3.26572e-16px 5.33333px 10.6667px rgba(14, 19, 18, 0.24);
   border-radius: 15px;
-  color: var(--white);
+  color: var(--w);
 }
 
 /* .delete-popup-container{
