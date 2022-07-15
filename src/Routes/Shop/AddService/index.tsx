@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BigButton from "../../../Components/Buttons/BigButton";
 import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
@@ -21,6 +21,8 @@ const AddService = ({ setShopSetupLayoutProps }: PropsType) => {
       },
     }));
   }, []);
+
+  const [serviceList,setServiceList] = useState([]);
 
   const navigate = useNavigate();
   return (

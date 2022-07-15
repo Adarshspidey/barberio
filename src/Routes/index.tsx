@@ -42,11 +42,7 @@ import NotificationList from "./Shop/NotificationList";
 import NotificationContent from "./Shop/NotificationContent";
 import FilterForm from "./Shop/FilterForm";
 import BookingSeatView from "./Shop/BookingSeatView";
-import {
-  LayOutProps,
-  ShopLayOutProps,
-  ShopSetupLayOutProps,
-} from "../Types/Props";
+import {LayOutProps,ShopLayOutProps,ShopSetupLayOutProps} from "../Types/Props";
 import ShopSubLayout from "../Components/Layout/ShopSubLayout";
 import ImagePage from "./Shop/ImagePage";
 import IntervalServiceList from "./Shop/IntervalServiceList";

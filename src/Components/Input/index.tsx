@@ -5,7 +5,7 @@ import Layout from "../Input/Components/Layout";
 import ArrowIcon from "./Components/ArrowIcon";
 
 type PropsTypes = {
-  type?: "text" | "number" | "password" | "submit" | "button" | "textarea";
+  type?: "text" | "number" | "password" | "submit" | "button" | "textarea" ;
   arrow?: string;
   leftIcon?:string;
   label?: string;
