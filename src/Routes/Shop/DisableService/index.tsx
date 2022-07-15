@@ -8,12 +8,17 @@ import time from '../../../assets/Icons/time.svg'
 import { useState } from "react";
 
 interface PropsType {
-  isDisableQueue?:boolean
+  isDisableQueue?:boolean;
+  disabled?:boolean;
 }
 
-const DisableService = ({isDisableQueue = false}:PropsType) => {
+const DisableService = ({isDisableQueue = false,disabled = false}:PropsType) => {
+  const[checkedIn,setCheckedIn] = useState("enable");
   const navigate = useNavigate();
 
+  const handleChange = (event:any) => {
+      setCheckedIn(event.target.value)
+  }
 
   return (
     <div className="waper-main-container">
@@ -30,11 +35,20 @@ const DisableService = ({isDisableQueue = false}:PropsType) => {
       <div className="radio-button">
         <form>
         <div className="radio-button-title">
-          <input type="radio"/>
+          <input type="radio"
+          value="enable"
+          checked={checkedIn === "enable"}
+          onClick={()=>setCheckedIn("enable")}
+          onChange={handleChange}
+          />
           <label>Until I manually enable</label>
         </div>
         <div className="radio-button-title">
-          <input type="radio" />
+          <input type="radio" 
+          value="periodOfTime"
+          checked={checkedIn === "periodOfTime"}
+          onClick={()=>setCheckedIn("periodOfTime")}
+          onChange={handleChange}/>
           <label>For a Period of Time</label>
         </div>
         </form>
@@ -43,22 +57,23 @@ const DisableService = ({isDisableQueue = false}:PropsType) => {
       <div className="card-title">Ending</div>
       <form className="form-feild-container">
       <div className="profile-waper-component">
-      <InputField 
+        <InputField 
           label="Date"
           type="text"
           icon={date}
           arrow={arrowDown}
-         onChange={() => {}} />
-      
+          onChange={() => {}} 
+           isDisabled={checkedIn === "enable"}
+         />
         <InputField 
           label="Time" 
           type="text"
           icon={time}
           arrow={arrowDown}
-          onChange={() => {}} />
+          onChange={() => {}}
+          isDisabled={checkedIn === 'enable'} />
           </div>
           <div className="button-end">
-
             {isDisableQueue?(
             <SmallButton
             type="saveBlack"

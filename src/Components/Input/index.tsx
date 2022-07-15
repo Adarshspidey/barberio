@@ -13,7 +13,7 @@ type PropsTypes = {
   error?: string;
   info?: string;
   value?: string;
-  disabled?: boolean;
+  isDisabled?: boolean;
   onChange: (value: string, e: any) => void;
   submitted?: boolean;
 };
@@ -28,7 +28,7 @@ const InputField = ({
   info,
   value,
   onChange,
-  disabled = false,
+  isDisabled = false,
   submitted = false,
 }: PropsTypes) => {
   const [isBlurred, setIsBlurred] = useState<boolean>(false);
@@ -48,7 +48,7 @@ const InputField = ({
           title={label}
           value={value}
           onChange={(e) => onChange(e.target.value, e)}
-          disabled={disabled}
+          disabled={isDisabled}
           onBlur={onBlur}
         />
 
@@ -58,7 +58,7 @@ const InputField = ({
           title={label}
           value={value}
           onChange={(e) => onChange(e.target.value, e)}
-          disabled={disabled}
+          disabled={isDisabled}
           onBlur={onBlur}
         />
       )}
