@@ -40,7 +40,7 @@ const Footer = ({activePath}:ShopFooterPropsTypes) => {
                     onClick={()=>navigate("/shop/QrShare")}
                     style={{
                         backgroundImage: `url(${
-                            qrIcon
+                            qrIcon 
                         })`
                     }}
                     >
