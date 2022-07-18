@@ -111,6 +111,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
         />
         <InputField
           label=" Time for a session"
+          type="number"
           icon={sessionicon}
           value={sessionTime}
           arrow={arrowDown}
@@ -120,6 +121,7 @@ const ServiceForm = ({ IsButton = false,IsDesktop=true }: PropsTypes) => {
         />
         <InputField
           label=" Rate"
+          type="number"
           icon={rupeeicon}
           value={rate}
           submitted={submit}
